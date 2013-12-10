@@ -51,19 +51,33 @@ div.cls_009{font-family:"Gill Sans MT",serif;font-size:26.1px;color:rgb(0,0,0);f
 <div style="position:absolute;left:50%;margin-left:-400px;top:1260px;width:800px;height:620px;border-style:outset;overflow:hidden">
 <div style="position:absolute;left:0px;top:0px">
 <img src="64d53e62-60fd-11e3-95e2-003048d80846_id_purpl-gadt_files/background3.jpg" width=800 height=620></div>
-<div style="position:absolute;left:246.48px;top:24.00px" class="cls_002"><span class="cls_002">List examples</span></div>
-<div style="position:absolute;left:52.00px;top:206.04px" class="cls_005"><span class="cls_005">•</span><span class="cls_003"> Traditional list ADT</span></div>
-<div style="position:absolute;left:52.00px;top:256.04px" class="cls_005"><span class="cls_005">•</span><span class="cls_003"> List GADT that can distinguish between empty and non-</span></div>
-<div style="position:absolute;left:87.00px;top:301.00px"
+<div style="position:absolute;left:86.48px;top:24.00px"
+class="cls_002"><span class="cls_002">List and Even-Odd Examples</span></div>
+<div style="position:absolute;left:52.00px;top:166.04px" class="cls_005"><span class="cls_005">•</span><span class="cls_003"> Traditional list ADT</span></div>
+<div style="position:absolute;left:52.00px;top:216.04px" class="cls_005"><span class="cls_005">•</span><span class="cls_003"> List GADT that can distinguish between empty and non-</span></div>
+<div style="position:absolute;left:87.00px;top:261.00px"
 class="cls_003"><span class="cls_003">empty lists in[</span> <a
 href="https://github.com/gowthamk/Lambda/blob/master/gadts/lists.ml#L1">ocaml</a> </span><span class="cls_003">]</span></div>
-<div style="position:absolute;left:52.00px;top:338.04px"
+<div style="position:absolute;left:52.00px;top:298.04px"
 class="cls_005"><span class="cls_005">•</span><span class="cls_003">
 Length-indexed list GADT in [</span><span class="cls_003"><a
 href="https://github.com/gowthamk/Lambda/blob/master/gadts/lists.ml#L31">ocaml</a></span><span class="cls_003">]</span></div>
-<div style="position:absolute;left:52.00px;top:388.04px" class="cls_005"><span class="cls_005">•</span><span class="cls_003"> Length-indexed list GADT using type-level functions, and</span></div>
-<div style="position:absolute;left:87.00px;top:433.00px" class="cls_003"><span class="cls_003">datakind promotion in [</span><span class="cls_010"><a
+<div style="position:absolute;left:52.00px;top:348.04px" class="cls_005"><span class="cls_005">•</span><span class="cls_003"> Length-indexed list GADT using type-level functions, and</span></div>
+<div style="position:absolute;left:87.00px;top:393.00px" class="cls_003"><span class="cls_003">datakind promotion in [</span><span class="cls_010"><a
 href="https://github.com/gowthamk/Lambda/blob/master/gadts/promoted_list.hs">Haskell</a></span><span class="cls_003">]</span></div>
+<div style="position:absolute;left:52.00px;top:433.04px"
+class="cls_005"><span class="cls_005">•</span><span class="cls_003">
+Nat datatype indexed by Parity (Even/Odd)<span class="cls_003"> in [</span><span class="cls_010"><a
+href="https://github.com/gowthamk/Lambda/blob/master/gadts/even-odd.ml">Ocaml</a>]</span></span></div>
+
+<div style="position:absolute;left:52.00px;top:473.04px"
+class="cls_005"><span class="cls_005">•</span><span class="cls_003">
+Parity indexed Nat with type functions in [</span><span class="cls_010"><a
+href="https://github.com/gowthamk/Lambda/blob/master/gadts/even-odd.hs">Haskell</a></span><span
+class="cls_003">].</span></div>
+<div style="position:absolute;left:87.00px;top:518.00px"
+class="cls_003"><span class="cls_003"> We get free theorems! </span></div>
+
 <div style="position:absolute;left:396.00px;top:573.00px" class="cls_006"><span class="cls_006">3</span></div>
 <div style="position:absolute;left:7.00px;top:601.00px" class="cls_004"><span class="cls_004">Monday, December 9, 13</span></div>
 </div>
@@ -74,7 +88,7 @@ href="https://github.com/gowthamk/Lambda/blob/master/gadts/promoted_list.hs">Has
 <div style="position:absolute;left:52.00px;top:189.04px"
 class="cls_005"><span class="cls_005">•</span><span class="cls_003">
 With traditional format descriptor [<a
-href="https://github.com/gowthamk/Lambda/blob/master/gadts/lists.ml#L://github.com/gowthamk/Lambda/blob/master/gadts/typed_printf.ml#L1">ocaml</a>] </span></div>
+href="https://github.com/gowthamk/Lambda/blob/master/gadts/typed_printf.ml#L1">ocaml</a>] </span></div>
 <div style="position:absolute;left:52.00px;top:239.04px" class="cls_005"><span class="cls_005">•</span><span class="cls_003"> Naive translation to GADT-based descriptor that turns out</span></div>
 <div style="position:absolute;left:87.00px;top:284.00px"
 class="cls_003"><span class="cls_003">to be useless. [<a
