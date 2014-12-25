@@ -6,13 +6,14 @@
 \textwidth=5.2in % increase textwidth to get smaller right margin
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font 
+\usepackage{hyperref}
 
 \begin{document} 
  
 \name{Gowtham Kaki} 
  
 %\fontsize{9pt}{1} \selectfont
-\address{http://gowthamk.github.io \hspace{1.25in} gkaki@cs.purdue.edu
+\address{http://gowthamk.github.io \hspace{1.25in} gkaki@purdue.edu
           \hspace{1.25in} (201) 417 1775 }
 
  
@@ -25,7 +26,7 @@ Program Logics, Type Systems and Static Analyses.
 {\bf Ph.D., Computer Science}. \hfill 2012 - present\\
 Advised by Prof. Suresh Jagannathan.\\
 Purdue University, West Lafayette, IN.\\
-Current GPA: 3.77/4.0 \\
+Current GPA: 3.64/4.0 \\
 \\
 {\bf B.E.(Hons)., Computer Science}. \hfill July, 2009\\
 BITS, Pilani, India.\\
@@ -33,18 +34,38 @@ GPA: 8.68/10.0
  
 
 \section{Research}
+ {\bf Declarative Programming over Eventually Consistent Datastores} \\
+ (With Sivaramakrishnan KC., and Suresh Jagannathan) Devised a
+ logic-based language framework to express high-level consistency
+ requirements of NoSQL applications. The framework delivers
+ application programmers from having to manually tune consistency
+ levels of NoSQL stores, such as Cassandra, which are often tied to
+ the implementation nuances of these stores. Further, the framework
+ comes with an extensive support for scalable transactions, which is
+ needed to build real-world NoSQL applications. The implementation of
+ the framework (called {\sc Quelea}) is available online at\\
+ \url{https://github.com/kayceesrk/Quelea}.
+ \begin{itemize}
+ \item Submitted to ACM SIGPLAN Conference on Programming Languages
+ Design and Implementation (PLDI), 2015. Draft paper avalilable at
+ \url{http://gowthamk.github.io/docs/quelea.pdf}.
+ \end{itemize}
+
+
  {\bf Relational Framework for Higher-order Shape Analysis} \\
  (With Suresh Jagannathan) Devised a verification framework based on
- decidable relational logics to automatically reason about
- catamorphisms in ML-like languages. The framework manifests as a
+ decidable relational logics to automatically reason about structural
+ properties in ML-like languages. The framework manifests as a
  dependent type system for ML and scales to higher-order programs by
- assigning "very general" (although not principal) types to
- higher-order functions. Our experience so far suggests that the
- method is quite useful to automatically verify partial correctness
- properties of compiler transformations. The current (partial)
- implementation of the framework is available online. Work-in-progress
- presentations have been delivered at 
+ assigning "very general" types to higher-order functions. Our
+ experience so far suggests that the method is quite useful to
+ automatically verify partial correctness properties of compiler
+ transformations. A web interface to experiment with our
+ implementation of the framework (called {\sc Catalyst}) is available
+ online at \url{http://tycon.github.io/catalyst/}.
  \begin{itemize} \itemsep -2pt  % reduce space
+ \item International Conference on Functional Programming (ICFP),
+ Gothenburg, 1st-6th September, 2014.
  \item Higher-Order Program Analysis (HOPA) Workshop, New Orleans,
  28th-29th June, 2013.
  \item Mid-west Verification Day (MVD), Chicago, 20th-21st September,
@@ -61,6 +82,15 @@ computational grids.
  \end{itemize}
 
 \section{Professional \\ Experience}
+
+{\bf Research Intern, Microsoft Research India, Bangalore} \hfill May - August, 2014\\
+(With G Ramalingam, K Vaswani, and D Vytiniotis) Built a region type
+system for Microsoft Dryad programs to ensure memory safety in
+presence of programmer-managed memory regions. Also developed a type
+inference algorithm that will automatically infer region types even in
+presence of higher-order functions. A paper describing the type system
+will be available from April, 2015.
+
 {\bf Software Engineer, Yahoo SDC, Bangalore, India} \hfill August, 2009 -
 July, 2011\\
 Frontend engineering for Yahoo content platforms group. Developed AJAX
@@ -68,46 +98,50 @@ and php tools for querying, processing and presenting
 loosely-structured data from various content grids inside yahoo. The
 tools were used by Yahoo's content curators.
 
-{\bf Engineering intern, Qualcomm, Hyderabad, India} \hfill January,
-2009 - June, 2009\\
+{\bf Engineering intern, Qualcomm, Hyderabad, India} \hfill January - June, 2009\\
 QA Engineering for Application-specific integrated circuit (ASIC) -
 User interface module (UIM) group. Developed tools to test low-level
-mobile network code.
+mobile network code.\\
 
 \section{Academics}
 {\bf Relevant Graduate Coursework }\\
 \begin{itemize}
-\item CS565 Programming Languages (analogoue of UPenn's Software
-Foundations with Coq), CS510 Software Engineering, EE570 Artificial
-Intelligence, and CS590 Current topics in Theoretical Computer
-Science.
+\item Programming Languages (Software Foundations with Coq), Software
+Engineering, Artificial Intelligence, Metaprogramming and Program
+Generation, and Current topics in Theoretical Computer Science.
 \item Attended Oregon Programming Languages Summer School (OPLSS'13)
 at Eugene, OR.
 \end{itemize}
 
-{\bf Teaching Assistanship}\\
+{\bf Courses Handled as a Teaching Assistant}\\
 \begin{itemize}
 \item CS240 C Programming. Fall 2012.
 \item CS565 Programming Languages. Spring, 2013.
 \end{itemize}
 
-\section{Programming \\ Languages}
-Standard ML, Ocaml, Scheme, C, Java, and Haskell (pure Haskell, to be
-precise. I am not yet comfortable with monadic types.).
+\section{Grants and Scholarships}
+\begin{itemize}
+\item Received ACM SIGPLAN PAC travel grant for ICFP 2014.
+\item Received ACM SIGPLAN PLMW scholarship for POPL 2014.
+\item Received institute merit-cum-need scholarship during all 
+semesters of my undergraduate education at BITS, Pilani, India.
+\end{itemize}
 
-\section {Service}
-Coordinating weekly sessions of Purdue PL (PurPL) reading group.
+\section {Professional Service}
+\begin{itemize}
+\item Coordinating weekly sessions of Purdue PL (PurPL) reading group.
 Notes/Slides for some sessions when I led the discussion are available
-on my web page.\\
-Purdue CS Graduate Student Board (GSB) office member, Fall 2011 and
-Spring 2012.\\
-Secretary (junior year), and office member (freshman and sophomore
+on my web page.
+\item Purdue CS Graduate Student Board (GSB) office member, Fall 2011 and
+Spring 2012.
+\item Secretary (junior year), and office member (freshman and sophomore
 years) of Computer Science Association (CSA) BITS, Pilani. We
-organized our techfest (APOGEE) in 2008. \\
+organized our techfest (APOGEE) in 2008. 
+\end{itemize}
 
 \section{References}
-Prof. Suresh Jagannathan (suresh@cs.purdue.edu).\\
-Prof. Chittaranjan Hota (hota@hyderabad.bits-pilani.ac.in)\\
+Prof. Suresh Jagannathan (Purdue University).\\
+Dr. Ganesan Ramalingam (Microsoft Research). \\
 Other references will be available on request.
 \end{resume} 
 \end{document} 
