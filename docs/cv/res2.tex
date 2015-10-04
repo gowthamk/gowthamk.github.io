@@ -8,6 +8,9 @@
 %\usepackage{newcent}   % uses new century schoolbook postscript font 
 \usepackage{hyperref}
 
+\newcommand{\code}[1]{\,{\tt #1}\,}
+\newcommand{\C}[1]{\code{#1}}
+
 \begin{document} 
  
 \name{Gowtham Kaki} 
@@ -26,7 +29,7 @@ Program Logics, Type Systems and Static Analyses.
 {\bf Ph.D., Computer Science}. \hfill 2012 - present\\
 Advised by Prof. Suresh Jagannathan.\\
 Purdue University, West Lafayette, IN.\\
-Current GPA: 3.64/4.0 \\
+Current GPA: 3.77/4.0 \\
 \\
 {\bf B.E.(Hons)., Computer Science}. \hfill July, 2009\\
 BITS, Pilani, India.\\
@@ -34,21 +37,52 @@ GPA: 8.68/10.0
  
 
 \section{Research}
+
+ {\bf Broom : Safe Region-based Memory Management for Dataflow
+ Systems}\\ (With G Ramalingam, K Vaswani, and D Vytiniotis)
+ Distributed data processing engines (e.g: MapReduce) rely on
+ general-purpose language runtimes to manage the execution of dataflow
+ operators like \C{Join}. We observe that the memory behavior of such
+ operators exhibit certain characteristics, which render
+ general-purpose garbage collection a particularly ineffective memory
+ management strategy. To address this problem, we propose {\sc Broom},
+ dialect of C\# with programmer-managed memory regions. 
+ %Regions are first-class values in
+ %{\sc Broom}: they can be stored in data structures, and can be passed
+ %as arguments to methods. Despite this expressivity, 
+ {\sc Broom} empowers dataflow system builders to implement efficient
+ region-based memory management strategies without incurring
+ significant cost: it's region type system guarantees safety of all
+ dereferences that are otherwise safe in presence of GC, while it's
+ region type inference obviates any need for programmer-provided
+ region type annotations. Experiments with real-world dataflow
+ operators demonstrate upto 59\% performance improvement due to safe
+ region-based memory managegement afforded via {\sc Broom}. An OCaml
+ implementation of {\sc Broom}'s region type system and type inference
+ can be obtained from \url{https://github.com/gowthamk/broomc}.
+ \begin{itemize}
+ \item Draft paper available at
+ \url{http://gowthamk.github.io/docs/broom.pdf}
+ \item Work-in-progress presentations at Microsoft Research India,
+ Bangalore in August, 2014 and July, 2015. 
+ \end{itemize}
+
  {\bf Declarative Programming over Eventually Consistent Data Stores} \\
  (With Sivaramakrishnan KC., and Suresh Jagannathan) Devised a
  logic-based language framework to express high-level consistency
  requirements of NoSQL applications. The framework delivers
  application programmers from having to manually tune consistency
  levels of NoSQL stores, such as Cassandra, which are often tied to
- the implementation nuances of these stores. Further, the framework
- comes with an extensive support for scalable transactions, which is
- needed to build real-world NoSQL applications. The implementation of
- the framework (called {\sc Quelea}) is available online at\\
- \url{https://github.com/kayceesrk/Quelea}.
+ the implementation nuances of these stores. The framework also comes
+ with an extensive support for scalable transactions. The
+ implementation of the framework (called {\sc Quelea}) is available
+ online at \url{https://github.com/kayceesrk/Quelea}.
  \begin{itemize}
- \item Submitted to ACM SIGPLAN Conference on Programming Languages
- Design and Implementation (PLDI), 2015. Draft paper avalilable at
- \url{http://gowthamk.github.io/docs/quelea.pdf}.
+ \item Published in the proceedings of ACM SIGPLAN Conference on
+ Programming Languages Design and Implementation (PLDI'15)
+ \item Presented at PLDI'15 at Portland, June 13-17, 2015.
+ \item Presented at RF Seminar Series, Microsoft Research India,
+ Bangalore in July, 2015.  
  \end{itemize}
 
 
@@ -64,13 +98,12 @@ GPA: 8.68/10.0
  \url{http://tycon.github.io/catalyst/}.
  \begin{itemize} \itemsep -2pt  % reduce space
  \item Published in the proceedings of the International Conference on
- Functional Programming (ICFP), Gothenburg, 1st-6th September, 2014.
- \item Presented at the Higher-Order Program Analysis (HOPA) Workshop,
- New Orleans, 28th-29th June, 2013.
- \item Presented at the Mid-west Verification Day (MVD), Chicago,
- 20th-21st September, 2013.
- \item Ongoing work on extending the framework with specification
- inference is presented at the Mid-west Verification Day (MVD),
+ Functional Programming (ICFP'14).
+ \item Presented at ICFP'14, Gothenburg, 1st-6th September, 2014.
+ \item Work-in-progress presentation at the Mid-west Verification Day
+ (MVD), Chicago, 20th-21st September, 2013.
+ \item Work-in-progress presentation on extending the framework with
+ specification inference at the Mid-west Verification Day (MVD),
  Columbia, MO, 2nd-3rd October, 2014.
  \end{itemize}
 
@@ -86,13 +119,11 @@ computational grids.
 
 \section{Professional \\ Experience}
 
-{\bf Research Intern, Microsoft Research India, Bangalore} \hfill May - August, 2014\\
-(With G Ramalingam, K Vaswani, and D Vytiniotis) Built a region type
-system for Microsoft Dryad programs to ensure memory safety in
-presence of programmer-managed memory regions. Also developed a type
-inference algorithm that will automatically infer region types even in
-presence of higher-order functions. A paper describing the type system
-will be available from April, 2015.
+{\bf Research Intern, Microsoft Research India, Bangalore} \\
+(May - August, 2014 \& July-August, 2015) 
+Built a region type system and region type inference to ensure the
+safety of dataflow programs that rely on programmer-managed memory
+regions, instead of garbage collection for memory management.
 
 {\bf Software Engineer, Yahoo SDC, Bangalore, India} \hfill August, 2009 -
 July, 2011\\
@@ -109,10 +140,10 @@ mobile network code.\\
 \section{Academics}
 {\bf Relevant Graduate Coursework (With Grades)}\\
 \begin{itemize}
-\item Programming Languages (A), Software Engineering (B),
-Metaprogramming and Program Generation (A+), Distributed Systems (A),
-Parallel Computing (A), and Current topics in Theoretical Computer
-Science (A-).  
+\item Design \& Analysis of Algorithms (A), Programming Languages (A),
+Software Engineering (B), Metaprogramming and Program Generation (A+),
+Distributed Systems (A), Parallel Computing (A), and Current topics in
+Theoretical Computer Science (A-).  
 \item Attended Oregon Programming Languages Summer School (OPLSS'13)
 at Eugene, OR.
 \end{itemize}
@@ -125,9 +156,10 @@ at Eugene, OR.
 
 \section{Grants and Scholarships}
 \begin{itemize}
-\item Received ACM SIGPLAN PAC travel grant for ICFP 2014.
-\item Received ACM SIGPLAN PLMW scholarship for POPL 2014.
-\item Received institute merit-cum-need scholarship during all 
+\item NSF Travel grant for PLDI 2014
+\item ACM SIGPLAN PAC travel grant for ICFP 2014.
+\item ACM SIGPLAN PLMW scholarship for POPL 2014.
+\item Institute merit-cum-need scholarship during all 
 semesters of my undergraduate education at BITS, Pilani, India.
 \end{itemize}
 
