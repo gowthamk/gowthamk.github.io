@@ -2,8 +2,8 @@
 
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
+  font:14px/1.5 PT Serif;
+  color:#555;
   font-weight:300;
 }
 
@@ -12,11 +12,18 @@ div#profile-image {
 }
 
 div.contact {
-  margin-bottom : 10px;
+  margin-bottom : 1px;
 }
-
+h4.contact-header {
+  margin-bottom: 2px;
+}
+h3.section-header {
+  width:6em;
+  margin: auto;
+  text-decoration: underline;
+}
 div.pub-title {
-  color : #777777;
+  color : #8f2400;
   font-weight : bold;
 }
 
@@ -25,12 +32,12 @@ div.misc-item {
 }
 
 h1, h2, h3 {
-  color:#222;
+  color:#8f2400;
   margin:0 0 20px;
 }
 
 h4, h5, h6 {
-  color:#222;
+  color:#8f2400;
   margin:0 0 5px;
 }
 
@@ -50,9 +57,6 @@ h2 {
   color:#393939;
 }
 
-h3, h4, h5, h6 {
-  color:#494949;
-}
 
 a {
   color:#39c;
@@ -182,8 +186,8 @@ header ul a strong {
 }
 
 section {
-  width:500px;
-  float:right;
+  /*width:500px;*/
+  /*float:right;*/
   padding-bottom:50px;
 }
 
@@ -274,4 +278,16 @@ footer {
     font-size:12pt;
     color:#444;
   }
+}
+/* GK Styles */
+div.img-wrapper {
+  float: left;
+  padding-right: 1em;
+}
+div#content-container {
+  max-width: 56em;
+  margin: auto;
+}
+div#header {
+  padding-bottom:1em;
 }
