@@ -3,7 +3,7 @@
 body {
   padding:50px;
   font:14px/1.5 PT Serif;
-  color:#555;
+  color:black;
   font-weight:300;
 }
 
@@ -295,4 +295,7 @@ div#content-container {
 }
 div#header {
   padding-bottom:1em;
+}
+span.highlight-text {
+  background-color: #FFFFA7;
 }
