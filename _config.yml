@@ -1,0 +1,80 @@
+# Site settings
+title: Gowtham Kaki
+email: gowtham.kaki@colorado.edu
+description: > # this means to ignore newlines until "baseurl:"
+  I'm an Assistant Professor of Computer Science at the University of
+  Colorado, Boulder. My research interests include Programming
+  Languages, Program Verification, and Distributed Systems.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://gowthamk.github.io" # the base hostname & protocol for your site
+twitter_username: gowthamk
+github_username:  gowthamk
+orcid_id: #0000-0003-4072-6263
+google_scholar_id: #BNr-fb8AAAAJ
+
+# Build settings
+markdown: kramdown
+
+# Other options
+permalink: blog/:year/:month/:title/
+jobtitle: "Assitant Professor"
+address: |
+    Department of Computer Science,
+    University of Colorado,
+    Boulder, CO 80309
+excerpt_separator: "<!--more-->"
+
+# SEO stuff
+# google_author: "https://plus.google.com/u/0/110288225974212014913"
+# google_site_verification: "nfd8hkZSc3GmIivrLCudAdTq5m1kI0Ao7P1UyIt9z5Q"
+# bing_webmastertools_id: "E24D33E8D53D5730794478CB209F15E5"
+
+plugins_dir:
+  - jekyll-sitemap
+
+exclude: ['*.Rmd']
+
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  news:
+    defaults:
+      layout: post
+    output: true
+    permalink: /news/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+news_limit: 5
+
+# -----------------------------------------------------------------------------
+# Jekyll Scholar
+# -----------------------------------------------------------------------------
+
+scholar:
+
+  last_name: Einstein
+
+  style: apa
+  locale: en
+
+  sort_by: year
+  order: descending
+
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_layout: bibtex.html
+  details_link: Details
+
+  query: "@*"
+
+

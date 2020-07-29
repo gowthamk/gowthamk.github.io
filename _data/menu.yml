@@ -1,0 +1,20 @@
+- title: "About"
+  href: "/"
+
+- title: "Blog"
+  href: "/blog/"
+
+# - title: "CV"
+#   href: "/cv/"
+
+- title: "Publications"
+  href: "/publications/"
+
+#- title: "Research"
+#  href: "/research/"
+
+- title: "Teaching"
+  href: "/teaching/"
+  subcategories:
+    - subtitle: "CSCI7000 – Distributed Systems Verification"
+      subhref: "https://gowthamk.github.io/cs_f20/"

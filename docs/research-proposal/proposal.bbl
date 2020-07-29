@@ -1,0 +1,139 @@
+\begin{thebibliography}{19}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[bai(2013)]{bailisblog}
+{When is ``ACID'' ACID? Rarely.}, 2013.
+\newblock URL \url{http://www.bailis.org/blog/when-is-acid-acid-rarely/}.
+
+\bibitem[jep(2013)]{jepsen}
+{Jepsen:Cassandra}, 2013.
+\newblock URL \url{https://aphyr.com/posts/294-call-me-maybe-cassandra}.
+
+\bibitem[fcg(2014{\natexlab{a}})]{fcgizmodo}
+{Bitcoin Bank Flexcoin Shuts Down After \$620,000 Heist}, 2014{\natexlab{a}}.
+\newblock URL
+  \url{https://gizmodo.com/bitcoin-bank-flexcoin-shuts-down-after-620-000-heist-1535960407}.
+
+\bibitem[fcg(2014{\natexlab{b}})]{fcgrd}
+{Bitcoin bank Flexcoin closes after hack attack}, 2014{\natexlab{b}}.
+\newblock URL
+  \url{https://www.theguardian.com/technology/2014/mar/04/bitcoin-bank-flexcoin-closes-after-hack-attack}.
+
+\bibitem[fcw(2014)]{fcwayback}
+{Flexcoin is shutting down. }, 2014.
+\newblock URL
+  \url{https://web.archive.org/web/20160408190656/http://www.flexcoin.com/}.
+
+\bibitem[pol(2014)]{poloniexbug}
+{BTC Stolen from Poloniex}, 2014.
+\newblock URL \url{https://bitcointalk.org/index.php?topic=499580}.
+
+\bibitem[hac(2015)]{hackaday}
+{Race conditions exploit granted free money on web services. }, 2015.
+\newblock URL
+  \url{https://hackaday.com/2015/04/29/race-conditions-exploit-granted-free-money-on-web-services/}.
+
+\bibitem[sho(2015)]{shopify}
+{Shopify Cart does not update Shipping Costs in Checkout when Quantities in
+  Cart change}, 2015.
+\newblock URL
+  \url{https://ecommerce.shopify.com/c/ecommerce-discussion/t/shopify-cart-does-not-update-shipping-costs-in-checkout-when-quantities-in-cart-change-294832}.
+
+\bibitem[tri(2015)]{tripwire}
+{Gift Card Fraud: How It's Committed and Why It's So Lucrative}, 2015.
+\newblock URL
+  \url{https://www.tripwire.com/state-of-security/risk-based-security-for-executives/risk-management/gift-card-fraud-how-its-committed-and-why-its-so-lucrative/}.
+
+\bibitem[kia(2017)]{kiablog}
+{A Case Study: Python TPC-C Benchmark}, 2017.
+\newblock URL \url{https://kiarahmani.github.io/2017/07/28/NoSQL3/}.
+
+\bibitem[pyt(2017)]{pytpcc}
+{Python TPC-C}, 2017.
+\newblock URL \url{https://github.com/apavlo/py-tpcc}.
+
+\bibitem[Bailis et~al.(2013)Bailis, Fekete, Ghodsi, Hellerstein, and
+  Stoica]{bailishotos}
+Peter Bailis, Alan Fekete, Ali Ghodsi, Joseph~M. Hellerstein, and Ion Stoica.
+\newblock {HAT, Not CAP: Towards Highly Available Transactions}.
+\newblock In \emph{Proceedings of the 14th USENIX Conference on Hot Topics in
+  Operating Systems}, HotOS'13, pages 24--24, Berkeley, CA, USA, 2013. USENIX
+  Association.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=2490483.2490507}.
+
+\bibitem[Bailis et~al.(2015)Bailis, Fekete, Franklin, Ghodsi, Hellerstein, and
+  Stoica]{bailisferal}
+Peter Bailis, Alan Fekete, Michael~J. Franklin, Ali Ghodsi, Joseph~M.
+  Hellerstein, and Ion Stoica.
+\newblock {Feral Concurrency Control: An Empirical Investigation of Modern
+  Application Integrity}.
+\newblock In \emph{Proceedings of the 2015 ACM SIGMOD International Conference
+  on Management of Data}, SIGMOD '15, pages 1327--1342, New York, NY, USA,
+  2015. ACM.
+\newblock ISBN 978-1-4503-2758-9.
+\newblock \doi{10.1145/2723372.2737784}.
+\newblock URL \url{http://doi.acm.org/10.1145/2723372.2737784}.
+
+\bibitem[Kaki and Jagannathan(2014)]{icfp14}
+Gowtham Kaki and Suresh Jagannathan.
+\newblock {A Relational Framework for Higher-order Shape Analysis}.
+\newblock In \emph{Proceedings of the 19th ACM SIGPLAN International Conference
+  on Functional Programming}, ICFP '14, pages 311--324, New York, NY, USA,
+  2014. ACM.
+\newblock ISBN 978-1-4503-2873-9.
+\newblock \doi{10.1145/2628136.2628159}.
+\newblock URL \url{http://doi.acm.org/10.1145/2628136.2628159}.
+
+\bibitem[Kaki et~al.(2016)Kaki, Ramalingam, Vaswani, and Vytiniotis]{msrtr}
+Gowtham Kaki, G.~Ramalingam, Kapil Vaswani, and Dimitrios Vytiniotis.
+\newblock Safe memory regions for big data processing.
+\newblock January 2016.
+\newblock URL
+  \url{https://www.microsoft.com/en-us/research/publication/safe-memory-regions-big-data-processing/}.
+
+\bibitem[Sivaramakrishnan et~al.(2015)Sivaramakrishnan, Kaki, and
+  Jagannathan]{pldi15}
+KC~Sivaramakrishnan, Gowtham Kaki, and Suresh Jagannathan.
+\newblock {Declarative Programming over Eventually Consistent Data Stores}.
+\newblock In \emph{Proceedings of the 36th ACM SIGPLAN Conference on
+  Programming Language Design and Implementation}, PLDI 2015, pages 413--424,
+  New York, NY, USA, 2015. ACM.
+\newblock ISBN 978-1-4503-3468-6.
+\newblock \doi{10.1145/2737924.2737981}.
+\newblock URL \url{http://doi.acm.org/10.1145/2737924.2737981}.
+
+\bibitem[Warszawski and Bailis(2017)]{acidrain}
+Todd Warszawski and Peter Bailis.
+\newblock {ACIDRain: Concurrency-Related Attacks on Database-Backed Web
+  Applications}.
+\newblock In \emph{Proceedings of the 2017 ACM International Conference on
+  Management of Data}, SIGMOD '17, pages 5--20, New York, NY, USA, 2017. ACM.
+\newblock ISBN 978-1-4503-4197-4.
+\newblock \doi{10.1145/3035918.3064037}.
+\newblock URL \url{http://doi.acm.org/10.1145/3035918.3064037}.
+
+\bibitem[Zhu et~al.(2015)Zhu, Nori, and Jagannathan]{hezhuicfp}
+He~Zhu, Aditya~V. Nori, and Suresh Jagannathan.
+\newblock Learning refinement types.
+\newblock In \emph{Proceedings of the 20th ACM SIGPLAN International Conference
+  on Functional Programming}, ICFP 2015, pages 400--411, New York, NY, USA,
+  2015. ACM.
+\newblock ISBN 978-1-4503-3669-7.
+\newblock \doi{10.1145/2784731.2784766}.
+\newblock URL \url{http://doi.acm.org/10.1145/2784731.2784766}.
+
+\bibitem[Zhu et~al.(2016)Zhu, Petri, and Jagannathan]{hezhupldi}
+He~Zhu, Gustavo Petri, and Suresh Jagannathan.
+\newblock Automatically learning shape specifications.
+\newblock In \emph{Proceedings of the 37th ACM SIGPLAN Conference on
+  Programming Language Design and Implementation}, PLDI '16, pages 491--507,
+  New York, NY, USA, 2016. ACM.
+\newblock ISBN 978-1-4503-4261-2.
+\newblock \doi{10.1145/2908080.2908125}.
+\newblock URL \url{http://doi.acm.org/10.1145/2908080.2908125}.
+
+\end{thebibliography}

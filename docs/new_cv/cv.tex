@@ -1,0 +1,535 @@
+\documentclass[10pt]{article}
+\usepackage{charter}
+% \usepackage{sourcecodepro-type1-autoinst}
+% \usepackage{MinionPro}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage[flushleft,neverdecrease,neveradjust]{paralist}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{pifont}
+\pagestyle{empty}
+\usepackage{mdwlist}
+\usepackage[left=.5cm,top=2cm,right=.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\usepackage{hyperref}
+
+\definecolor{darkgrey}{HTML}{333333}
+\definecolor{grey}{HTML}{4D4D4D}
+\definecolor{lightgrey}{HTML}{999999}
+\definecolor{green}{HTML}{C2E15F}
+\definecolor{orange}{HTML}{FDA333}
+% \definecolor{purple}{HTML}{D3A4F9}
+\definecolor{purple}{HTML}{9B59B6}
+\definecolor{red}{HTML}{FB4485}
+\definecolor{blue}{HTML}{6CE0F1}
+\definecolor{zest}{HTML}{E67E22}
+\linespread{1}
+\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemii}{}
+
+\newcommand{\lbar}[1]{{\color{#1}\ding{118}}\hspace*{2pt}}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=Sepia,
+  linkcolor=RoyalBlue,
+  pdfborder= 0 0 0,
+  bookmarks=false,
+  pdftitle={Gowtham Kaki - CV},
+  pdfauthor={Gowtham Kaki},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={Gowtham Kaki, resume, cv, mathematics, cs,
+    computer science, phd, programming languages, concurrency, eventual
+    consistency, databases, weak isolation, functional
+    programming, Haskell, OCaml, Standard ML, MLton, PLDI, POPL, ICFP,
+    OOPSLA, SPLASH, ECOOP, weak consistency, axiomatic semantics,
+    operational semantics, mysql, postgres, cassandra, NoSQL
+}}
+
+% http://tex.stackexchange.com/questions/110236/is-there-a-way-to-get-reverse-numbering-on-the-enumerate-environment
+\newenvironment{benumerate}[2]{
+    \let\oldItem\item
+    \def\item{\addtocounter{enumi}{-2}\oldItem}
+    \begin{enumerate}[#2] \itemsep3pt
+    \setcounter{enumi}{#1}
+    \addtocounter{enumi}{1}}
+  {\end{enumerate}}
+
+\newenvironment{education}[4]
+{%\filbreak
+\item
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#2} \\
+    #3 & \small{#4} \\
+  \end{tabular*}
+  % \begin{itemize} \setlength{\parskip}{-1pt}\item
+  }
+  { % \end{itemize}
+}
+
+\newcommand{\service}[1]{\item $\bullet$ \hspace{1ex}\parbox{7.2in}{#1}}
+
+\newcommand{\positionnodesc}[2]
+{%\filbreak
+\item
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#2}
+  \end{tabular*}
+}
+
+\newenvironment{position}[4]
+{%\filbreak
+\item
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#2} \\
+    \hspace{1ex} #3 & \small{#4} \\
+  \end{tabular*}
+  % \begin{itemize} \setlength{\parskip}{-1pt}\item
+  }
+  { % \end{itemize}
+}
+
+\newenvironment{publication}[5]
+{ \item
+  \begin{tabular*}{7.5in}{p{6.3in}@{\extracolsep{\fill}}r}
+    \href{#1}{\textbf{#2}} & \textit{#3}\\ #4 &\\ \textit{#5}&\\
+  \end{tabular*}
+} {}
+
+\newenvironment{publicationNote}[6]
+{ \item
+  \begin{tabular*}{7.5in}{p{6.3in}@{\extracolsep{\fill}}r}
+    \href{#1}{\textbf{#2}} & \textit{#3}\\ #4 &\\ \textit{#5}\\ \textbf{#6} \\
+  \end{tabular*}
+} {}
+
+\newenvironment{talk}[4]
+{ \item
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#2} \\
+    \hspace{1ex} #3 & \small{#4}
+\end{tabular*}
+} {}
+
+\newcommand{\reference}[7]{%
+  \begin{tabular}{@{}l@{}}%
+    \textbf{#1}\\%
+    #2\\%
+    #3\\%
+    #4\\%
+    #5\\%
+    #6\\%
+    \href{mailto:#7}{#7}%
+  \end{tabular}%
+}
+
+\newcommand{\referencesmall}[6]{%
+  \begin{tabular}{@{}l@{}}%
+    \textbf{#1}\\%
+    #2\\%
+    #3\\%
+    #4\\%
+    #5\\%
+    \href{mailto:#6}{#6}%
+  \end{tabular}%
+}
+
+
+\newcommand{\refrow}[2]{%
+\item \begin{tabular*}{0.9\textwidth}{@{}p{3.0in}@{\hspace*{0.3in}}p{3.0in}@{}} #1 & #2 \end{tabular*}
+\vspace*{1ex}}
+
+\newenvironment{region}[3]{%
+  \vspace*{0.5ex}
+% {\scalebox{1.4}{\textbf{#1}}}
+  {{\textbf{\large{#1}}}}
+  \begin{benumerate}{#3}{\color{RoyalBlue}#2}}
+  {\end{benumerate}\vspace{0.8ex}}
+
+\newenvironment{nonumregion}[1]{%
+\begin{region}{#1}{}{1}}
+{\end{region}}
+
+\newenvironment{itemregion}[1]{
+  \vspace*{0.5ex}
+% {\scalebox{1.4}{\textbf{#1}}}
+  {{\textbf{\large{#1}}}}
+  \begin{itemize}\itemsep1pt}
+  {\end{itemize}\vspace{0.8ex}}
+
+\newcommand{\oral}{{\color{PineGreen}\textsc{oral}}}
+\newcommand{\poster}{{\color{BurntOrange}\textsc{poster}}}
+
+\color{darkgrey}
+\begin{document}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \hypersetup{urlcolor=zest}
+  \node [rectangle, fill=grey, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+  \node [anchor=center] (name) at (box) {%
+    \color{white}%
+    \begin{tabular*}{7.5in}{@{\extracolsep{\fill}}lr}
+      \\
+      \textbf{\huge{Curriculum Vitae}} & \today\\*[2ex]
+      \textbf{\large{Gowtham Kaki}} & {\url{http://gowthamk.github.io}}\\[0.5ex]
+      {305 N University Street, LWSN 2116N} & {\href{mailto:gkaki@purdue.edu}{gkaki@purdue.edu}}\\
+      {Purdue University, West Lafayette, 47906, USA} & {+1 201 417 1775}\\
+    \end{tabular*}
+  };
+\end{tikzpicture}
+\vspace{0.9in}
+
+\hypersetup{urlcolor=zest}
+
+\begin{nonumregion}{\lbar{Mahogany}Research Focus}
+\item \hspace{1ex} \parbox{7.3in}{Automatic Reasoning for
+  Data-Intensive Application Safety.}
+\end{nonumregion}
+
+\begin{nonumregion}{\lbar{Mahogany}Education}
+  \begin{education}{PhD --- Computer Science}
+    {Aug 2019}
+    {}
+    {Purdue University, USA}
+    \vspace{-3ex}
+    \item
+      \begin{itemize}
+      \item Thesis:
+        \href{http://gowthamk.github.io/docs/thesis.pdf}{\textbf{Automatic
+          Reasoning Techniques for Non-Serializable \\
+          \quad Data-Intensive Applications}}
+        \vspace{-0.5ex}
+      \item Advisor: Suresh Jagannathan
+      \end{itemize}
+  \end{education}
+  \begin{education} {Master of Science --- Computer Science}
+    {May 2016}
+    {}
+    {Purdue University, USA}
+  \end{education}
+
+\item
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{Bachelor of Engineering (Hons.) --- Computer Science} & \textit{Jul 2009} \\
+     & \small{BITS Pilani, India} \\
+  \end{tabular*}
+  \vspace{-12pt}
+
+\end{nonumregion}
+
+\begin{nonumregion} {\lbar{Mahogany}Experience}
+	\positionnodesc{Visiting Assistant Professor, Purdue University}{Aug 2019 -- present}
+  \positionnodesc{Google Research Fellow, Purdue University}{May 2018 -- Jul 2019}
+  %\begin{position}{Chief Technology Officer, OCaml Labs Consultancy Ltd.}{Aug 2016 -- present}{}{Cambridge, UK}
+  %  {Focussed on building the OCaml Platform: infrastructure to build, test, document and deploy OCaml-based software.}
+  %\end{position}
+  \begin{position}{Research Assistant, Purdue University}{Jun 2013 -- Apr 2018}
+		{Advisor: Suresh Jagannathan}{}
+  \end{position}
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{Teaching Assistant, Purdue University} & \small{}\\
+    \hspace{1ex} Introduction to Programming in C (CS240) & \textit{Aug 2012 -- Dec 2012} \\
+    \hspace{1ex} Programming Languages (CS565) & \textit{Jan 2013 -- May 2013} \\
+    \end{tabular*}
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+      \textbf{Research Intern, Microsoft Research, India} & \textit{May 2014 -- Aug 2014, \&}\\
+    \hspace{1ex} {Advisor: G Ramalingam} & \textit{Jun 2015 -- Aug 2015} \\
+    \end{tabular*}
+
+  \positionnodesc{Software Engineer, Yahoo!, India}{Jul 2009 -- Jul 2011}
+
+\end{nonumregion}
+
+\begin{itemregion} {\lbar{Mahogany}Major Recognitions}
+  \service{\href{https://ai.googleblog.com/2018/04/announcing-2018-google-phd-fellows-for.html}{Google
+  PhD Fellowship 2018} for exceptional research in Computer Science
+  and related disciplines.}
+  \service{\href{https://www.cs.purdue.edu/news/articles/2019/2019-cs-award-banquet.html}{Maurice
+  H. Halstead Memorial Award} for outstanding research in Software Engineering, Purdue University, 2019.}
+  \service{\href{https://www.bitsaa.org/page/30U30}{``30 under 30''}
+  award for outstanding accomplishments by a young alumnus, BITS Alumni Association (BITSAA), 2018. }
+\end{itemregion}
+
+% \begin{itemregion} {\lbar{blue}Service}
+%   \service{Organizer, \href{http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172}{Dagstuhl Seminar on "Algebraic Effect Handlers go Mainstream"}, Apr 2018.}
+%   \service{Program Committee member: PMLDC@ECOOP 2017, Off-the-beaten track (OBT) 2017, OCaml Workshop 2016, SPLASH-MARC symposium, 2013.}
+%   \service{Artifact Evaluation Committee member: ICFP 2018, PLDI 2015, PPoPP/CGO 2016.} \vspace{0.5ex}
+%   \service{Reviewer: ECOOP, TODS, JFP, POPL, ICFP, ASPLOS, TLDI, Concurrency and Computation:
+%   Practice and Experience, Software: Practice and Experience.}
+%   \service{Organizer for Darwin College Science Seminar Series, Oct 2015 -- May 2017.}
+% \end{itemregion}
+
+\begin{region} {\lbar{Mahogany}Journal Publications}{{J}1}{4}
+
+	\begin{publication}{http://gowthamk.github.io/docs/mrdt.pdf}
+		{Mergeable Replicated Data Types}
+    {Oct 2018}{Gowtham Kaki, Swarn Priya, KC Sivaramakrishnan, Suresh Jagannathan}
+		{Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2019}
+  \end{publication}
+
+	\begin{publication}{http://gowthamk.github.io/docs/q9.pdf}
+		{Safe Replication through Bounded Concurrency Verification}
+    {Nov 2018}{Gowtham Kaki, Kapil Earanky, KC Sivaramakrishnan, Suresh Jagannathan}
+		{Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2018}
+  \end{publication}
+
+  \begin{publication}{http://gowthamk.github.io/docs/popl18.pdf}
+    {Alone Together: Compositional Reasoning and Inference for Weak Isolation}
+    {Jan 2018}
+    {Gowtham Kaki, Kartik Nagar, Mahsa Najafzadeh, Suresh Jagannathan}
+    {Proceedings of the ACM on Programming Languages (PACMPL), issue POPL 2018}
+  \end{publication}
+
+  \begin{publication}{http://gowthamk.github.io/docs/quelea_ieee16.pdf}
+    {Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores}
+    {Mar 2016}{KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan}
+    {IEEE Data Engineering Bulletin, 39(1): 52 -- 64}
+  \end{publication}
+\end{region}
+
+\begin{region} {\lbar{Mahogany}Conference Publications\footnote{Journal
+  publications J2-J4 are also published in the corresponding conference
+  proceedings. They are not repeated.}}{{C}1}{5}
+
+	\begin{publication} {http://gowthamk.github.io/docs/snapl19.pdf}
+		{Version Control Is For Your Data Too}
+		{May 2019} {Gowtham Kaki, KC Sivaramakrishnan, Suresh Jagannathan}
+		{Summit on Advances in Programming Languages (SNAPL 2019)}
+  \end{publication}
+
+	\begin{publication} {http://gowthamk.github.io/docs/ecoop2018.pdf}
+		{Safe Transferable Regions}
+		{Jul 2018} {Gowtham Kaki, G Ramalingam}
+		{European Conference on Object-Oriented Programming (ECOOP 2018)}
+  \end{publication}
+
+  \begin{publication} {http://gowthamk.github.io/docs/quelea.pdf}
+    {Declarative Programming over Eventually Consistent Data Stores}
+    {Jun 2015} {KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan}
+    {International Conference on Programming Language Design and
+    Implementation (PLDI 2015)}
+  \end{publication}
+
+  \begin{publication}{http://gowthamk.github.io/docs/icfp2014.pdf}
+    {A Relational Framework for Higher-Order Shape Analysis}
+    {Sep 2014}{Gowtham Kaki, Suresh Jagannathan}
+    {International Conference on Functional Programming (ICFP 2014)}
+  \end{publication}
+
+  \begin{publication}{https://www.researchgate.net/publication/224127688_Novel_adaptive_scheduling_algorithm_for_computational_grid}
+    {Novel adaptive scheduling algorithm for computational grid}
+    {Jan 2010}{Sunita Bansal, Gowtham Kaki, Chittaranjan Hota}
+    {Internet Multimedia Services Architecture and Applications (IMSAA'09)}
+  \end{publication}
+
+\end{region}
+
+
+\begin{region} {\lbar{Mahogany}Workshop Publications \& Tech Reports}{{W}1}{5}
+
+	\begin{publication}{https://gowthamk.github.io/docs/papoc18.pdf}
+		{Fine-grained distributed consistency guarantees with effect orchestration}
+		{Apr 2018}{Kia Rahmani, Gowtham Kaki, Suresh Jagannathan}
+    {Principles and Practice of Consistency for Distributed Data (PaPoC 2018)}
+  \end{publication}
+
+  \begin{publication}{http://kcsrk.info/papers/mergeable_types_ml17.pdf}
+    {Mergeable Types}
+    {Sep 2017}{Gowtham Kaki, KC Sivaramakrishnan, Samodya Abeysiriwardane, Suresh Jagannathan}
+    {ML Workshop (ML 2017)}
+  \end{publication}
+
+	\begin{publicationNote} {http://kcsrk.info/papers/dali_snapl17.pdf}
+    {DaLi : Database as a Library}
+    {May 2017} {Gowtham Kaki, KC Sivaramakrishnan, Thomas Gazagnaire, Anil Madhavapeddy, Suresh Jagannathan}
+    {Summit on Advances in Programming Languages (SNAPL 2017)}
+    {Oral Presentation}
+  \end{publicationNote}
+
+  \begin{publication}{http://purduepl.github.io/docs/maglev.pdf}
+    {A Lightweight Symbolic Execution Framework for Ruby-on-Rails}
+    {Jun 2016}{Gowtham Kaki} {PLDI Student Research Competition (PLDI SRC 2016)}
+  \end{publication}
+
+  \begin{publication}{https://www.microsoft.com/en-us/research/publication/safe-memory-regions-big-data-processing}
+    {Safe Memory Regions for Big Data Processing}
+    {Jan 2016}{Gowtham Kaki, G Ramalingam, Kapil Vaswani, Dimitrios
+    Vytiniotis} {Microsoft Tech Report}
+  \end{publication}
+
+\end{region}
+
+\begin{itemregion}{\lbar{Mahogany}Teaching}
+  \service{Course Instruction at Purdue University}
+  \begin{itemize}
+    \service{Software Engineering (CS307), Fall 2019}
+  \end{itemize}
+
+  \service{Teaching Assistantship at Purdue University}
+  \begin{itemize}
+    \service{Introduction to Programming in C (CS240), Aug 2012 -- Dec 2012.}
+    \service{Programming Languages (CS565), Jan 2013 -- May 2013.}
+  \end{itemize}
+\end{itemregion}
+
+\newpage
+\begin{itemregion}{\lbar{Mahogany}Talks}
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Mergeable Replicated Data Types} \\
+        \hspace{1ex} OOPSLA 2019, Athens & \textit{Oct 2019} \\
+        \hspace{1ex}  Shonan Seminar on Programming Language Support for
+          Data-Intensive Applications, Japan & \textit{Jul 2019}\\
+        \end{tabular*}
+
+	\begin{talk} {Automatic Reasoning in the Absence of Serializability}
+		{Jul 2019}  {Phd Defense, Purdue University} {}
+  \end{talk}
+
+%%\begin{talk} {Relational Reasoning for Mergeable Replicated Data Types}
+%%	{Jul 2019}  {Shonan Seminar on Programming Language Support for
+%%  Data-Intensive Applications, Japan} {}
+%%\end{talk}
+
+	\begin{talk} {Version Control Is For Your Data Too}
+    {May 2019}  {SNAPL 2019, Brown University} {}
+  \end{talk}
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Safe Replication through Bounded Concurrency Verification} \\
+        \hspace{1ex} OOPSLA 2018, Boston & \textit{Nov 2018} \\
+        \hspace{1ex} Purdue PL (PurPL) Seminar  & \textit{Nov 2018}\\
+        \hspace{1ex} Mid-West PL Summit, University of Wisconsin,
+        Madison  & \textit{Oct 2018}
+        \end{tabular*}
+   
+  \begin{talk} {Safe Transferable Regions}
+    {Jul 2018}  {ECOOP 2018, Amsterdam} {}
+  \end{talk}
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Alone Together: Compositional Reasoning and Inference
+        under Weak Isolation} \\
+        \hspace{1ex} POPL 2018, Los Angeles & \textit{Jan 2018} \\
+        \hspace{1ex} Mid-West PL Summit, Indiana University,
+        Bloomington  & \textit{Dec 2017}
+        \end{tabular*}
+   
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Mergeable Types} \\
+        \hspace{1ex} ML Workshop 2017, Oxford, UK & \textit{Sep 2017} \\
+        \hspace{1ex} Purdue PL (PurPL) Seminar & \textit{Aug 2017} \\
+        \end{tabular*}
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Quelea: Declarative Programming under Eventual
+        Consistency} \\
+        \hspace{1ex} PLDI 2015, Portland & \textit{Jun 2015} \\
+        \hspace{1ex} Mid-West Verification, University of
+          Illinois, Urbana-Champaign & \textit{Oct 2015} \\
+        \hspace{1ex} Microsoft Research India Intern Day, Bangalore & 
+          \textit{Jul 2015} \\
+        \end{tabular*}
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Catalyst: A Relational Framework for Higher-Order
+        Shape Analysis} \\
+        \hspace{1ex} Dagstuhl Seminar on Verification Tools for
+        Functional Programs, Dagstuhl, Germany & \textit{Apr 2016} \\
+        \hspace{1ex} Mid-West Verification, University of
+          Missouri, Columbia & \textit{Oct 2014} \\
+        \hspace{1ex} ICFP 2014, Gothenburg, Sweden & \textit{Sep 2014} \\
+        \end{tabular*}
+
+\end{itemregion}
+
+\begin{itemregion} {\lbar{Mahogany}Service}
+  \service{Artifact Evaluation Committee (AEC) Member: PLDI'16,
+      ICFP'17, ICFP'18, ECOOP'19, and PLDI'19}
+  \service{Organizer, Purdue PL (PurPL) Reading Group, Oct 2013 -- Dec 2016.}
+  \service{Expert Advisor, \href{http://gradright.com}{GradRight Inc.}, Oct 2018 -- Aug 2019}
+  \service{Student Volunteer, PLDI'16}
+\end{itemregion}
+
+\begin{itemregion}{\lbar{Mahogany}Travel Grants \& Scholarships}
+  \service {ACM SIGPLAN PAC funding: ICFP'14 and OOPSLA'18.}
+  \service {ECOOP travel funding, 2018.}
+  \service {ACM SIGPLAN PLMW scholarship, 2014.}
+  \service {BITS Pilani merit-cum-need scholarship, Aug 2005 -- Dec 2008.}
+\end{itemregion}
+
+
+\ifdefined\genrefs
+
+\newpage
+
+\begin{nonumregion}{\lbar{Mahogany}References}
+  \refrow{
+    \reference{Suresh Jagannathan}
+    {Samuel D. Conte Professor of Computer Science}
+    {Department of Computer Science}
+    {Purdue University}
+    {305 N University St}
+    {West Lafayette, IN 47906, USA}
+    {suresh@cs.purdue.edu}
+  }{
+    \reference{Tiark Rompf}
+    {Assistant Professor}
+    {Department of Computer Science}
+    {Purdue University}
+    {305 N University St}
+    {West Lafayette, IN 47906, USA}
+    {tiark@purdue.edu}
+  }
+
+\refrow{
+  \reference{G Ramalingam}
+  {Principal Researcher \& ACM Fellow}
+  {Programming Languages and Tools Group}
+  {Microsoft Research India}
+  {Vigyan, No. 9, Lavelle Road}
+  {Bengaluru, 560001, India}
+  {grama@microsoft.com}
+}{
+  \reference{KC Sivaramakrishnan}
+  {Assistant Professor}
+  {Department of Computer Science \& Engineering}
+  {Indian Institute of Technology (IIT) Madras}
+  {IIT P.O., Chennai, 600036}
+  {Tamil Nadu, India}
+  {kcsrk@cse.iitm.ac.in}
+}
+
+
+\refrow{
+  \reference{Ranjit Jhala}
+  {Professor}
+  {Department of Computer Science \& Engineering}
+  {University of California, San Diego}
+  {9500 Gilman Drive}
+  {La Jolla, CA 92093}
+  {jhala@cs.ucsd.edu}
+}{
+% \reference{KC Sivaramakrishnan}
+% {Assistant Professor}
+% {Department of Computer Science \& Engineering}
+% {Indian Institute of Technology (IIT) Madras}
+% {IIT P.O., Chennai, 600036}
+% {Tamil Nadu, India}
+% {kcsrk@cse.iitm.ac.in}
+}
+\end{nonumregion}
+
+\fi
+
+\end{document}
+
+%  LocalWords:  lr Siddharth Narayanaswamy Compositionality Advisor Siskind Yu
+%  LocalWords:  Muniyandi Manivannan IIT Manya Sep Unseeability Unseeable ACS
+%  LocalWords:  Barbu Michaux Compositional JAIR IEEE PAMI Cao CVPR RoyalBlue
+%  LocalWords:  Burchill Coroian Fidler Mussman Salvi Shangguan Waggoner Zhang
+%  LocalWords:  Uncertainity UAI ICRA VR Laparoscopic Devasahayam MMVR Xiong
+%  LocalWords:  Corso Fellbaum elie Malaia Pearlmutter Talavage IPAB JT
+%  LocalWords:  Colloquia AAAI ICDL PRL InnerVision Cohn Jos RUBIC Heavilon

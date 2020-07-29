@@ -1,0 +1,276 @@
+Computing has come a long way since Von Neumann introduced his
+stored-program model of a computer in 1945. Von Neumann's architecture
+is fundamentally \emph{compute-centric} -- a Central Processing Unit
+(CPU) performs all the computation by periodically fetching data and
+programs from a passive main memory or a secondary storage. Implicit
+in this model is the assumption that it is possible to tread a
+computation's data in its entirety through a ``central'' processor to
+a compute a single value that is the canonical result of a
+computation. This view of computing stands in stark contrast to the
+reality of modern applications, which are fundamentally
+\emph{data-centric} as opposed to compute-centric -- they operate on
+large amounts of data organized into multiple data banks, e.g.,
+\emph{databases}, \emph{shards}, and \emph{replicas}, and perform
+computations that are essentially distributed in nature to compute
+results for which no canonical answer exists. Despite such fundamental
+differences in the nature of computing, applications today are
+nonetheless programmed using the same language abstractions and
+programming techniques that trace their origins to the Von Neumann
+model. The resultant \emph{impedance mismatch} between the computation
+performed and the programming model employed has been a consistent
+source of negative impact on the security, reliability, and
+performance of data-centric applications. For instance, coercing
+database transactions, which are concurrent by their very nature, into
+Von Neumann model of computing, which emphasizes an orderly
+execution of instructions, has resulted in an impedance mismatch that
+effectively exposed several database-backed commercial applications
+to concurrency-related attacks~\cite{acidrain}. One such attack has
+been particularly notorious for it has led to the theft of over
+half-a-million dollars, and subsequent closure of an otherwise
+well-performing Bitcoin exchange named Flexcoin~\cite{poloniexbug}.
+More such examples abound in literature and in popular press.
+
+% requires explicit enforcement of a concurrency control mechanism
+% called Serializability. By guaranteeing equivalence to an orderly
+% execution of transactions, Serializability lets application
+% developers stay within the familiar confines of Von Neumann model,
+% and has therefore gained universal acceptance as the de facto
+% standard of database systems correctness. In practice however,
+% database systems rarely enforce serializability owing to its
+% expensive nature, choosing instead to employ lenient forms of
+% concurrency control 
+
+\section*{My Research}
+
+As evident from above, there is a need for novel computational models,
+language abstractions and programming techniques that better suit the
+nature of modern data-centric applications. Developing such
+programming infrastructure is indeed one of the focal points of my
+research, in particular my most recent work on distributed programming
+models and replicated data structures~\cite{oopsla19,snapl19,thesis}.
+The more pressing need however is for automated reasoning techniques,
+program analyses, and compilation tools that work with the current
+generation of data-centric applications, helping them meet the ever so
+strict goals of scalability and availability \emph{without}
+compromising security and robustness. Developing such automated
+reasoning infrastructure is another focal point of my research, and a
+unifying theme behind most of my
+work~\cite{popl18,oopsla18,ecoop18,icfp14,pldi15}. \textbf{At a high level, my
+research falls at the intersection of programming languages, software
+engineering, databases, and distributed systems. In particular, I aim
+to solve the most pressing problems in the latter two domains by
+developing novel approaches that build on top of the conventional
+wisdom and technical know-how of the former two}. The relevance
+of my work to the theory and practice of contemporary data-centric
+computing has been recognized through a generous research fellowship
+from Google. In what follows, I describe my research at a high-level
+categorizing it into three broad themes, and conclude by briefly
+describing my ideas for future research.
+
+\section*{Theoretical Foundations of Data Storage and Processing
+Systems}
+
+The theoretical and mental models of data storage systems prevalent
+among the programming community are often too simple to match the
+reality of such systems. For instance, developers commonly assume
+relational databases, such as MySQL and PostgreSQL, to be
+ACID-compliant with Serializable transactions, whereas in reality they
+are not~\cite{bailishotos}. To accentuate performance, database
+systems routinely drop Serializability in favor of weaker
+\emph{isolation} guarantees that do \emph{not} mask the concurrent
+nature of database transactions. This mismatch between expectation and
+reality results in subtle bugs that manifest as serious violations of
+safety~\cite{poloniexbug,acidrain}. The problem is aggravated in case
+of distributed ``NoSQL'' data stores, which, by construction, admit
+\emph{weakly-consistent} executions that defy the commonsense of
+programming.  If programmers were to effectively navigate the complex
+reality of modern data storage systems, novel reasoning techniques and
+automated tool support are essential. Such tools and techniques should
+necessarily be based on sound proof theory and accurate formal models
+of modern data storage systems, which are among the major contribution
+of my research.  In~\cite{popl18}, I present the first ever high-level
+formal semantics of \emph{weak isolation} as it occurs in the real
+world. Based on this semantics, I develop a deductive proof system
+that admits rigorous proofs of correctness for database-backed
+applications composed of weakly-isolated transactions.  In a follow-up
+to this work~\cite{oopsla18}, I extend the formal treatment to
+distributed ``NoSQL'' data stores and their applications composed of
+weakly-consistent operations. A distinguishing feature of both the
+formalisms is their remarkable simplicity notwithstanding their
+comprehensive treatment of complex real-world data systems. Such
+simplicity is indeed what makes the formal reasoning to be automated
+and applied at scale to identify concurrency-related vulnerabilities
+and verify correctness of realistic (distributed) database
+applications, as shall be explained in the next subsection.
+
+My work in theoretical foundations extends to data processing systems
+as well. In~\cite{ecoop18}, I demonstrate how stream processing
+systems (Microsoft's Naiad in particular) can take advantage of
+GC-free memory regions to significantly increase overall
+throughput of the system without compromising memory safety.
+The region type system I present in the paper, albeit grounded in
+sound theory, is an exercise in pragmatism for it strikes a fine
+balance between static type checking and lightweight run-time checks
+to ensure that the type system does not ``get in the way'' of Naiad's
+expert developers. Such productive collaborations with systems and
+database researchers is, I believe, how my research can have the most
+impact going forward.
+
+\section*{Automatic Verification and Synthesis for Data-Centric
+Applications}
+
+My theoretical work in~\cite{popl18, oopsla18, ecoop18} gave me an
+excellent framework within which I could develop novel techniques in
+automated verification, modelchecking, type inference, and program
+synthesis for data-centric applications. Building on the proof system
+in~\cite{popl18}, I built a tool called \acidifier that can
+automatically analyze MySQL and PostgreSQL applications with
+weakly-isolated transactions to either detect concurrency-related
+vulnerabilities or certify them correct.  \acidifier can  also infer
+the weakest (hence most scalable) isolation configurations at which it
+is safe to run these applications. For instance, for the TPC-C OLTP
+benchmark, \acidifier discovered that none of the transactions need to
+be run at Serializable isolation in order to guarantee the correct
+behavior, which turned out to be accurate. Another tool I built,
+called \qnine is based on a novel operational semantics of
+weakly-consistent replicated data stores I present
+in~\cite{oopsla18}, and extends automated (bounded) verification to
+distributed ``NoSQL'' applications. \qnine analyzes distributed
+applications under a finite concurrency bound by reducing the
+application logic and data store semantics into set-theoretic
+constraints that can be very efficiently solved using off-the-shelf
+SMT solvers. This approach helped \qnine discover a range of
+weak-consistency bugs in large-scale applications, including the
+distributed variants of TPC-C and TPC-E OLTP benchmarks in just under
+two minutes, and subsequently repair the applications through
+selective consistency strengthening.
+
+Beyond verification, my work also spans synthesis of replicated data
+types (RDTs), such as replicated queues and document trees, which are
+the building blocks of an emerging class of peer-to-peer and
+interactive distributed applications, including blockchains and
+collaborative editors. The theoretical foundations were laid
+in~\cite{icfp14}, where I show that any functional data structure can
+be reduced to a collection of \emph{structural relations} for
+which automatic reasoning is decidable. In~\cite{icfp14}, I built a
+dependent type system called \catalyst that performs the
+aforementioned relational reasoning to automatically verify the
+correctness of data structure transformations, such as AST
+transformations in a compiler. The ideas were further developed
+in~\cite{oopsla19} to automatically \emph{synthesize} data structure
+transformations, in particular a \emph{merge} transformation that
+merges concurrent versions of a given data type in the context of
+their common ancestor. This crucial result made it possible to
+automatically \emph{derive} replicated data types from first
+principles, thus providing a simpler and more principled alternative
+to the currently-popular variants of replicated data types that insist
+on commutativity of operations (i.e., CRDTs).  The synthesis approach
+was used in practice to automatically derive a standard library of \emph{mergeable}
+replicated data types (MRDTs) from ordinary OCaml data types, which
+were then used to build decentralized (peer-to-peer) variants of large
+OLTP benchmarks~\cite{oopsla19}.
+
+\section*{Novel Programming Models for Data-Centric Computation}
+
+Another focal point of my research work is the development of novel
+language abstractions and programming models that better suit the
+nature of data-centric computing. I made two major contributions
+towards this end. In~\cite{pldi15}, my collaborators and I present a
+Haskell domain-specific language (DSL) called \quelea that liberates
+application development on weakly-consistent ``NoSQL'' stores
+from the Von Neumann style. \quelea starts with a clean-slate design
+where, unlike the Von Neumann model, \emph{no} order is guaranteed
+between any two operations, i.e., no consistency is assumed
+whatsoever. Instead, applications are required to \emph{declare} their
+consistency requirements as a series of high-level ordering
+constraints on their operations, which will then be then be compiled
+down to efficient low-level code that handles systems and networking
+concerns (analogous to how declarative Haskell programs are compiled
+to efficient low-level imperative code by GHC). As we demonstrate
+in~\cite{pldi15}, \quelea drastically reduces the effort required to
+build highly-scalable distributed applications on top of off-the-shelf
+NoSQL data stores, e.g., Cassandra.
+
+The second contribution is an OCaml DSL, named \carmot, for building
+peer-to-peer decentralized applications~\cite{snapl19,oopsla19}. Key
+to \carmot is the observation that a distributed computation (on data)
+is not fundamentally different from the collaborative development (of
+source code), hence familiar version control protocols, e.g, Git,
+which have been successfully used to manage the latter, can be
+profitably employed in the context of the former. Indeed, \carmot lets
+programmers orchestrate a distributed computation very much like a Git
+workflow, namely by forking branches, committing concurrent versions,
+and periodically merging versions to keep the branches in sync. As we
+demonstrate in~\cite{snapl19,oopsla19}, the novel version
+control-inspired programming model of \carmot is indispensable in
+bringing the benefits of Mergeable Replicated Data Types (MRDTs), in
+particular automatic synthesis, to fully-decentralized data-centric
+applications, taking us one step closer to the goal of automatically
+deriving such applications from their sequential counterparts.
+
+\section*{Future Work}
+
+I see many opportunities for future research in data-centric
+computing, which I would like to pursue in collaboration with
+researchers in Systems, Databases, Cryptography, and Machine Learning.
+I sketch a few possibilities below.
+
+{\itshape\color{MidnightBlue}Formal models of complex software systems}
+In~\cite{popl18} and~\cite{oopsla18}, I demonstrate the utility of
+employing simple formal models of (distributed) database systems in
+lieu of their complex implementations to reason about application
+safety. I see this approach being useful in the context of file
+systems, lock-free data structures, data processing libraries --
+basically any real-world software system that accrues code and
+optimizations from decades of engineering effort, and becomes too
+complex to be analyzed directly by the verification tools tasked with
+establishing the safety of their clients. Building high-fidelity
+formal models of such systems, however, requires considerable domain
+knowledge, which is often scattered through API and informal
+documentation, unit tests, configuration files, logs, and commit
+messages. Mining structured knowledge from these sources, and (mostly)
+automating the task of synthesizing formal models that act as proxies
+for these systems during verification is a challenging-yet-worthwhile
+exercise, and one that I plan to take up in near future.
+
+{\itshape\color{MidnightBlue}Programming models for
+fully-decentralized and privacy-conscious computing}  Users of
+internet services are becoming increasingly vocal about their
+(justifiable) privacy concerns on the internet. Ambitious initiatives
+have sought to address this issue by promoting full decentralization in
+application and network protocol design (e.g., Blockchains and IPFS),
+and by putting people in charge of their data in their own premises
+(e.g., TRVE Data).  Well-intended as they may be, such initiatives
+nonetheless have systemic issues for there are currently no languages
+and tools that can bridge the wide chasm between the limited human
+cognition of the programmer, and planet-scale workings of the
+underlying system. In~\cite{snapl19}, I show that a distributed
+programming model inspired by version control workflow can
+significantly reduce the cognitive burden involved in building highly
+decentralized applications. However, the questions about performance
+(at internet-scale) and privacy are yet unanswered, and addressing
+them may require a significant re-think of how computation should be
+performed over the internet. I would like to collaborate with Systems,
+Database, and Cryptography researchers towards answering this
+question.
+
+{\itshape\color{MidnightBlue} Distributed vector representations of
+data-centric computations} Following the runaway success of
+``word2vec'' in natural language processing, there have been attempts
+to build distributed vector representations of code snippets
+(``code2vec'') with the aim of comparing and predicting the semantic
+properties of code. While the approach is promising, the success so
+far has been limited owing to the high semantic complexity of
+general-purpose computations in a Turing-complete language compared to
+words in a natural language. I believe more success can be had by
+restricting our attention to data-centric computations of which most
+are expressible in a Turing-\emph{incomplete} language such as Datalog (A
+case in the point is SQL, which is a subset of Datalog. Another
+example is the TPC-C benchmark we used in evaluating
+\acidifier~\cite{popl18}, which was completely written in a
+Turing-incomplete OCaml DSL). I am therefore interested in evaluating
+the possibility of building distributed vector representations of
+data-centric computations expressed in (a variant of) Datalog --
+``Datalog2Vec'', in collaboration with researchers in Databases, 
+Machine Learning, and NLP.
+
