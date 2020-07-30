@@ -3,81 +3,95 @@ layout: page
 title: Research
 permalink: /research/
 ---
+My research statement is [here]({% link docs/research-statement.pdf %}).
+Few research problems where I am actively seeking student involvement
+are described below (in no particular order). 
 
-{% include image.html url="/images/falklands-rally-1982.jpg" caption="Argentine citizens rally in April 1982 at May Square in Buenos Aires, demonstrating support for their government's recent invasion of the British-held Falkland Islands. (Panta Astiazaran, AFP, Getty Images)" width=400 align="right" %}
+<h2> Distributed Program Verification and Synthesis</h2>
 
-My research has to date focused on two broad sets of question. The first and most active part of my research agenda focuses on the effect of external threat, especially to the territorial integrity of the state, on the political attitudes of citizens. Here, I have a keen interest in what happens to citizen attitudes toward the government and what type of authority the government should have. The second part of my research agenda is rooted in the peace science approach to the study of international conflict. Here, my research has explored either the conditions of militarized interstate dispute (MID) onset and escalation or how we should understand code these events. In addition, I have also published various items on political topics of interest to me in light of current events. I offer [a three-page research statement](/docs/svm-research-statement.pdf) that summarizes and contextualizes my different research agendas. [My CV](http://svmiller.com/cv/) contains some more information about works in progress and where some of these works in progress are in the peer review process.
-
-<!-- I also provide titles for some working papers and works in progress below. I provide full links for these papers when I believe they are ready for peer review. Feel free to contact me if you are interested in some of these projects. [My CV](http://svmiller.com/cv/) contains more information about where some of these projects are in the peer review process.
-
-I also offer [a three-page research statement](/docs/svm-research-statement.pdf) that summarizes and contextualizes my different research agendas. -->
- 
-<hr style="clear:both;visibility: hidden;" />  
-
-## Original Data
-
-[*Gibler-Miller-Little (GML) MID Data*](/gml-mid-data/) ![Version 2.2.1](https://img.shields.io/badge/release-v2.2.1-blue.svg) <br /> This page contains links to download non-directed/directed dyad-year militarized interstate dispute (MID) data derived from my co-authored project published in [*International Studies Quarterly*](https://academic.oup.com/isq/article-abstract/60/4/719/2918882/An-Analysis-of-the-Militarized-Interstate-Dispute?redirectedFrom=fulltext).
-
-## Publications
-
-Gibler, Douglas M., Steven V. Miller, and Erin K. Little. Forthcoming. "[The Importance of Correct Measurement](https://doi.org/10.1093/isq/sqaa011)." *International Studies Quarterly*.
-
-Miller, Steven V. Forthcoming. "[Economic Anxiety or Ethnocentrism? An Evaluation of Attitudes Toward Immigration in the U.S. From 1992 to 2017](/research/economic-anxiety-ethnocentrism-immigration-1992-2017/)." *Social Science Journal.*
-
-Miller, Steven V. and Nicholas T. Davis. Forthcoming. "[The Effect of White Social Prejudice on Support for American Democracy](/research/white-social-prejudice-support-american-democracy/)." *Journal of Race, Ethnicity, and Politics.*
+Distributed systems are workhorses of internet-era computing. While
+distributed computing has become ubiquitous, the complexity of
+programming however has remained high, resulting in deep and subtle
+bugs that are sometimes be exploited to the detriment of
+safety-critical systems. Verification preempts most such bugs by
+producing a machine-certified proof that the system satisfies its
+specification, however the cost of manual verification remains
+exceedingly high. Modelchecking (à la TLA+) is a low-cost
+mostly-automated alternative to verification, but modelchecking is
+effective only on specifications (or model implementations), leaving
+open the possibility of bugs in real implementations. In this context,
+it is pertinent to ask the following question:
 
 
-Miller, Steven V. 2019. "[What Americans Think About Gun Control: Evidence from the General Social Survey, 1972-2016](/research/what-americans-really-think-about-gun-control/)". *Social Science Quarterly* 100(1): 272-288.
+> Is there a non-trivial sub-class of distributed programs for which
+> we can construct a mostly-automated verification procedure? How
+> effective would the verification be in practice?
 
-Miller, Steven V. 2018. "[External Territorial Threats and Tolerance of Corruption: A Private/Government Distinction](/research/external-territorial-threats-and-tolerance-of-corruption-a-privategovernment-distinction/)". *Peace Economics, Peace Science and Public Policy* 24(1): `doi:` [10.1515/peps-2017-0043](https://doi.org/10.1515/peps-2017-0043)
+Alternatively, one might ask similar question in the context of
+synthesis: 
 
-Miller, Steven V. 2017. "[The Effect of Terrorism on Judicial Confidence](http://svmiller.com/research/effect-terrorism-judicial-confidence/)." *Political Research Quarterly* 70(4): 790--802.
+> Is there a non-trivial sub-class of distributed programs that can
+> be synthesized from their (declarative) specifications? How
+> competent are the synthesized programs in practice?
 
-Miller, Steven V. 2017. "[Individual-Level Expectations of Executive Authority under Territorial Threat](/research/individual-level-expectations-of-executive-authority-under-territorial-threat/)." *Conflict Management and Peace Science* 34(5): 526-545.
+These research questions are relevant not only to the commercial
+distributed computing enterprise, but also to the future of
+internet-scale computing in general. As people gradually move away
+from trusting few large corporations with their data and computation,
+large-scale decentralized architectures (e.g., blockchains) and
+local-first software become the norm. In this context, it is
+worthwhile to pursue the dream of a programming framework that lets
+individuals own their data and help them deploy local-first
+decentralized software with the same ease as they deploy centralized
+cloud-hosted software today.
 
-Miller, Steven V. 2017. "[Economic Threats or Societal Turmoil? Understanding Preferences for Authoritarian Political Systems](/research/economic-threats-or-societal-turmoil-understanding-preferences-for-authoritarian-political-systems/)." *Political Behavior* 39(2): 457-478.
+<hr /> <br />
 
-Gibler, Douglas M., Steven V. Miller, and Erin K. Little. 2016. "[An Analysis of the Militarized Interstate Dispute (MID) Dataset, 1816-2001](http://dmgibler.people.ua.edu/mid-replication.html)." *International Studies Quarterly* 60(4): 719-730.
+<h2> Probabilistic Verification of Systems </h2>
 
-Gibler, Douglas M. and Steven V. Miller. 2014. "[External Territorial Threat, State Capacity, and Civil War](http://dmgibler.people.ua.edu/state-capacity.html)." *Journal of Peace Research* 51(5): 634-646.
+Conventional program verification answers a yes-or-no question: given
+a program and a machine, is it provably *safe* to execute the program
+on the machine? Safety is generally defined as machine never reaching
+an undesirable state or never getting *stuck*. Unfortunately, real
+systems are fraught with uncertainies such as network partitions,
+message losses, and disk crashes, and proving safety under such system
+model requires programmers to account for black swan events through
+expensive mitigations (e.g., strengthening the consistency model,
+adding locks etc). An interesting alternative in this context is to
+change the nature of verification itself:
 
-Miller, Steven V. 2013. "[Territorial Disputes and the Politics of Individual Well-Being](/research/territorial-disputes-and-the-politics-of-individual-well-being/)." *Journal of Peace Research* 50(6): 677-690.
+> Instead of performing determistic reasoning, can a program
+> verification be formulated based on a probabilistic reasoning about
+> program safety? Instead of giving a yes-or-no answer, can the
+> verification  establish numeric bounds on how much a system
+> deviates from its safety condition?
 
-Gibler, Douglas M. and Steven V. Miller. 2013. "[Quick Victories? Territory, Democracies and Their Disputes](http://jcr.sagepub.com/content/57/2/258.full)." *Journal of Conflict Resolution* 57(2): 258-284.
+Such a probabilistic verification framework could be useful in the
+context of applications such as online banking and e-commerce, where a
+slight deviation from safety condition is admissable in the interest
+of performance and ease of use, provided that such a deviation is
+quantifiable.
 
-Gibler, Douglas M., Marc L. Hutchison and Steven V. Miller. 2012. "[Individual Identity Attachments and International Conflict: The Importance of Territorial Threat](http://cps.sagepub.com/content/45/12/1655.full)." *Comparative Political Studies* 45(12): 1655-1683.
+<hr /> <br />
+<h2> Program Reconstruction from Traces </h2>
 
-Gibler, Douglas M. and Steven V. Miller. 2012. "[Comparing the Foreign Aid Policies of Presidents Bush and Obama](http://onlinelibrary.wiley.com/doi/10.1111/j.1540-6237.2012.00909.x/full)." *Social Science Quarterly* 93(5): 1202-1217.
-
-Miller, Steven V. and Douglas M. Gibler. 2011. "[Democracies, Territory and Negotiated Compromises](http://cmp.sagepub.com/content/28/3/261)." *Conflict Management and Peace Science* 28(3): 261-279.
-
-## Book Chapters
-
-Gibler, Douglas M. and Steven V. Miller. Forthcoming. "The Territorial Peace." *What Do We Know About War?* (3rd ed.). Routledge.
-
-Miller, Steven V., Jaroslav Tir, and John A. Vasquez. 2020. "[Geography, Territory, and Conflict](https://oxfordre.com/internationalstudies/view/10.1093/acrefore/9780190846626.001.0001/acrefore-9780190846626-e-320)." *Oxford Research Encyclopedia of International Studies.* `doi:` [10.1093/acrefore/9780190846626.013.320](https://oxfordre.com/internationalstudies/view/10.1093/acrefore/9780190846626.001.0001/acrefore-9780190846626-e-320)
-
-## Book Reviews
-
-Miller, Steven V. 2020. "[Power without Victory: Woodrow Wilson and the American Internationalist Experiment](https://www.tandfonline.com/doi/full/10.1080/07343469.2020.1761051)" *Congress & the Presidency*.
-
-- Review of Throntveit, Trygve. 2017. *Power without Victory: Woodrow Wilson and the American Internationalist Experiment*. Chicago, IL: University of Chicago Press.
-
-
-Miller, Steven V. 2019. "[National Identity and Territory in a World of Changing Scale](https://academic.oup.com/isr/advance-article-abstract/doi/10.1093/isr/viy051/5026359?redirectedFrom=fulltext)" *International Studies Review* 20(4): 728--730
-
-- Review of Herb, Guntram M. and David H. Kaplan. 2017. *Scaling Identities: Nationalism and Territoriality*. Lanham, MD: Rowman & Littlefield.
-
-## Reports
-
-Miller, Steven V. 2020. "[School Choice Advocacy Report Plays Regression Modeling Games to Make Its Case Against Public Schools](https://nepc.info/newsletter/2019/12/school-satisfaction)." National Education Policy Center.
-
-<!-- ## Select Working Papers and Works in Progress
-
-"Understanding Carrots and Sticks in U.S. Aid Allocation: The Case of the Middle East"
-
-"U.S. Presidents, Human Rights, and Economic Aid from Truman to Obama: A Mixed Effects Approach"
-
-"Convergence or Divergence? The Unique Effect of Territorial Threats on Attitudes toward Authoritarian Leaders" -->
-
-
+Program synthesis is the task of synthesizing programs from various
+kinds of specifications, such as declarations in a formal logic
+specifying the program semantics, input-output examples describing the
+program's I/O behavior, or execution traces capturing main events in
+the program's execution. While synthesis based on logical
+specifications and input-output examples has received much attention
+in the research literature, trace-based synthesis has not elicited
+similar enthusiasm due to its limited applicability; traces are hard
+to generate without the program, and if a program exists then there is
+likely no need for synthesis. This is however not true in case of
+Program Reconstruction, which remains a major application of
+trace-based synthesis. Under Program Reconstrution, one attempts to
+*reconstruct* a program, whose source code is inaccessible, by
+observing a collection of its execution traces. Program Reconstruction
+has been used for digital forensics in the context of database
+applications, but the formal guarantees of such reconstruction remain
+an open question. Nonetheless, I belive there is much scope for
+exploring Program Reconstruction in the context of Machine Learning
+applications, where, if successful, reconstruction could lead to
+significant reductions in the model generation time. 
