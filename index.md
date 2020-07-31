@@ -27,7 +27,7 @@ earned my Masters in CS from Purdue, and Bachelors in CS from [BITS
 Pilani](https://www.bits-pilani.ac.in), India.
 
 <span class="highlight">I am actively recruiting Ph.D students</span>.
-If you are a graduate student at CU with a strong motivation do
+If you are a graduate student at CU with a strong motivation to do
 research, please drop me an email; I'll reply as quickly as I can. If
 you are a prospective student, I strongly encourage you to apply to
 CU!  We have a great [PLV](https://plv.colorado.edu) group, and one of
