@@ -9,6 +9,8 @@ are described below (in no particular order).
 
 <h2> Distributed Program Verification and Synthesis</h2>
 
+{% include image.html url="/images/distsys_verification.png" width=220 align="left" %}
+
 Distributed systems are workhorses of internet-era computing. While
 distributed computing has become ubiquitous, the complexity of
 programming however has remained high, resulting in deep and subtle
@@ -49,18 +51,20 @@ cloud-hosted software today.
 
 <h2> Probabilistic Verification of Systems </h2>
 
+{% include image.html url="/images/probabilistic_verification.png" width=275 align="left" %}
+
 Conventional program verification answers a yes-or-no question: given
 a program and a machine, is it provably *safe* to execute the program
 on the machine? Safety is generally defined as machine never reaching
 an undesirable state or never getting *stuck*. Unfortunately, real
-systems are fraught with uncertainies such as network partitions,
+systems are fraught with uncertainties such as network partitions,
 message losses, and disk crashes, and proving safety under such system
 model requires programmers to account for black swan events through
 expensive mitigations (e.g., strengthening the consistency model,
 adding locks etc). An interesting alternative in this context is to
 change the nature of verification itself:
 
-> Instead of performing determistic reasoning, can a program
+> Instead of performing deterministic reasoning, can a program
 > verification be formulated based on a probabilistic reasoning about
 > program safety? Instead of giving a yes-or-no answer, can the
 > verification  establish numeric bounds on how much a system
@@ -75,6 +79,8 @@ quantifiable.
 <hr /> <br />
 <h2> Program Reconstruction from Traces </h2>
 
+{% include image.html url="/images/program_reconstruction.png" width=350 align="left" %}
+
 Program synthesis is the task of synthesizing programs from various
 kinds of specifications, such as declarations in a formal logic
 specifying the program semantics, input-output examples describing the
@@ -86,12 +92,12 @@ similar enthusiasm due to its limited applicability; traces are hard
 to generate without the program, and if a program exists then there is
 likely no need for synthesis. This is however not true in case of
 Program Reconstruction, which remains a major application of
-trace-based synthesis. Under Program Reconstrution, one attempts to
+trace-based synthesis. Under Program Reconstruction, one attempts to
 *reconstruct* a program, whose source code is inaccessible, by
 observing a collection of its execution traces. Program Reconstruction
 has been used for digital forensics in the context of database
 applications, but the formal guarantees of such reconstruction remain
-an open question. Nonetheless, I belive there is much scope for
+an open question. Nonetheless, I believe there is much scope for
 exploring Program Reconstruction in the context of Machine Learning
 applications, where, if successful, reconstruction could lead to
 significant reductions in the model generation time. 
