@@ -5,4 +5,4 @@ inline: true
 ---
 
 New course announcement: [CSCI7000 - Distributed Systems
-Verification](https://gowthamk.github.io/cs_f20/).
+Verification](https://gowthamk.github.io/csci7000_f20/).
