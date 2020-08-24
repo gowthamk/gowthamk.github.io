@@ -7,7 +7,7 @@ My research statement is [here]({% link docs/research-statement.pdf %}).
 Few research problems where I am actively seeking student involvement
 are described below (in no particular order). 
 
-<h2> Distributed Program Verification and Synthesis</h2>
+<h2 id="distsys_verification"> Distributed Program Verification and Synthesis</h2>
 
 {% include image.html url="/images/distsys_verification.png" width=220 align="left" %}
 
@@ -49,7 +49,7 @@ cloud-hosted software today.
 
 <hr /> <br />
 
-<h2> Probabilistic Verification of Systems </h2>
+<h2 id="prob_verification"> Probabilistic Verification of Networked Systems </h2>
 
 {% include image.html url="/images/probabilistic_verification.png" width=275 align="left" %}
 
@@ -77,7 +77,7 @@ of performance and ease of use, provided that such a deviation is
 quantifiable.
 
 <hr /> <br />
-<h2> Program Reconstruction from Traces </h2>
+<h2 id="prog_reconstruction"> Program Reconstruction from Traces </h2>
 
 {% include image.html url="/images/program_reconstruction.png" width=350 align="left" %}
 
