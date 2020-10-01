@@ -4,5 +4,5 @@ date: 2020-07-27 09:00:00-0400
 inline: true
 ---
 
-New course announcement: [CSCI7000 - Distributed Systems
+New course announcement (Spring 2021): [CSCI7000 - Distributed Systems
 Verification](https://gowthamk.github.io/csci7000_f20/).
