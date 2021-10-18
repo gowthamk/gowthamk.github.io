@@ -26,6 +26,7 @@ in the area of Programming Technology and Software Engineering. I
 earned my Masters in CS from Purdue, and Bachelors in CS from [BITS
 Pilani](https://www.bits-pilani.ac.in), India.
 
+<!-- 
 <span class="highlight">I am actively recruiting Ph.D students</span>.
 If you considering a PhD in Programming Languages and Verification,
 you should definitely apply to CU! We have a great
@@ -35,7 +36,7 @@ interests](https://www.youtube.com/watch?v=qAUpUujljWY), and a
 campus](https://www.colorado.edu/virtualvisit/boulder-campus) in the
 midst of [the best
 city](https://realestate.usnews.com/places/colorado/boulder?utm_source=usn_tw)
-to live in the US! 
+to live in the US! -->
 
 
 
