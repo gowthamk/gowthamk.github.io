@@ -4,7 +4,34 @@ title: Publications
 permalink: /publications/
 ---
 
+
 <div class="publications">
+
+<h2>2022</h2>
+<p class="pub-item">
+  <div class="pub-title">
+   RunTime-Assisted Convergence in Replicated Data Types 
+  </div>
+  (Gowtham Kaki, Prasanth Prahladan, and Nicholas V. Lewchenko)
+  <ul>
+    <li>
+       43rd ACM SIGPLAN Conference on Programming Language Design and
+       Implementation (PLDI'22) [<a href="{% link docs/pldi22.pdf %}">Paper</a>]
+    </li>
+  </ul>
+</p>
+
+<p class="pub-item">
+  <div class="pub-title">
+   Bolt-On Convergence in Mergeable Replicated Data Types 
+  </div>
+  (Gowtham Kaki, Prasanth Prahladan, and Nicholas V. Lewchenko)
+  <ul>
+    <li>
+      9th Workshop on Principles and Practice of Consistency for Distributed Data (PaPoC'22) [<a href="{% link docs/papoc22.pdf %}">Paper</a>]
+    </li>
+  </ul>
+</p>
 
 <h2>2019</h2>
 
