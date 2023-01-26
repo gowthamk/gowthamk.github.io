@@ -20,10 +20,9 @@ computing.
 Prior to joining CU, I was a Post-Doc and a Ph.D student at Purdue
 University, where I was advised by [Prof. Suresh
 Jagannathan](https://www.cs.purdue.edu/homes/suresh).  As a grad
-student, I was a [Google PhD
-Fellow](https://research.googleblog.com/2018/04/announcing-2018-google-phd-fellows-for.html)
-in the area of Programming Technology and Software Engineering. I
-earned my Masters in CS from Purdue, and Bachelors in CS from [BITS
+student, I was a Google PhD Fellow in the area of Programming
+Technology and Software Engineering. I earned my Masters in CS from
+Purdue, and Bachelors in CS from [BITS
 Pilani](https://www.bits-pilani.ac.in), India.
 
 <!-- 
