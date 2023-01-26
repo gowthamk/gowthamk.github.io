@@ -16,9 +16,5 @@
 - title: "Teaching"
   href: "/teaching/"
   subcategories:
-    - subtitle: "CSCI7000-01 – Distributed Systems Verification"
-      subhref: "https://gowthamk.github.io/csci7000_s21/"
-    - subtitle: "CSCI5535 – Foundations of Programming Languages"
-      subhref: "https://csci5535.github.io/"
-    - subtitle: "CSCI7000-11 – Pinciples of Functional Programming"
+    - subtitle: "CSCI7000-11 – Principles of Functional Programming"
       subhref: "https://gowthamk.github.io/csci7000_pfp_s23/"
