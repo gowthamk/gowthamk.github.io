@@ -7,6 +7,43 @@ permalink: /publications/
 
 <div class="publications">
 
+<h2>2023</h2>
+<p class="pub-item">
+  <div class="pub-title">
+   Verifying Indistinguishability of Privacy-Preserving Protocols
+  </div>
+  (Kirby Linvill, Gowtham Kaki, and Eric Wustrow)
+  <ul>
+    <li>
+       ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages, 
+       and Applications (OOPSLA'23) [<a href="{% link docs/oopsla23a.pdf %}">Paper</a>]
+    </li>
+  </ul>
+</p>
+<p class="pub-item">
+  <div class="pub-title">
+   Historia: Refuting Callback Reachability with Message-History Logics
+  </div>
+  (Shawn Meier, Sergio Mover, Gowtham Kaki, and Bor-Yuh Evan Chang)
+  <ul>
+    <li>
+       ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages, 
+       and Applications (OOPSLA'23) [<a href="{% link docs/oopsla23b.pdf %}">Paper</a>]
+    </li>
+  </ul>
+</p>
+<p class="pub-item">
+  <div class="pub-title">
+  Distributed Consensus Algorithms as Replicated State Applications 
+  </div>
+  (Nicholas Lewchenko and Gowtham Kaki)
+  <ul>
+    <li>
+      10th Workshop on Principles and Practice of Consistency for Distributed Data (PaPoC'23) [<a href="{% link docs/papoc23.pdf %}">Paper</a>]
+    </li>
+  </ul>
+</p>
+
 <h2>2022</h2>
 <p class="pub-item">
   <div class="pub-title">
