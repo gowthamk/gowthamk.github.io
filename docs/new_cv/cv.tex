@@ -39,10 +39,10 @@
   pdfsubject={Curriculum Vitae},
   pdfkeywords={Gowtham Kaki, resume, cv, mathematics, cs,
     computer science, phd, programming languages, concurrency, eventual
-    consistency, databases, weak isolation, functional
-    programming, Haskell, OCaml, Standard ML, MLton, PLDI, POPL, ICFP,
-    OOPSLA, SPLASH, ECOOP, weak consistency, axiomatic semantics,
-    operational semantics, mysql, postgres, cassandra, NoSQL
+    consistency, distributed systems, databases, weak isolation, functional
+    programming, Haskell, OCaml, PLDI, POPL, ICFP,
+    OOPSLA, SPLASH, ECOOP, weak consistency, paxos, raft, protocols,
+     mysql, postgres, cassandra, NoSQL
 }}
 
 % http://tex.stackexchange.com/questions/110236/is-there-a-way-to-get-reverse-numbering-on-the-enumerate-environment
@@ -241,14 +241,12 @@
 \end{nonumregion}
 
 \begin{itemregion} {\lbar{Mahogany}Major Recognitions}
+  \service{Amazon Research Award, 2023.}
   \service{\href{https://ai.googleblog.com/2018/04/announcing-2018-google-phd-fellows-for.html}{Google
-  PhD Fellowship 2018} for exceptional research in Computer Science
-  and related disciplines.}
+  PhD Fellowship 2018}}
   \service{\href{https://www.cs.purdue.edu/news/articles/2019/2019-cs-award-banquet.html}{Maurice
-  H. Halstead Memorial Award} for outstanding research in Software Engineering, Purdue University, 2019.}
-  \service{\href{https://www.bitsaa.org/page/30U30}{``30 under 30''}
-  award for outstanding accomplishments by a young alumnus, BITS Alumni Association (BITSAA), 2018. }
-  \service{Amazon Research Award 2023 For Domain-Specific Solvers for Distributed System Verification (Declined)}
+  H. Halstead Memorial Award}, Purdue University, 2019.}
+  \service{BITS Pilani Alumni Association (BITSAA) \href{https://www.bitsaa.org/page/30U30}{``30 under 30''}, 2018. }
 \end{itemregion}
 
 % \begin{itemregion} {\lbar{blue}Service}
@@ -347,6 +345,13 @@
 
 \begin{region} {\lbar{Mahogany}Workshop Publications \& Tech Reports}{{W}1}{5}
 
+  \begin{publication} {https://arxiv.org/abs/2401.12379}
+    {Analyzing the Effectiveness of Large Language Models on
+    Text-to-SQL Synthesis}
+    {Dec 2023} {Richard Roberson, Gowtham Kaki, and Ashutosh Trivedi}
+    {arXiv:2401.12379}
+  \end{publication}
+
   \begin{publication} {https://gowthamk.github.io/docs/papoc22.pdf}
 		{Distributed Consensus Algorithms as Replicated State Applications }
 		{April 2023} {Nicholas Lewchenko and Gowtham Kaki}
@@ -399,7 +404,7 @@
     \service{Principles of Programming Langauges (CSCI3155), Spring'21 \& '22, Fall'23}
     \service{\href{https://gowthamk.github.io/csci7000_s21/}{Distributed Systems Verification (CSCI7000)}, Spring'21 \& '24}
     \service{\href{https://csci5535.github.io/}{Foundations of
-    Programming Langauges (CSCI5535)}, Fall'21}
+    Programming Langauges (CSCI5535)}, Fall'21 \& Fall'24}
     \service{\href{https://gowthamk.github.io/csci7000_pfp_s23/}{Principles of Functional Programming (CSCI7000)}, Spring'23}
   \end{itemize}
   \service{Purdue}
@@ -408,86 +413,113 @@
   \end{itemize}
 \end{itemregion}
 
-%%\begin{itemregion}{\lbar{Mahogany}Talks}
+\begin{itemregion}{\lbar{Mahogany}Talks \& Invited Lectures}
 
-%%  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
-%%        \textbf{Mergeable Replicated Data Types} \\
-%%        \hspace{1ex} OOPSLA 2019, Athens & \textit{Oct 2019} \\
-%%        \hspace{1ex}  Shonan Seminar on Programming Language Support for
-%%          Data-Intensive Applications, Japan & \textit{Jul 2019}\\
-%%        \hspace{1ex} University of Minnesota, Twin Cities & \textit{Nov 2020}\\
-%%        \end{tabular*}
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Consensus via Convergence and Monotonicity: A Novel Approach
+      to Verifying Distributed Systems}\\
+        \hspace{1ex} ACM DARE Summer School, TU Darmstadt. &
+        \textit{Sep 2024} \\
+        \end{tabular*}
 
-%%  \begin{talk} {Automatic Reasoning in the Absence of Serializability}
-%%    {Jul 2019}  {Phd Defense, Purdue University} {}
-%%  \end{talk}
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Verifying Indistinguishability of Privacy-Preserving
+        Protocols}\\
+        \hspace{1ex} Dagstuhl Seminar on Formal Methods in Distributed
+        Systems&
+        \textit{Mar 2023} \\
+        \end{tabular*}
 
-%%%%\begin{talk} {Relational Reasoning for Mergeable Replicated Data Types}
-%%%%	{Jul 2019}  {Shonan Seminar on Programming Language Support for
-%%%%  Data-Intensive Applications, Japan} {}
-%%%%\end{talk}
 
-%%  \begin{talk} {Version Control Is For Your Data Too}
-%%    {May 2019}  {SNAPL 2019, Brown University} {}
-%%  \end{talk}
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Mergeable Replicated Data Types} \\
+        \hspace{1ex} University of Minnesota, Twin Cities & \textit{Nov 2020}\\
+        \hspace{1ex} OOPSLA 2019, Athens & \textit{Oct 2019} \\
+        %\hspace{1ex}  Shonan Seminar on Programming Language Support for
+        %  Data-Intensive Applications, Japan & \textit{Jul 2019}\\
+        \end{tabular*}
 
-%%  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
-%%        \textbf{Safe Replication through Bounded Concurrency Verification} \\
-%%        \hspace{1ex} OOPSLA 2018, Boston & \textit{Nov 2018} \\
-%%        \hspace{1ex} Purdue PL (PurPL) Seminar  & \textit{Nov 2018}\\
-%%        \hspace{1ex} Mid-West PL Summit, University of Wisconsin,
-%%        Madison  & \textit{Oct 2018}
-%%        \end{tabular*}
-%%   
-%%  \begin{talk} {Safe Transferable Regions}
-%%    {Jul 2018}  {ECOOP 2018, Amsterdam} {}
-%%  \end{talk}
+  \begin{talk} {MRDTs: Data Structures for Truly Decentralized
+    Internet} {Nov 2022} {IIT Madras, India} {}
+  \end{talk}
 
-%%  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
-%%        \textbf{Alone Together: Compositional Reasoning and Inference
-%%        under Weak Isolation} \\
-%%        \hspace{1ex} POPL 2018, Los Angeles & \textit{Jan 2018} \\
-%%        \hspace{1ex} Mid-West PL Summit, Indiana University,
-%%        Bloomington  & \textit{Dec 2017}
-%%        \end{tabular*}
-%%   
+  \begin{talk} {Bolt-On Convergence in Replicated Data Types} {Apr 2022}
+    {PaPoC 2022, Remote} {}
+  \end{talk}
 
-%%  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
-%%        \textbf{Mergeable Types} \\
-%%        \hspace{1ex} ML Workshop 2017, Oxford, UK & \textit{Sep 2017} \\
-%%        \hspace{1ex} Purdue PL (PurPL) Seminar & \textit{Aug 2017} \\
-%%        \end{tabular*}
+  \begin{talk} {Automatic Reasoning in the Absence of Serializability}
+    {Jul 2019}  {Phd Defense, Purdue University} {}
+  \end{talk}
 
-%%  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
-%%        \textbf{Quelea: Declarative Programming under Eventual
-%%        Consistency} \\
-%%        \hspace{1ex} PLDI 2015, Portland & \textit{Jun 2015} \\
-%%        \hspace{1ex} Mid-West Verification, University of
-%%          Illinois, Urbana-Champaign & \textit{Oct 2015} \\
-%%        \hspace{1ex} Microsoft Research India Intern Day, Bangalore & 
-%%          \textit{Jul 2015} \\
-%%        \end{tabular*}
+  \begin{talk} {Relational Reasoning for Mergeable Replicated Data Types}
+  	{Jul 2019}  {Shonan Seminar on Programming Language Support for
+    Data-Intensive Applications, Japan} {}
+  \end{talk}
 
-%%  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
-%%        \textbf{Catalyst: A Relational Framework for Higher-Order
-%%        Shape Analysis} \\
-%%        \hspace{1ex} Dagstuhl Seminar on Verification Tools for
-%%        Functional Programs, Dagstuhl, Germany & \textit{Apr 2016} \\
-%%        \hspace{1ex} Mid-West Verification, University of
-%%          Missouri, Columbia & \textit{Oct 2014} \\
-%%        \hspace{1ex} ICFP 2014, Gothenburg, Sweden & \textit{Sep 2014} \\
-%%        \end{tabular*}
+  \begin{talk} {Version Control Is For Your Data Too}
+    {May 2019}  {SNAPL 2019, Brown University} {}
+  \end{talk}
 
-%%\end{itemregion}
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Safe Replication through Bounded Concurrency Verification} \\
+        \hspace{1ex} OOPSLA 2018, Boston & \textit{Nov 2018} \\
+        \hspace{1ex} Purdue PL (PurPL) Seminar  & \textit{Nov 2018}\\
+        \hspace{1ex} Mid-West PL Summit, University of Wisconsin,
+        Madison  & \textit{Oct 2018}
+        \end{tabular*}
+   
+  \begin{talk} {Safe Transferable Regions}
+    {Jul 2018}  {ECOOP 2018, Amsterdam} {}
+  \end{talk}
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Alone Together: Compositional Reasoning and Inference
+        under Weak Isolation} \\
+        \hspace{1ex} POPL 2018, Los Angeles & \textit{Jan 2018} \\
+        \hspace{1ex} Mid-West PL Summit, Indiana University,
+        Bloomington  & \textit{Dec 2017}
+        \end{tabular*}
+   
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Mergeable Types} \\
+        \hspace{1ex} ML Workshop 2017, Oxford, UK & \textit{Sep 2017} \\
+        \hspace{1ex} Purdue PL (PurPL) Seminar & \textit{Aug 2017} \\
+        \end{tabular*}
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Quelea: Declarative Programming under Eventual
+        Consistency} \\
+        \hspace{1ex} PLDI 2015, Portland & \textit{Jun 2015} \\
+        \hspace{1ex} Mid-West Verification, University of
+          Illinois, Urbana-Champaign & \textit{Oct 2015} \\
+        \hspace{1ex} Microsoft Research India Intern Day, Bangalore & 
+          \textit{Jul 2015} \\
+        \end{tabular*}
+
+  \item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{Catalyst: A Relational Framework for Higher-Order
+        Shape Analysis} \\
+        \hspace{1ex} Dagstuhl Seminar on Verification Tools for
+        Functional Programs, Dagstuhl, Germany & \textit{Apr 2016} \\
+        \hspace{1ex} Mid-West Verification, University of
+          Missouri, Columbia & \textit{Oct 2014} \\
+        \hspace{1ex} ICFP 2014, Gothenburg, Sweden & \textit{Sep 2014} \\
+        \end{tabular*}
+
+\end{itemregion}
 
 \begin{itemregion} {\lbar{Mahogany} Research Grants}
-  \service{Developing AI agents to Support Teaching Staff in Large
-  Programming Classes, CU Boulder IRT seed grant (Co-PI)}
+  \service{PI, Developing AI agents to Support Teaching Staff in Large
+  Programming Classes, CU Boulder IRT seed grant 2022.}
+  \service{Co-PI, Verified Probabilistic Programming for Hybrid Systems, NSF
+  Formal Methods in the Field (FMitF) 2024.}
 \end{itemregion}
 
 \begin{itemregion} {\lbar{Mahogany}Service}
-  \service{CS Dept., Graduate Committee (GradComm) Member, 2020-2021}
-  \service{Program Committee (PC) Member: PLDI'23, OOPSLA'23, OOPSLA'22, ML'20}
+  \service{CS Dept., Graduate Committee (GradComm) Member, 2020-2021,
+  2024-current}
+  \service{Program Committee (PC) Member: POPL'25, ATVA'24, PLDI'23, OOPSLA'23, OOPSLA'22, ML'20}
   \service{Referee, TOPLAS 2022}
   \service{Artifact Evaluation Committee (AEC) Member: PLDI'16,
       ICFP'17, ICFP'18, ECOOP'19, and PLDI'19}
