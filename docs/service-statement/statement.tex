@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+
+
+\usepackage[letterpaper, margin=1in, headheight=15pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xspace}
+\usepackage{mathtools}
+\usepackage{mathpartir}
+\usepackage{ifpdf}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{stmaryrd}
+\usepackage[numbers]{natbib}
+\usepackage{amsthm}
+\usepackage{sectsty}
+\usepackage{csquotes}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = teal,
+            anchorcolor = blue]{hyperref}
+\usepackage{tgheros}
+\usepackage[most]{tcolorbox}
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage[sc]{mathpazo}
+\usepackage{newpxtext}
+\usepackage[T1]{fontenc}
+
+
+% My settings
+% -------------
+\newcommand{\mypara}[1]{\noindent\fcolorbox{white}{black!5}{\bf #1}}
+
+% For block quote
+% ----------------
+\newtcolorbox{mdquote}{
+  colback=white,
+  colframe=white,
+  left=3pt,
+  right=3pt,
+  top=3pt,
+  bottom=3pt,
+  enhanced,
+  borderline west={2pt}{0pt}{gray},
+  boxrule=0pt,
+  fontupper=\itshape, 
+  width=\dimexpr\linewidth-2pt\relax,
+}
+
+
+\sectionfont{\color{teal}}
+\newcommand{\C}[1]{{\tt #1}}
+\newcommand{\acidifier}{{\sc ACIDifier}\xspace}
+\newcommand{\qnine}{{\sc Q9}\xspace}
+\newcommand{\catalyst}{{\sc Catalyst}\xspace}
+\newcommand{\quelea}{{\sc Quelea}\xspace}
+\newcommand{\quark}{{\sc Quark}\xspace}
+\newcommand{\superv}{{\sc Super-V}\xspace}
+\newcommand{\waldo}{{\sc Waldo}\xspace}
+\newcommand{\dissprove}{{\sc Dissprove}\xspace}
+\newcommand{\lepr}{\Lambda_{\texttt{EPR}}}
+\newcommand{\eventual}{\blacklozenge}
+\newcommand{\strong}{\blacksquare}
+
+
+% Header setup
+% `pagestyle{fancy}` must come after package loads but before \begin{document}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\Large Gowtham Kaki {\color{Gray} {$\vert$} Service Statement} }
+\renewcommand{\headrulewidth}{0pt}
+
+% === FIX FOR THE TITLE PAGE ===
+% The title page uses the 'plain' page style by default.
+% We redefine what 'plain' looks like to match our fancy header.
+\fancypagestyle{plain}{
+  \fancyhf{} % clear all header and footer fields
+  \fancyhead[L]{\Large Gowtham Kaki {\color{Gray} {$\vert$} Service Statement} }
+  \renewcommand{\headrulewidth}{0pt}
+}
+% ==============================
+
+\setlength{\droptitle}{-0.6in} 
+\title{\color{teal} Service Statement}
+\author{}
+\date{}
+
+\begin{document}
+
+% This command applies the "fancy" style to the title page
+\thispagestyle{fancy}
+%\maketitle
+%\vspace*{-1in}
+\input{content}
+
+\end{document}
