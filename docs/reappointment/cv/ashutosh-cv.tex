@@ -1,0 +1,889 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[sc,osf]{mathpazo}  
+\usepackage{charter}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{mathpazo}
+
+\definecolor{darkgrey}{HTML}{333333}
+\definecolor{grey}{HTML}{4D4D4D}
+\definecolor{lightgrey}{HTML}{999999}
+\definecolor{green}{HTML}{C2E15F}
+\definecolor{orange}{HTML}{FDA333}
+\definecolor{purple}{HTML}{9B59B6}
+\definecolor{red}{HTML}{FB4485}
+\definecolor{blue}{HTML}{6CE0F1}
+\definecolor{zest}{HTML}{E67E22}
+
+
+\newcommand{\mypara}[1]{\noindent\colorbox{white}{black!5}{#1}}
+
+\def\labelitemi{--}
+\usepackage{hyperref} 
+\hypersetup{pageanchor,breaklinks,plainpages=false,colorlinks=true,citecolor=green!50!black,linkcolor=red!70!black} 
+\usepackage[letterpaper, top=1in, left=0.65in, right=0.65in, bottom=1in]{geometry} 
+
+\begin{document}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \hypersetup{urlcolor=zest}
+  \node [rectangle, fill=grey, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+  \node [anchor=center] (name) at (box) {%
+    \color{white}%
+    \begin{tabular*}{7.2in}{@{\extracolsep{\fill}}lr}
+      \\
+      \textbf{\huge{Curriculum Vitae}} & \today\\*[2ex]
+      \textbf{\large{Gowtham Kaki}} & {\url{https://gowthamk.github.io}}\\[0.5ex]
+      {1111 Engineering Dr, ECOT 717} & {\href{mailto:gowtham.kaki@colorado.edu}{gowtham.kaki@colorado.edu}}\\
+      {Boulder, CO 80309, USA} & {+1 201 417 1775}\\
+    \end{tabular*}
+  };
+\end{tikzpicture}
+\vspace{0.9in}
+
+\def\name{Ashutosh Trivedi}
+
+\newcommand{\heading}[1]{\noindent\fcolorbox{white}{black!5}{\large
+\textsc{#1}}}
+
+\heading{A. Education}
+\begin{center}
+  \begin{tabular}{ l p{13cm} r }
+   PhD & {\bf Purdue University, USA}, Computer Science & 2019 \\ \vspace{0.5em}
+   & Advisor: Prof.\ Suresh Jagannathan &\\
+   & Thesis: {\bf Automatic Reasoning Techniques for Non-Serializable}& \\
+   &   {\bf \phantom{Thesis:}Data-Intensive Applications}  &\\
+   & Committee: Prof.\ Xiangyu Zhang, Prof.\ Tiark Rompf and
+   Prof.\ Pedro Fonseca &\\
+   &&\\
+  
+   M.S & {\bf Purdue University}, Computer Science & 2016 \\ \vspace{0.5em} 
+   %& Advisor: Prof.\ Suresh Jagannathan &\\
+   %& Thesis: {\bf Techniques in Symbolic Model Checking}  &\\
+   &&\\
+   
+   B.E (Hons.) & {\bf Birla Institute of Technology and Science (BITS),
+   Pilani, India},
+   Computer Science & 2009 \\ \vspace{0.5em} 
+  %  & Advisor: Prof.\ C. S. Moghe &\\
+  %  & Thesis: {\bf Design and Implementation of Network Firewalls}  &\\
+   &&\\
+   
+   
+  \end{tabular}
+  \end{center}
+
+\heading{B. Academic and Industry Appointments}
+\begin{center}
+  \begin{tabular}{ p{10cm}  r}
+    University of Colorado Boulder, USA  & August 2020--present \\
+    {\bf Assistant Professor}, Department of Computer Science &\\[12pt]
+
+    Purdue University, USA & January 2020--July 2020 \\
+    {\bf Postdoctoral Researcher}, Department of Computer Science &\\
+    Advisor: Prof. Suresh Jagannathan &\\[12pt]
+    % {\bf On Leave} from August 2015--August 2016 &\\[10pt]
+
+    Purdue University, USA & August 2019--December 2019 \\
+    {\bf Visiting Assistant Professor}, Department of Computer Science &\\[12pt]
+
+    Yahoo Inc, India & July 2009--July 2011 \\
+    {\bf Software Engineer}, Content Platforms Group &\\[12pt]
+    \end{tabular}
+  \end{center}
+
+\heading{C. Research Interests}
+
+\begin{center}
+  \begin{tabular}{ l  r }
+    \emph{Automatic formal methods for safety and security verification in mission-critical systems.} & \\ [5pt]
+{\bf Keywords:} Formal Methods, Programming Languages, Distributed Systems,
+Adversarial Networks, &\\
+Cryptography, Databases, Functional Programming, Automated Reasoning, Program Analysis&\\ 
+\end{tabular}
+\end{center}
+
+\heading{D. Awards/Honors}
+
+\vspace{1em}
+\noindent {\em Award Papers}
+%\vspace*{-0.1in}
+\begin{center}
+  \begin{tabular}{ p{15cm}  r }
+    %
+    {\bf IEEE Data Engineering: Bulletin Special Issue Invitation} & 2016\\ [3pt]
+    \hspace{2em} Representation without Taxation: A Uniform, Low-Overhead,
+    and High-Level Interface & \\
+    \hspace{2em} to Eventually Consistent Key-Value Stores   & \\[6pt]
+    %
+    \end{tabular}
+\end{center}
+
+\noindent {\em Professional}
+%\vspace{-1em}
+\begin{center}
+  \begin{tabular}{ p{15cm}  r }
+{\bf Amazon Research Award} & 2023 \\ [3pt]
+\hspace{2em} Amazon Inc., USA. &
+\\[6pt]
+%
+{\bf Maurice H. Halstead Memorial Award}, for Software
+Engineering research & 2019 \\ [3pt]
+\hspace{2em} Purdue University, USA. &
+\\[6pt]
+%
+{\bf North America PhD Fellowship}& 2018 \\ [3pt]
+\hspace{2em} Google Inc., USA &
+\\[6pt]
+%
+{\bf ``30-under-30'' Distinguished Almunus Award} & 2018\\ [3pt]
+    \hspace{2em} BITS, Pilani, India. & \\[6pt]
+   \end{tabular}
+\end{center}
+
+\heading{E.  Funding}
+
+\vspace{1em}
+\noindent I have been a PI or co-PI on sponsored research totaling in
+awards of approximately \$945,000 of which \$50,000 has been led by me as
+PI (CU Boulder declined to accept these funds). My portion of these awards
+has totaled approximately \$265,635. A summary of these figures is given
+below:
+
+\vspace{1em}
+\begin{tabular}{p{8cm}  l}
+  Total Awarded: &  \$945,000\\
+  Awarded, my portion, approximate:& \$265,635 \\
+  Awarded as PI for CU Boulder:& \$50,000  
+\end{tabular}
+
+\medskip
+
+\noindent\textbf{Current Funding (1)}
+
+\begin{enumerate}
+
+\item {\bf NSF FMitF-2422136, \emph{FMitF: Track I: Verified Probabilistic Programming for Hybrid Systems}}
+\begin{itemize}
+  \item 
+    Total Amount: \$875,000
+  \item 
+    Period: 09/01/2024 ---08/31/2028
+\item 
+    Investigators: Gowtham Kaki (co-PI), Rebecca Morrison (co-PI), and
+    Sriram Sankaranarayanan (PI)
+\item 
+Funding Agency: NSF (Software and Hardware Foundations)
+\end{itemize}  
+\end{enumerate}
+
+\medskip
+
+\noindent\textbf{Past Funding (2) }
+\begin{enumerate}
+  \item {\bf EE-AIL IRT Seed Grant FY22-23, \emph{Developing AI agents to Support Teaching Staff in Large Programming Classes}}
+  \begin{itemize}
+  \item
+    Total amount: \$20, 000
+  \item  
+    Period: 2020--2021
+  \item Investigators:
+   Gowtham Kaki (co-PI), and Ashutosh Trivedi (PI)
+  \item Funding Agency: Engineering Education and AI-Augmented Learning IRT, University of Colorado Boulder
+  \end{itemize}
+
+  \item {\bf ARA 23, \emph{Domain-Specific Solvers for Distributed Systems
+Verification and Model Checking}}
+  \begin{itemize}
+    \item 
+      Total Amount: \$50,000
+    \item 
+      Period: 05/01/2025 ---04/31/2024
+    \item 
+      Investigators: Gowtham Kaki (PI)
+    \item 
+      Funding Agency: Amazon Inc.
+    \item Remark: funds were declined by CU as OCG could not accept to award terms and conditions.
+\end{itemize}  
+\end{enumerate}
+
+\medskip
+
+\noindent\textbf{Pending (3)}
+\begin{enumerate}
+  \item {\bf NSF, \emph{SHF:Small: A Modular Approach to Practical Distributed Systems Verification}}
+  \begin{itemize}
+    \item 
+      Total Amount: \$480,110
+    \item 
+      Period: 01/01/2026 --- 12/31/2028
+    \item 
+      Investigators: Gowtham Kaki (PI)
+    \item 
+      Funding Agency: NSF (Software and Hardware Foundations)
+\end{itemize}  
+
+  \item {\bf NSF, \emph{CAREER: Verifying Safety and Privacy of Distributed
+  Systems on Adversarial Networks}}
+  \begin{itemize}
+    \item 
+      Total Amount: \$714,519
+    \item 
+      Period: 08/01/2026 --- 07/31/2031
+    \item 
+      Investigators: Gowtham Kaki (PI)
+    \item 
+      Funding Agency: NSF (Software and Hardware Foundations)
+  \end{itemize}
+
+  \item {\bf ARA, \emph{Program Synthesis with Syntax-Aligned Language Models}}
+  \begin{itemize}
+    \item 
+      Total Amount: \$70,000
+    \item 
+      Period: 09/01/2025 --- 08/31/2036
+    \item 
+      Investigators: Gowtham Kaki (PI)
+    \item 
+      Funding Agency: Amazon Inc.
+  \end{itemize}
+  
+\end{enumerate}
+
+\noindent\textbf{Rejected (7)}
+\begin{enumerate}
+\item {\bf ARA, \emph{SYNTLA: Correct-by-Construction Synthesis of Distributed Programs}}
+  \begin{itemize}
+    \item 
+      Total Amount: \$50,000
+    \item 
+      Submitted: 10/06/2020
+    \item 
+      Investigators: Gowtham Kaki (PI)
+    \item 
+      Funding Agency: Amazon Inc.
+  \end{itemize}
+
+
+\item {\bf NSF \emph{FMitF: Track I: Verified Probabilistic Programming for Hybrid Systems}} 
+  \begin{itemize}
+  \item
+    Total amount: \$1,000,000
+  \item 
+    Submitted: 02/15/2023
+  \item Investigators: Gowtham Kaki (co-PI), Rebecca Morrison (co-PI), and
+  Sriram Sankaranarayanan (PI)
+  \end{itemize}
+
+\item {\bf NSF \emph{SHF:Small: Language Support for Provably-Safe Distributed Programming}} 
+  \begin{itemize}
+  \item
+    Total amount: \$550,024
+  \item  
+    Submitted: 10/20/2023 
+  \item 
+    Investigators: Gowtham Kaki (PI)  
+  \end{itemize}
+
+\item {\bf DARPA} (sub-contract via Kudu Dynamics) {\bf\emph{Check Engine}} 
+  \begin{itemize}
+  \item
+    Total amount: \$1,499,982
+  \item  
+    Submitted: 06/01/2023 
+  \item 
+    Investigators: Ashutosh Trivedi (co-PI), Evan Chang (co-PI), Sriram
+    Sankaranarayanan (co-PI), and Gowtham Kaki (PI)
+  \item 
+      Funding Program: DARPA BAA HR001123S0020 (PROVERS).  
+  \end{itemize}
+
+\item {\bf DARPA} (sub-contract via Northrop Grumman) {\bf\emph{Gradual Verification of Computational Integrity on Opaque Processors via Physical Side-Channel Semantics}} 
+  \begin{itemize}
+  \item
+    Total amount: \$2,300,000
+  \item  
+    Submitted: 05/03/2024 
+  \item 
+    Investigators: Ashutosh Trivedi (co-PI), Gowtham Kaki (co-PI), Joseph
+    Izraelevitz (co-PI), and Evan Chang (PI)
+  \item 
+      Funding Program: DARPA BAA HR001124S0016 (COOP).  
+  \end{itemize}  
+  
+\item {\bf DARPA} {\bf\emph{Headlamp: Shedding Formalization Light on Exploit Chain Analysis}} 
+  \begin{itemize}
+  \item
+    Total amount: \$2,455,150 
+  \item  
+    Submitted: 08/26/2024 
+  \item 
+    Investigators: Gowtham Kaki (co-PI) and Yueqi Chen (PI). Sub-contracted
+    to Northwestern University. 
+  \item 
+      Funding Program: DARPA BAA HR001124S0033 (INGOTS).  
+  \end{itemize}
+
+\item {\bf DARPA} (sub-contract via Psiphon Inc.) {\bf\emph{WIN: Weirdness through Indistinguishable Networks}} 
+  \begin{itemize}
+  \item
+    Total amount: \$4,202,162
+  \item  
+    Submitted: 11/05/2024 
+  \item 
+    Investigators: Gowtham Kaki (PI). 
+  \item 
+      Funding Program:  DARPA BAA HR001124S0037 (PWND$^2$).  
+  \end{itemize}
+
+\end{enumerate}
+
+\heading{F. Advising}
+
+\vspace{1em}
+\noindent Graduated PhD Dissertation Advisee
+\begin{enumerate}
+\item Saeid Tizpaz-Niari, (co-advised with Pavol Cerny) Fall 2015--Fall 2020,
+ECEE, CU Boulder,\\
+{\bf Thesis Title.} {\em Differential Performance Debugging and its application to
+side-channel analysis}. \\{\bf First Employment.} {\it Assistant Professor},
+University of Texas at El Paso. 
+\item Devendra Bhave, (co-advised with Krishna S.)  Fall 2014--Fall 2020, Computer Science, IIT Bombay,\\
+{\bf Thesis Title.} {\em Perfect Subclasses of Real-time Recursive Systems.}. \\
+{\bf First Employment.} {\it Senior Software Engineer }, Mathworks. 
+\end{enumerate}
+
+\noindent Current PhD Dissertation Advisees
+\begin{enumerate}
+  \item Vishnu Murali (co-advised with Majid Zamani), Spring 2021--present, Computer Science, CU Boulder
+  \item Mateo Perez, (co-advised with Fabio Somenzi), Fall 2020--present,
+  Computer Science, CU Boulder 
+  \item 
+  Taylor Dohmen, Fall 2018–present, Computer Science, CU Boulder
+  \item   
+  John Komp, Fall 2018--present, Computer Science, CU Boulder
+  \item 
+  John Paul Martin, Jr. (co-advised with Evan Chang), Fall 2018--present,
+  Computer Science, CU Boulder
+  \item 
+  Tianhan Lu (co-advised with Evan Chang), Fall 2015--present 
+\end{enumerate}
+
+\noindent MS/BS Research Advisees
+\begin{enumerate}
+  \item Vishnu Murali (MS), Spring 2020--present, Computer Science, CU Boulder
+  \item Zachary Mckevitt (BS), co-advised with Tamara Lehman, Fall 2020--present,
+  Electrical, Computer, and Energy Engineering, CU Boulder 
+  \item Emily Millican (BS), Spring’2020, Computer Science, CU Boulder 
+  \item Mateo Perez (BS), co-advised with Fabio Somenzi, Summer 2018-Spring
+  2020,Electrical, Computer, and Energy Engineering, CU Boulder
+  \item Electrical, Computer, and Energy Engineering (ECEE) Capstone Team Love Bugs (Developing a Self-Driving Car):
+  Mohammed Al Hasani,George Matthew Helmick, Rodolfo Gonzalez Hill V, Myungshin
+  Im, Michael Shea Oliver, and Mateo Perez, co-advised with Fabio Somenzi.
+  \item Shemal Somil Lalaji (MS), Independent Study Project, Fall-2019.
+  \item Aniket Lata (MS), co-advised with Evan Chang, Spring 2015--Spring
+  2016. Electrical, Computer, and Energy Engineering. University of Colorado
+  Boulder.
+  \item Ram Das Diwakaran (MS), co-advised with Sriram Sankaranarayanan, Fall
+  2016--Spring 2017. 
+  Computer Science, University of Colorado  Boulder. 
+\end{enumerate}
+
+
+
+\heading{G. Refereed Publications in Proceedings}
+
+\vspace{1em}
+In many areas of Computer Science, including theoretical computer science, the first and primary publication venues are full length papers
+in the proceedings of selective conferences. 
+Many conferences have extensive two-phase review processes with author
+responses. The two main outlets are proceedings published 
+by ACM (Association for Computing Machinery) and the Lecture Notes in Computer
+Science (LNCS) series published by Springer. The DBLP service
+(http://dblp.uni-trier.de/db/) maintains an up-to-date index of Computer Science
+literature. In the following, the  $\dag$ mark indicates students or post-doctoral
+reseachers that I formally advise, and the $\ddag$ mark indicates other student
+co-authors.
+Also, in theoretical computer science publications, author ordering is typically
+by alphabetical order---most of my paper follow this norm.
+
+\begin{enumerate}
+\item
+{\bf Faithful and Effective Reward Schemes for Model-Free Reinforcement Learning
+  of Omega-Regular Objectives.} by
+Ernst Moritz Hahn, Mateo Perez${}^{\dag}$, Sven Schewe, Fabio Somenzi, {\bf Ashutosh
+Trivedi}, Dominik Wojtczak $\cdot$ Symposium on Automated Technology for Verification and
+Analysis (ATVA) 2020 $\cdot$ $16$ pages $\cdot$ (Acceptance
+Rate: 40\%)
+\item 
+  {\bf Model-Free Reinforcement Learning for Stochastic Parity Games} by Ernst
+  Moritz Hahn, Mateo Perez${}^{\dag}$, Sven Schewe, Fabio Somenzi, {\bf Ashutosh
+   Trivedi}, and
+  Dominik Wojtczak  $\cdot$  31st International Conference
+  on Concurrency Theory (CONCUR) 2020 $\cdot$ Pages 21:1--21:16 $\cdot$ (Acceptance
+  Rate: 40\%)
+\item 
+  {\bf Weighted Transducers for Robustness Verification} by Emmanuel Filiot,
+  Nicolas Mazzocchi${}^{\ddag}$, Jean-François Raskin, Sriram Sankaranarayanan and {\bf Ashutosh Trivedi} $\cdot$   31st International Conference
+  on Concurrency Theory (CONCUR) 2020$\cdot$ Pages 17:1--17:21  $\cdot$ (Acceptance
+  Rate: 40\%)
+\item
+  {\bf Detecting and Understanding Real-World Differential Performance Bugs in
+    Machine Learning Libraries} by Saeid Tizpaz-Niari${}^{\dag}$,
+  Pavol Cerny, and {\bf Ashutosh Trivedi} $\cdot$  ACM SIGSOFT International Symposium
+  on Software Testing and Analysis (ISSTA) 2020 $\cdot$ Pages 189–199 $\cdot$ (Acceptance
+  Rate: 26.5\%)
+\item
+  {\bf Data-Driven Debugging for Functional Side Channels} by Saeid Tizpaz-Niari${}^{\dag}$,
+  Pavol Cerny, and {\bf Ashutosh Trivedi} $\cdot$  Network and Distributed System
+  Security Symposium (NDSS) 2020 $\cdot$  $17$ Pages $\cdot($ Acceptance Rate: 17.4\%)
+  
+\item {\bf Good-for-MDPs Automata for Probabilistic Analysis and Reinforcement
+  Learning} by Ernst
+  Moritz Hahn, Mateo Perez${}^{\dag}$, Sven Schewe, Fabio Somenzi, {\bf Ashutosh Trivedi},
+  Dominik Wojtczak $\cdot$ International Conference on Tools and Algorithms for
+  the Construction and Analysis of Systems (TACAS) 2020 $\cdot$ Pages 306–323
+  $\cdot$ (Acceptance
+  Rate: 30\%)
+
+\item {\bf Formal Controller Synthesis for Unknown Continuous-Space MDPs via
+  Reinforcement Learning} by Abolfazl Lavaei${}^{\ddag}$, Fabio Somenzi, Sadegh
+  Soudjani, {\bf Ashutosh Trivedi} and Majid Zamani $\cdot$ ACM/IEEE International
+  Conference on Cyber-Physical Systems (ICCPS) 2020 $\cdot$ Pages 98–107 $\cdot$
+  (Acceptance
+  Rate: 23\%)
+\item
+  {\bf Quantitative Mitigation of Timing Side Channels} by Saeid Tizpaz-Niari${}^{\dag}$,
+  Pavol Cerny, and {\bf Ashutosh Trivedi} $\cdot$ Computer Aided Verification (CAV) 2019 $\cdot$ Pages 140-160 $\cdot$ (Acceptance
+  Rate: 26\%)
+\item
+{\bf Expected Reachability-Price Games} by Shibashis Guha${}^{\ddag}$ and {\bf Ashutosh Trivedi}
+$\cdot$ Formal Modeling and Analysis of Timed Systems (FORMATS) 2019 $\cdot$ Pages 282-300 $\cdot$ (Acceptance Rate: 35\%)
+\item
+  {\bf Efficient Detection and Quantification of Timing Leaks with Neural
+  Networks} by 
+  Saeid Tizpaz-Niari${}^{\dag}$, Pavol Cerny, Sriram Sankaranarayanan, and {\bf
+  Ashutosh Trivedi}, $\cdot$ Runtime Verification (RV) 2019 $\cdot$ Pages 329-348
+  $\cdot$ (Acceptance Rate: 65\%)   $\cdot$ {\bf \color{green!40!black} Recipient
+  of Journal Special Issue Invitation}.
+\item
+  {\bf Omega-Regular Objectives in Model-Free Reinforcement Learning} by Ernst
+    Moritz Hahn, Mateo Perez${}^{\dag}$, Sven Schewe, Fabio Somenzi, {\bf Ashutosh Trivedi},
+    Dominik Wojtczak $\cdot$ International Conference on Tools and Algorithms
+    for the Construction and Analysis of Systems (TACAS) 2019 $\cdot$ Pages
+    395-412 $\cdot$ (Acceptance
+    Rate: 31.4\%)
+\item
+  {\bf Type-directed Bounding of Collections in Reactive Programs} by 
+  Tianhan Lu${}^{\dag}$, Pavol Cerny, Bor-Yuh Evan Chang, {\bf Ashutosh Trivedi}
+  $\cdot$ International Conference on Verification, Model Checking, and Abstract
+  Interpretation (VMCAI) 2019 $\cdot$ Pages 275-296 $\cdot$ (Acceptance Rate: 43\%)
+
+\item
+  {\bf  Differential Performance Debugging With Discriminant Regression Trees}
+  by   Saeid Tizpaz-Niari${}^{\dag}$, Pavol Cerny, Bor-Yuh Evan Chang, {\bf Ashutosh Trivedi}
+  $\cdot $  AAAI Conference on Artificial Intelligence (AAAI) 2018 $\cdot$ Pages 2468-2475 $\cdot$ (Acceptance Rate: 24\%)
+
+\item
+  {\bf Global Almost-Sure Reachability for Stochastic Constant-Rate Multi-Mode
+    Systems} by Fabio Somenzi, Behrouz Touri, and {\bf Ashutosh Trivedi} $\cdot$
+    International Conference on Hybrid Systems: Computation and Control (HSCC)
+    2018 $\cdot$ Pages 11-20 $\cdot$  (Acceptance Rate: 43\%)
+\item
+  {\bf The Reach-Avoid Problem for Constant-Rate Multi-mode Systems} by S.
+  Krishna, Aviral Kumar${}^{\ddag}$, Fabio Somenzi, Behrouz Touri, and {\bf Ashutosh
+  Trivedi} $\cdot$ 15th International Symposium on Automated Technology for 
+  Verification and Analysis (ATVA 2017) $\cdot$ Pages 463--479 $\cdot$ (Acceptance Rate: 37\%)
+\item
+  {\bf Analyzing neighborhoods of falsifying traces in cyber-physical systems}
+  by Ramdas Diwakaran${}^{\dag}$, Sriram Sankaranarayanan, and {\bf Ashutosh Trivedi} $\cdot$
+  International Conference on Cyber-Physical Systems (ICCPS 2017) $\cdot$ Pages
+  109-120 $\cdot$ (Acceptance Rate: 31\%)
+\item
+  {\bf Discriminating traces with time} by
+  Saeid Tizpaz-Niari${}^{\dag}$, Pavol Cerny, Bor-Yuh Evan Chang, Sriram Sankaranarayanan,
+  and {\bf Ashutosh Trivedi}. International Conference on Tools and Algorithms for the
+  Construction and Analysis of Systems (TACAS 2017) $\cdot$ Pages 21--37 $\cdot$
+  (Acceptance Rate: 30\%)
+\item
+  {\bf FO-definable transformations of infinite strings} by 
+  Vrunda Dave${}^{\dag}$, Krishna S. and {\bf Ashutosh Trivedi} $\cdot$ 
+  Conference on Foundations of Software Technology and Theoretical Computer
+  Science (FSTTCS 2016) $\cdot$ Pages 12:1--12:14 $\cdot$ (Acceptance Rate: 39\%)
+\item
+  {\bf Mean-Payoff Games on Timed Automata} by 
+  Shibashis Guha${}^{\ddag}$, Marcin Jurdzinski, Krishna S. and {\bf Ashutosh Trivedi} $\cdot$ 
+  Conference on Foundations of Software Technology and Theoretical Computer
+  Science (FSTTCS 2016) $\cdot$ Pages 44:1--44:14 $\cdot$ (Acceptance Rate: 39\%)
+
+\item
+  {\bf Stochastic Timed Games Revisited} by
+  S. Akshay, Patricia Bouyer, Krishna S., Lakshmi Manasa${}^{\ddag}$ and {\bf Ashutosh Trivedi} $\cdot$
+  International Symposium on Mathematical Foundations of Computer Science
+  (MFCS 2016) $\cdot$ Pages 8:1--8:14  $\cdot$ (Acceptance Rate: 43\%)
+\item
+  {\bf Incentive Stackelberg Mean-payoff Games} by
+  Anshul Gupta, Sven Schewe, {\bf Ashutosh Trivedi}, Sai Krishna Deepak Maram${}^{\dag}$ and
+  Bharat Kumar Padarthi${}^{\dag}$ $\cdot$ International conference on
+  Software Engineering and Formal Methods (SEFM 2016) $\cdot$ Pages 304--320 $\cdot$(Acceptance Rate:
+  22\%) 
+  
+\item
+  {\bf Revisiting Robustness in Priced Timed Games}
+  by Shibashis Guha${}^{\ddag}$, S. Krishna, Lakshmi Manasa${}^{\ddag}$, and {\bf Ashutosh Trivedi} $\cdot$ 
+  Conference on Foundations of Software Technology and Theoretical Computer
+  Science (FSTTCS 2015) $\cdot$ Pages 261--277 $\cdot$ (Acceptance Rate: 35\%)
+\item
+{\bf Skolem Functions for Factored Formulas} by
+Ajith K. John${}^{\ddag}$, Shetal Shah, Supratik Chakraborty, {\bf Ashutosh Trivedi}, and  S. Akshay $\cdot$
+International Conference on
+Formal Methods in Computer-Aided Design (FMCAD 2015) $\cdot$ Pages 73--80
+$\cdot$ (Acceptance Rate: 28\%)
+
+\item
+  {\bf Symmetric Strategy Improvement Algorithm} by 
+  Sven Schewe, {\bf Ashutosh Trivedi}, and Thomas Varghese${}^{\ddag}$ $\cdot$
+  42nd International Colloquium on Automata, Languages, and Programming (ICALP
+  2015) $\cdot$ Pages 388--400
+  $\cdot$ (Acceptance Rate: 28\%)
+
+\item
+  {\bf Bounded-Rate Multi-Mode Systems Based Motion Planning} by Devendra Bhave${}^{\dag}$,
+  Sagar Jha${}^{\dag}$, S. Krishna, Sven Schewe, {\bf Ashutosh Trivedi}$\cdot$ 
+  International conference on Hybrid systems: computation
+  and control (HSCC'15) $\cdot$ Pages 41--50
+  $\cdot$ (Acceptance Rate: 39\%)
+
+\item
+  {\bf What's Decidable About Recursive Hybrid Automata?} by S. Krishna,
+  Lakshmi Manasa${}^{\dag}$, and {\bf Ashutosh Trivedi} $\cdot$ 
+  International conference on Hybrid systems: computation
+  and control (HSCC 2015) $\cdot$ Pages 31--40
+  $\cdot$ (Acceptance Rate: 39\%)
+  \item
+  {\bf On Pure Nash Equilibria in Stochastic Games}  by Ankush Das${}^{\dag}$, 
+  S. Krishna, Lakshmi Manasa${}^{\ddag}$, {\bf Ashutosh Trivedi} and Dominik Wojtczak $\cdot$ 
+  Theory and Applications of Models of Computation (TAMC 2015) $\cdot$ Pages 359--371
+  $\cdot$ (Acceptance Rate: 44\%)
+  
+\item
+{\bf Weak Singular Hybrid Automata} by 
+S. Krishna, Umang Mathur${}^{\dag}$, and {\bf Ashutosh Trivedi} $\cdot$  
+International Conference on Formal Modeling and Analysis of
+Timed Systems (FORMATS 2014) $\cdot$ Pages 161--175
+$\cdot$ (Acceptance Rate: 44\%)
+
+\item
+{\bf First-order definable string transformations} by  
+Emmanuel Filiot, S. Krishna, and {\bf Ashutosh Trivedi} $\cdot$ 
+Conference on Foundations of Software Technology and
+Theoretical Computer Science (FSTTCS 2014) $\cdot$ Pages 147--159
+$\cdot$ (Acceptance Rate: 29\%)
+
+\item
+{\bf Adding Negative Prices to Priced Timed Games} by
+Thomas Brihaye, Gilles Geeraerts, S. Krishna, Lakshmi Manasa${}^{\ddag}$,
+B. Monmege${}^{\ddag}$, and {\bf Ashutosh Trivedi} $\cdot$  
+International conference on concurrency theory (CONCUR
+2014) $\cdot$ Pages 560--575
+$\cdot$ (Acceptance Rate: 28\%)
+
+\item 
+  {\bf From Monadic Second-Order Definable String Transformations to Transducers}
+  by Rajeev Alur, Antoine Durand-Gasselin, and {\bf Ashutosh Trivedi} $\cdot$ 
+  Symposium on Logic in Computer Science (LICS 2013) $\cdot$ Pages 458--467
+  $\cdot$ (Acceptance Rate: 34\%)
+\item
+  {\bf Safe Schedulability of Bounded-Rate Multi-Mode Systems} by Rajeev Alur,
+  Vojtech Forejt, Salar Moarref${}^{\dag}$, and {\bf Ashutosh Trivedi} $\cdot$ 
+  International conference on Hybrid systems: computation
+  and control (HSCC 2013) $\cdot$ Pages 243--252
+  $\cdot$ (Acceptance Rate: 34\%)
+\item
+   {\bf Playing Stochastic Games Precisely} by Taolue Chen, Vojtech Forejt,
+  Marta Kwiatkowska, Aistis Simatis${}^{\ddag}$, {\bf Ashutosh Trivedi}, and 
+  Michael Ummels $\cdot$
+  International Conference on Concurrency Theory (CONCUR
+  2012) $\cdot$ Pages 348--363
+  $\cdot$ (Acceptance Rate: 36\%)
+  
+\item
+  {\bf Regular Transformations of Infinite Strings} by
+  Rajeev Alur, Emmanuel Filiot, and {\bf Ashutosh Trivedi} $\cdot$ Logic in Computer Science
+  (LICS 2012) $\cdot$ Pages 65--74 $\cdot$ (Acceptance Rate: 37\%)
+\item 
+   {\bf Optimal Scheduling for Constant-Rate Multi-Mode Systems} by Rajeev Alur, {\bf
+   Ashutosh Trivedi} and Dominik Wojtczak $\cdot$  International Conference on Hybrid Systems: Computation and Control
+  (HSCC 2012) 
+ $\cdot$ Pages 75--84
+ $\cdot$ (Acceptance Rate: 61\%)
+ $\cdot$ {\bf \color{green!40!black} Recipient of HSCC best paper award}
+\item 
+  {\bf Relating average and discounted costs for quantitative analysis of timed
+    systems} by Rajeev Alur and {\bf Ashutosh Trivedi} $\cdot$ 
+  International Conference on Embedded Software (EMSOFT 2011) 
+  $\cdot$ Pages 165--174
+  $\cdot$ (Acceptance Rate: 24\%)
+\item
+  {\bf Recursive Timed Automata} by {\bf  Ashutosh Trivedi} and Dominik Wojtczak $\cdot$
+  International Conference on Automated Technology
+  for Verification and Analysis (ATVA 2010) $\cdot$ Pages 306--324
+  $\cdot$ (Acceptance Rate: 33\%)
+
+\item
+  {\bf Timed Branching Processes} by {\bf Ashutosh Trivedi} and Dominik Wojtczak $\cdot$
+  International Conference on Quantitative
+  Evaluation of SysTems (QEST 2010) $\cdot$ Pages 219--228
+  $\cdot$ (Acceptance Rate: 48\%)
+\item
+  {\bf Expected Reachability-Time Games} by Vojtech Forejt, Marta Kwiatkowska,
+  Gethin Norman, and {\bf Ashutosh Trivedi} $\cdot$ 
+  International Conference on Formal Modeling and Analysis of Timed Systems
+  (FORMATS 2010) $\cdot$ Pages 122--136
+  $\cdot$ (Acceptance Rate: 45\%)
+\item 
+  {\bf Concavely-Priced Probabilistic Timed Automata} by M. Jurdzinski,
+  Marta Kwiatkowska, Gethin Norman, and {\bf Ashutosh Trivedi} $\cdot$ 
+ International Conference on Concurrency Theory (CONCUR 2009) $\cdot$ Pages 415--430
+ $\cdot$ (Acceptance Rate: 28\%)
+\item
+  {\bf Concavely-Priced Timed Automata} by Marcin Jurdzinski and {\bf Ashutosh Trivedi}
+  $\cdot$ International Conference on Formal 
+  Modeling and Analysis of Timed Systems (FORMATS 2008) $\cdot$ Pages 48--62
+  $\cdot$ (Acceptance Rate: 45\%)
+\item
+  {\bf Average-Time Games} by Marcin Jurdzinski and {\bf Ashutosh Trivedi} $\cdot$ Conference on Foundations of Software Technology and Theoretical
+  Computer Science (FSTTCS 2008) $\cdot$ Pages 340--351
+  $\cdot$ (Acceptance Rate: 29\%)
+
+\item
+  {\bf Reachability-Time Games on Timed Automata} by Marcin Jurdzinski and {\bf
+  Ashutosh Trivedi} $\cdot$ In 34th International Colloquium on Automata,
+  Languages and Programming (ICALP 2007) $\cdot$ Pages 838--849
+  $\cdot$ (Acceptance Rate: 31\%)
+\end{enumerate}
+
+\heading{H. Refereed Journal Publications}
+\vspace{1em}
+\begin{enumerate}
+  \item
+  {\bf Schedulability of Bounded-Rate Multi-Mode Systems} by
+  Rajeev Alur, Vojtech Forejt, Salar Moarref${}^{\dag}$, and {\bf Ashutosh Trivedi} $\cdot$ 
+  ACM Transactions on Embedded Computing Systems $\cdot$ Volume 16 $\cdot$ No 3 $\cdot$ Pages 85:1-85:27
+  $\cdot$ 2017.
+  \item
+  {\bf Expected reachability-time games} by
+  Vojtech Forejt, Marta Kwiatkowska, Gethin Norman, {\bf Ashutosh Trivedi} $\cdot$
+  Theoretical Computer Science (TCS) $\cdot$ Volume 631 $\cdot$ Pages 139-160
+  $\cdot$  2016.
+  \item 
+  {\bf Hybrid Automata for Formal Modeling and Verification of
+   Cyber-Physical Systems} by S. Krishna and {\bf Ashutosh Trivedi} $\cdot$
+ Journal of the Indian Institute of Science, VOL 93:3, 2013, pages 419-440. 
+\end{enumerate}
+
+
+\heading{I. Editing}
+\vspace{1em}
+\begin{enumerate}
+  \item 
+  {\bf Proceedings of the The First Workshop on Verification and Validation of
+  Cyber-Physical Systems} by Mehdi Kargahi, Ashutosh Trivedi $\cdot$ Workshop
+  collocated with Integrated Formal Methods 2016, Reykjavík, Iceland, June 4-5,
+  2016. EPTCS 232, 2016 
+\end{enumerate}
+
+\heading{J. Refereed Workshop Publications and Peer-Reviewd Short Papers}
+\vspace{1em}
+\begin{enumerate}
+     \item
+  {\bf  On Timed Scope-Bounded Context-Sensitive Languages} by  Devendra Bhave${}^{\dag}$,
+  Shankara Narayanan Krishna, Ramchandra Phawade${}^{\ddag}$, {\bf Ashutosh Trivedi} $\cdot$
+  Developments in Language Theory (DLT) 2019 $\cdot$ Pages 168-181 $\cdot$ (Acceptance Rate: 66\%)
+  \item
+  {\bf On Nonlinear Prices in Timed Automata} by
+  Devendra Bhave${}^{\dag}$, Krishna S., and {\bf Ashutosh Trivedi} $\cdot$ International workshop on
+  Verification and Validation of Cyber-Physical Systems (VVCPS 2016)$\cdot$
+  Pages $65$--$78$ $\cdot$ (Acceptance Rate: Unknown)
+
+  \item
+    {\bf A Perfect Class of Context-Sensitive Timed Languages} 
+    by Devendra Bhave${}^{\dag}$, Vrunda Dave${}^{\ddag}$, S. Krishna, Ramchandra
+    Phawade${}^{\ddag}$ and {\bf Ashutosh Trivedi} $\cdot$ Developments in Language
+    Theory (DLT 2016) $\cdot$ Pages 38-50 $\cdot$ (Acceptance Rate: 66\%).
+  \item
+    {\bf A Logical Characterization for Dense-Time Visibly Pushdown Automata}
+    by Devendra Bhave${}^{\dag}$, Vrunda Dave${}^{\dag}$, S. Krishna, Ramchandra
+    Phawade${}^{\ddag}$ and {\bf Ashutosh Trivedi} $\cdot$  
+    International Conference on
+    Language and Automata Theory and Applications (LATA 2016) $\cdot$ Pages
+    89-101 $\cdot$ (Acceptance Rate: 35\%)
+    
+\item
+  {\bf Reachability Games on Recursive Hybrid Automata}
+  by S. Krishna, Lakshmi Manasa${}^{\ddag}$, and {\bf Ashutosh Trivedi} $\cdot$ International
+  Symposium on Temporal Representation and Reasoning (TIME 2015) $\cdot$ Pages
+  150--159 $\cdot$ (Acceptance Rate: 73\%)
+\item
+  {\bf Time-Bounded Reachability Problem for Recursive Timed Automata is
+    Undecidable} by S. Krishna, Lakshmi Manasa${}^{\dag}$, and {\bf Ashutosh Trivedi} $\cdot$  
+  International Conference on Language and Automata
+  Theory and Applications (LATA 2015) $\cdot$ Pages 237--248 $\cdot$ (Acceptance
+  Rate: 46\%)
+
+\item
+{\bf Improved Undecidability Results for Reachability Games on Recursive Timed
+  Automata} by S. Krishna, Lakshmi Manasa${}^{\ddag}$, and {\bf Ashutosh Trivedi} $\cdot$ 
+International symposium on games, automata, logics and
+  formal verification (GandALF 2014) $\cdot$ Pages 245--259 $\cdot$ (Acceptance
+  Rate: Unknown.)
+\end{enumerate}
+
+
+\heading{K. Invited Papers}
+\vspace{1em}
+\begin{enumerate}
+  % \item
+  % {\bf Omega-Regular Rewards in Model-Free Reinforcement Learning} $\cdot$
+  % International Workshop on Verification of Infinite-State Systems (INFINITY'
+  % 20) $\cdot $ Co-located with ATVA 2019 
+  \item
+  {\bf Reinforcement Learning and Formal Requirements} by Fabio Somenzi and
+  Ashutosh Trivedi $\cdot$ International Workshop on Numerical Software
+  Verification  (NSV@CAV) 2019 $\cdot$ Pages 26-41 
+\item
+{\bf  Limit Reachability for Model-Free Reinforcement Learning of
+  $\omega$-Regular Objectives} by
+  Ernst Moritz Hahn, Mateo Perez${}^{\dag}$, Sven Schewe, Fabio Somenzi, {\bf Ashutosh
+  Trivedi}, Dominik Wojtczak $\cdot$ International
+Workshop on Symbolic-Numeric methods for Reasoning about CPS and IoT (SNR) 2019.
+% \item {\bf Multi-Mode Systems : LEGO-style Development for Cyber-Physical
+% Systems} $\cdot$ Series: Center for Cyber-Physical Systems and Internet of Things
+% $\cdot$ USC Viterbi School of Engineering $\cdot$   Sep 2018.  
+\item 
+{\bf Compositional modeling and analysis of automotive feature product lines}
+by S. Krishna, Ganesh Khandu Narwane${}^{\ddag}$, S. Ramesh, {\bf Ashutosh Trivedi} $\cdot$ 52nd
+Design Automation Conference (DAC) 2015 $\cdot$ Pages 1--6.
+\end{enumerate}
+
+\heading{L. Teaching Experience}
+
+\vspace{1em}
+\noindent \underline{{\em University of Colorado Boulder:}}
+\vspace{-1em}
+\begin{center}
+  \begin{tabular}{ p{16.5cm}}
+{\bf Theory of Computation}, CSCI 5444, Instructor \hfill Fall 2020,
+Fall 2018, Spring 2017 \\[3pt]
+{\bf Theory of Computation}, CSCI 3434, Instructor \hfill Fall 2016 \\[3pt]
+\hspace{2em}  Core undergraduate and graduate-level course on the fundamental ideas behind
+computability and complexity theory. \\ [7pt]
+%
+{\bf Data Structures}, CSCI 2270, Instructor \hfill Spring 2019, Spring 2020 \\[3pt]
+\hspace{2em}  Core undergraduate-level course introducing theoretical
+foundations and practical considerations in the design and implementation of
+basic and advanced data structures.\\ [7pt] 
+%
+{\bf Automata for Verification, Synthesis, and Learning}, CSCI 7000, Instructor
+\hfill Fall 2019 \\[3pt]
+\hspace{2em}  Graduate seminar on the advanced automata theory and
+its applications in formal verification, formal synthesis, and machine learning. 
+\\ [7pt]
+%
+{\bf Foundations of Cyber-Physical Systems}, CSCI 5854, Instructor \hfill Spring
+2018 \\[3pt] 
+\hspace{2em}  A graduate-level course introducing the principles of design and
+verification of safety-critical cyber-physical systems. This course introduced
+formal modeling, specification formalisms, and verification approaches for
+discrete, continuous, and hybrid dynamical systems. \\ [7pt]
+%
+{\bf Design and Analysis of Algorithms}, CSCI 5454, Instructor \hfill Fall
+2017 \\[3pt] 
+\hspace{2em}  A core graduate-level course introducing basic algorithms at a
+finer level of detail and more advanced algorithms and data structures.\\ [7pt]
+\end{tabular}
+\end{center}
+\vspace{0.3em}
+\noindent \underline{\em Indian Institute of Technology Bombay:}
+\vspace{-1em}
+\begin{center}
+  \begin{tabular}{ p{16.5cm}}
+{\bf Digital Logic Design} (Theory+Lab), CS 226, Instructor \hfill Spring 2014 \\[3pt]
+\hspace{2em}  Core undergraduate-level course on the fundamental ideas behind
+the design of combinational circuits and synchronous and asynchronous sequential
+circuits design approaches.  \\ [6pt]
+%
+  \end{tabular}
+  \begin{tabular}{ p{16.5cm}}
+{\bf Automata Theory and Logic}, CS 208, Instructor \hfill Spring 2014, Spring
+2013, Summer 2012 \\[3pt]
+\hspace{2em}  Core undergraduate and graduate-level course on the fundamental
+ideas behind computability and complexity theory.\\ [6pt] 
+%
+{\bf Modeling and Analysis of Cyber-Physical Systems}, CS 620, Instructor
+\hfill Autumn 2013 \\[3pt]
+\hspace{2em}  Graduate seminar introducing the principles of design and
+verification of safety-critical cyber-physical systems. This course introduced
+formal modeling, specification formalisms, and verification approaches for
+discrete, continuous, and hybrid dynamical systems. \\ [6pt]
+\end{tabular}
+\end{center}
+
+
+\heading{M. Professional Activities}
+%\lline
+\begin{itemize}
+\item NSF Panelist: 2018, 2019, 2020
+\item AFOSR Reviewer: 2019
+\item RIO Reviewer: 2019
+\item Trustworthy-Software Search Committee {\bf Chair}, 2019-2020
+\item Computer Science Instructor Search Committee {\bf Member}, 2020-2021
+\item Computer Engineering (ECEE) Search Committee {\bf Member}, 2018-2019
+\item Organizing Committee Chair:
+  \begin{itemize}
+  \item
+   Workshop on Algorithmic Verification of Real-Time Systems 2017. Co-located
+   with ICALP 2017.
+  \item
+   Workshop on Algorithmic Verification of Real-Time Systems 2016. Co-located
+   with FSTTCS 2016.
+ \item
+   Workshop on Verification and Validation of
+      Cyber-Physical Systems 2016. Co-located with iFM'16.
+    \item Asian Logic Conference (ALC) 2015.
+    \item Indian Conference on Logic and its Applications (ICLA) 2015.
+  \end{itemize}
+\item Program Committee Membership:
+  \begin{itemize}
+  \item 
+  HSCC 2021, ICCPS 2021, AAAI 2021, CAV 2021, CAV 2020, SR 2019, EMSOFT2019, ACSD 2019, NSV 2019, HSCC 2019, APLAS
+  2018, FORMATS 2018, MoRE 2018, SR 2018, HSCC 2018, ACSD 2018, ICCPS 2018, DIAS
+  2017, ACSD 2017, CONCUR 2016, HSCC 2016, FORMATS 2015, HSCC 2015, FSTTCS 2014,
+  FORMATS 2014, HSCC 2014, FORMATS 2013.
+  \end{itemize}
+\item External Reviewer for:
+  \begin{itemize}
+  \item {\bf Conferences:}
+    FSTTCS 2020, MFCS 2020, ICALP 2020, HSCC'19, SEFM '17, FSTTCS '17, ICALP'14, LICS'14, CAV'14, FORMATS'13, FSTTCS'13, FOSSACS'13, CAV'13, SODA'
+    13, Petri Nets' 12, TACAS'12, FOSSACS'11, AMCA-POP'10, FOSSACS'10, LICS'10,
+    ICALP'10, LICS'09, TACAS'09, ATVA'09, IFM'09, LICS'06, CONCUR'06,
+    CAV'05, ATVA'05.
+  \item {\bf Journals:}
+    ACM Transactions on Embedded Computing Systems (1),
+    Information Processing Letters(3),
+    International Journal of Foundations  of Computer Science (1), Logical Methods
+    in CS (1), Software Tools for Technology Transfer (1), and Theoretical Computer Science (6).  
+  \end{itemize}
+\end{itemize}
+
+\vspace{1em}
+\heading{N. Citizenship Status}
+
+Citizenship: India
+
+Permanant Resident of USA.
+\end{document}
