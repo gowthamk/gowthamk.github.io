@@ -11,4 +11,4 @@ haste:
 	open cv.pdf
 
 clean:
-	rm -f *~ *.aux *.out *.log *.fdb_latexmk *.fls
+	rm -f *~ *.aux *.out *.log *.fdb_latexmk *.fls *.synctex.gz

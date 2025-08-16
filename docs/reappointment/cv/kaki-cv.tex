@@ -1,0 +1,809 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage[flushleft,neverdecrease,neveradjust]{paralist}
+\usepackage[sc,osf]{mathpazo}  
+\usepackage{charter}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{mdwlist}
+\usepackage{ifthen}
+
+\definecolor{darkgrey}{HTML}{333333}
+\definecolor{grey}{HTML}{4D4D4D}
+\definecolor{lightgrey}{HTML}{999999}
+\definecolor{green}{HTML}{C2E15F}
+\definecolor{orange}{HTML}{FDA333}
+\definecolor{purple}{HTML}{9B59B6}
+\definecolor{red}{HTML}{FB4485}
+\definecolor{blue}{HTML}{6CE0F1}
+\definecolor{zest}{HTML}{E67E22}
+
+
+\def\labelitemi{--}
+\usepackage{hyperref} 
+%\hypersetup{pageanchor,breaklinks,plainpages=false,colorlinks=true,citecolor=green!50!black,linkcolor=red!70!black} 
+
+\hypersetup{
+  colorlinks=false,
+  urlcolor=olive,
+  linkcolor=RoyalBlue,
+  pdfborder= 0 0 0,
+  bookmarks=false,
+  pdftitle={Gowtham Kaki - CV},
+  pdfauthor={Gowtham Kaki},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={Gowtham Kaki, resume, cv, mathematics, cs,
+    computer science, phd, programming languages, concurrency, eventual
+    consistency, distributed systems, databases, weak isolation, functional
+    programming, Haskell, OCaml, PLDI, POPL, ICFP,
+    OOPSLA, SPLASH, ECOOP, weak consistency, paxos, raft, protocols,
+     mysql, postgres, cassandra, NoSQL
+}}
+\usepackage[letterpaper, top=1in, left=0.65in, right=0.65in, bottom=1in]{geometry} 
+
+%%%%%%%%%%%%% MyDefs %%%%%%%%%%%%%
+\newcommand{\mypara}[1]{\noindent\colorbox{white}{black!5}{#1}}
+\newcommand{\lbar}[1]{{\color{#1}\ding{118}}\hspace*{2pt}}
+\newcommand{\oral}{{\color{PineGreen}\textsc{oral}}}
+\newcommand{\poster}{{\color{BurntOrange}\textsc{poster}}}
+
+
+
+% Reverse enumeration environment
+\newenvironment{benumerate}[2]{
+    \let\oldItem\item
+    \def\item{\addtocounter{enumi}{-2}\oldItem}
+    \begin{enumerate}[#2] \itemsep3pt
+    \setcounter{enumi}{#1}
+    \addtocounter{enumi}{1}}
+  {\end{enumerate}}
+
+% Reverse enumeration region  
+\newenvironment{region}[3]{%
+%  \vspace*{0.5ex}
+% {\scalebox{1.4}{\textbf{#1}}}
+  {{\textbf{#1}}}
+  \begin{benumerate}{#3}{\color{RoyalBlue}#2}}
+  {\end{benumerate}\vspace{0.8ex}}
+
+\newenvironment{nonumregion}[1]{%
+\begin{region}{#1}{}{1}}
+{\end{region}}
+
+\newenvironment{itemregion}[1]{
+  \vspace*{0.5ex}
+% {\scalebox{1.4}{\textbf{#1}}}
+  {{\textbf{\large{#1}}}}
+  \begin{itemize}\itemsep1pt}
+  {\end{itemize}\vspace{0.8ex}}
+
+% Publication environment
+\newenvironment{publication}[6]
+{ \item
+  \begin{tabular*}{6.8in}{p{6in}@{\extracolsep{\fill}}r}
+    \href{#1}{\textbf{#2}} & \textit{#3}\\ #4 &\\ \textit{#5}&\\
+    \ifthenelse{\equal{#6}{}}{}{#6&\\}
+  \end{tabular*}
+} {}
+
+\newenvironment{publicationNote}[6]
+{ \item
+  \begin{tabular*}{6.8in}{p{6in}@{\extracolsep{\fill}}r}
+    \href{#1}{\textbf{#2}} & \textit{#3}\\ #4 &\\ \textit{#5}\\ \textbf{#6} \\
+  \end{tabular*}
+} {}
+
+\newenvironment{talk}[4]
+{ \item
+  \begin{tabular*}{6.8in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#2} \\
+    \hspace{1ex} #3 & \small{#4}
+\end{tabular*}
+} {}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \hypersetup{urlcolor=zest}
+  \node [rectangle, fill=grey, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+  \node [anchor=center] (name) at (box) {%
+    \color{white}%
+    \begin{tabular*}{7.2in}{@{\extracolsep{\fill}}lr}
+      \\
+      \textbf{\huge{Curriculum Vitae}} & \today\\*[2ex]
+      \textbf{\large{Gowtham Kaki}} & {\url{https://gowthamk.github.io}}\\[0.5ex]
+      {1111 Engineering Dr, ECOT 717} & {\href{mailto:gowtham.kaki@colorado.edu}{gowtham.kaki@colorado.edu}}\\
+      {Boulder, CO 80309, USA} & {+1 201 417 1775}\\
+    \end{tabular*}
+  };
+\end{tikzpicture}
+\vspace{0.9in}
+
+\def\name{Gowtham Kaki}
+
+\newcommand{\heading}[1]{\noindent\fcolorbox{white}{black!5}{\large
+\textsc{#1}}}
+
+\heading{A. Education}
+\begin{center}
+  \begin{tabular}{ l p{13cm} r }
+   PhD & {\bf Purdue University, USA}, Computer Science & 2019 \\ \vspace{0.5em}
+   & Advisor: Prof.\ Suresh Jagannathan &\\
+   & Thesis: {\bf Automatic Reasoning Techniques for Non-Serializable}& \\
+   &   {\bf \phantom{Thesis:}Data-Intensive Applications}  &\\
+   & Committee: Prof.\ Xiangyu Zhang, Prof.\ Tiark Rompf and
+   Prof.\ Pedro Fonseca &\\
+   &&\\
+  
+   M.S & {\bf Purdue University}, Computer Science & 2016 \\ \vspace{0.5em} 
+   %& Advisor: Prof.\ Suresh Jagannathan &\\
+   %& Thesis: {\bf Techniques in Symbolic Model Checking}  &\\
+   &&\\
+   
+   B.E (Hons.) & {\bf Birla Institute of Technology and Science (BITS),
+   Pilani, India},
+   Computer Science & 2009 \\ \vspace{0.5em} 
+  %  & Advisor: Prof.\ C. S. Moghe &\\
+  %  & Thesis: {\bf Design and Implementation of Network Firewalls}  &\\
+   &&\\
+   
+   
+  \end{tabular}
+  \end{center}
+
+\heading{B. Academic and Industry Appointments}
+\begin{center}
+  \begin{tabular}{ p{10cm}  r}
+    University of Colorado Boulder, USA  & August 2020--present \\
+    {\bf Assistant Professor}, Department of Computer Science &\\[12pt]
+
+    Purdue University, USA & January 2020--July 2020 \\
+    {\bf Postdoctoral Researcher}, Department of Computer Science &\\
+    Advisor: Prof. Suresh Jagannathan &\\[12pt]
+    % {\bf On Leave} from August 2015--August 2016 &\\[10pt]
+
+    Purdue University, USA & August 2019--December 2019 \\
+    {\bf Visiting Assistant Professor}, Department of Computer Science &\\[12pt]
+
+    Yahoo Inc, India & July 2009--July 2011 \\
+    {\bf Software Engineer}, Content Platforms Group &\\[12pt]
+    \end{tabular}
+\end{center}
+
+\heading{C. Research Interests}
+
+\begin{center}
+  \begin{tabular}{ l  r }
+    \emph{Automatic formal methods for safety and security verification in mission-critical systems.} & \\ [5pt]
+{\bf Keywords:} Formal Methods, Programming Languages, Distributed Systems,
+Adversarial Networks, &\\
+Cryptography, Databases, Functional Programming, Automated Reasoning, Program Analysis&\\ 
+\end{tabular}
+\end{center}
+
+\heading{D. Awards/Honors}
+
+\vspace{1em}
+\noindent {\em Award Papers}
+%\vspace*{-0.1in}
+\begin{center}
+  \begin{tabular}{ p{15cm}  r }
+    %
+    {\bf IEEE Data Engineering: Bulletin Special Issue Invitation} & 2016\\ [3pt]
+    \hspace{2em} Representation without Taxation: A Uniform, Low-Overhead,
+    and High-Level Interface & \\
+    \hspace{2em} to Eventually Consistent Key-Value Stores   & \\[6pt]
+    %
+    \end{tabular}
+\end{center}
+
+\noindent {\em Professional}
+%\vspace{-1em}
+\begin{center}
+  \begin{tabular}{ p{15cm}  r }
+{\bf Amazon Research Award} & 2023 \\ [3pt]
+\hspace{2em} Amazon Inc., USA. &
+\\[6pt]
+%
+{\bf Maurice H. Halstead Memorial Award}, for Software
+Engineering research & 2019 \\ [3pt]
+\hspace{2em} Purdue University, USA. &
+\\[6pt]
+%
+{\bf North America PhD Fellowship}& 2018 \\ [3pt]
+\hspace{2em} Google Inc., USA &
+\\[6pt]
+%
+{\bf ``30-under-30'' Distinguished Almunus Award} & 2018\\ [3pt]
+    \hspace{2em} BITS, Pilani, India. & \\[6pt]
+   \end{tabular}
+\end{center}
+
+\heading{E.  Funding}
+
+\vspace{1em}
+\noindent I have been a PI or co-PI on sponsored research totaling in
+awards of approximately \$945,000 of which \$50,000 has been led by me as
+PI (CU Boulder declined to accept these funds). My portion of these awards
+has totaled approximately \$265,635. A summary of these figures is given
+below:
+
+\vspace{1em}
+\begin{tabular}{p{8cm}  l}
+  Total Awarded: &  \$945,000\\
+  Awarded, my portion, approximate:& \$265,635 \\
+  Awarded as PI for CU Boulder:& \$50,000  
+\end{tabular}
+
+\medskip
+
+\noindent\textbf{Current Funding (1)}
+
+\begin{enumerate}
+
+\item {\bf NSF FMitF-2422136, \emph{FMitF: Track I: Verified Probabilistic Programming for Hybrid Systems}}
+\begin{itemize}
+  \item 
+    Total Amount: \$875,000
+  \item 
+    Period: 09/01/2024 ---08/31/2028
+\item 
+    Investigators: Gowtham Kaki (co-PI), Rebecca Morrison (co-PI), and
+    Sriram Sankaranarayanan (PI)
+\item 
+Funding Agency: NSF (Software and Hardware Foundations)
+\end{itemize}  
+\end{enumerate}
+
+\medskip
+
+\noindent\textbf{Past Funding (2) }
+\begin{enumerate}
+  \item {\bf EE-AIL IRT Seed Grant FY22-23, \emph{Developing AI agents to Support Teaching Staff in Large Programming Classes}}
+  \begin{itemize}
+  \item
+    Total amount: \$20, 000
+  \item  
+    Period: 2020--2021
+  \item Investigators:
+   Gowtham Kaki (co-PI), and Ashutosh Trivedi (PI)
+  \item Funding Agency: Engineering Education and AI-Augmented Learning IRT, University of Colorado Boulder
+  \end{itemize}
+
+  \item {\bf ARA 23, \emph{Domain-Specific Solvers for Distributed Systems
+Verification and Model Checking}}
+  \begin{itemize}
+    \item 
+      Total Amount: \$50,000
+    \item 
+      Period: 05/01/2025 ---04/31/2024
+    \item 
+      Investigators: Gowtham Kaki (PI)
+    \item 
+      Funding Agency: Amazon Inc.
+    \item Remark: funds were declined by CU as OCG could not accept to award terms and conditions.
+\end{itemize}  
+\end{enumerate}
+
+\medskip
+
+\noindent\textbf{Pending (3)}
+\begin{enumerate}
+  \item {\bf NSF, \emph{SHF:Small: A Modular Approach to Practical Distributed Systems Verification}}
+  \begin{itemize}
+    \item 
+      Total Amount: \$480,110
+    \item 
+      Period: 01/01/2026 --- 12/31/2028
+    \item 
+      Investigators: Gowtham Kaki (PI)
+    \item 
+      Funding Agency: NSF (Software and Hardware Foundations)
+\end{itemize}  
+
+  \item {\bf NSF, \emph{CAREER: Verifying Safety and Privacy of Distributed
+  Systems on Adversarial Networks}}
+  \begin{itemize}
+    \item 
+      Total Amount: \$714,519
+    \item 
+      Period: 08/01/2026 --- 07/31/2031
+    \item 
+      Investigators: Gowtham Kaki (PI)
+    \item 
+      Funding Agency: NSF (Software and Hardware Foundations)
+  \end{itemize}
+
+  \item {\bf ARA, \emph{Program Synthesis with Syntax-Aligned Language Models}}
+  \begin{itemize}
+    \item 
+      Total Amount: \$70,000
+    \item 
+      Period: 09/01/2025 --- 08/31/2036
+    \item 
+      Investigators: Gowtham Kaki (PI)
+    \item 
+      Funding Agency: Amazon Inc.
+  \end{itemize}
+  
+\end{enumerate}
+
+\noindent\textbf{Rejected (8)}
+\begin{enumerate}
+\item {\bf ARA, \emph{SYNTLA: Correct-by-Construction Synthesis of Distributed Programs}}
+  \begin{itemize}
+    \item 
+      Total Amount: \$50,000
+    \item 
+      Submitted: 10/06/2020
+    \item 
+      Investigators: Gowtham Kaki (PI)
+    \item 
+      Funding Agency: Amazon Inc.
+  \end{itemize}
+
+
+\item {\bf NSF \emph{FMitF: Track I: Verified Probabilistic Programming for Hybrid Systems}} 
+  \begin{itemize}
+  \item
+    Total amount: \$1,000,000
+  \item 
+    Submitted: 02/15/2023
+  \item Investigators: Gowtham Kaki (co-PI), Rebecca Morrison (co-PI), and
+  Sriram Sankaranarayanan (PI)
+  \end{itemize}
+
+\item {\bf NSF \emph{SHF:Small: Language Support for Provably-Safe Distributed Programming}} 
+  \begin{itemize}
+  \item
+    Total amount: \$550,024
+  \item  
+    Submitted: 10/20/2023 
+  \item 
+    Investigators: Gowtham Kaki (PI)  
+  \end{itemize}
+
+\item {\bf DARPA} (sub-contract via Kudu Dynamics) {\bf\emph{Check Engine}} 
+  \begin{itemize}
+  \item
+    Total amount: \$1,499,982
+  \item  
+    Submitted: 06/01/2023 
+  \item 
+    Investigators: Ashutosh Trivedi (co-PI), Evan Chang (co-PI), Sriram
+    Sankaranarayanan (co-PI), and Gowtham Kaki (PI)
+  \item 
+      Funding Program: DARPA BAA HR001123S0020 (PROVERS).  
+  \end{itemize}
+
+\item {\bf DARPA} (sub-contract via Northrop Grumman) {\bf\emph{Gradual Verification of Computational Integrity on Opaque Processors via Physical Side-Channel Semantics}} 
+  \begin{itemize}
+  \item
+    Total amount: \$2,300,000
+  \item  
+    Submitted: 05/03/2024 
+  \item 
+    Investigators: Ashutosh Trivedi (co-PI), Gowtham Kaki (co-PI), Joseph
+    Izraelevitz (co-PI), and Evan Chang (PI)
+  \item 
+      Funding Program: DARPA BAA HR001124S0016 (COOP).  
+  \end{itemize}  
+  
+\item {\bf DARPA} {\bf\emph{Headlamp: Shedding Formalization Light on Exploit Chain Analysis}} 
+  \begin{itemize}
+  \item
+    Total amount: \$2,455,150 
+  \item  
+    Submitted: 08/26/2024 
+  \item 
+    Investigators: Gowtham Kaki (co-PI) and Yueqi Chen (PI). Sub-contracted
+    to Northwestern University. 
+  \item 
+      Funding Program: DARPA BAA HR001124S0033 (INGOTS).  
+  \end{itemize}
+
+\item {\bf DARPA} (sub-contract via Psiphon Inc.) {\bf\emph{WIN: Weirdness through Indistinguishable Networks}} 
+  \begin{itemize}
+  \item
+    Total amount: \$4,202,162
+  \item  
+    Submitted: 11/05/2024 
+  \item 
+    Investigators: Gowtham Kaki (PI). 
+  \item 
+      Funding Program:  DARPA BAA HR001124S0037 (PWND$^2$).  
+  \end{itemize}
+
+\item {\bf DARPA} (sub-contract via UC San Diego) {\bf\emph{Proof Catalyst: Transforming High-Level Strategies into Proofs}} 
+  \begin{itemize}
+  \item
+    Total amount: \$5,000,000
+  \item  
+    Submitted: 05/15/2025 
+  \item 
+    Investigators: Gowtham Kaki (co-PI), Sriram Sankaranarayanan (co-PI),
+    Loris D'Antoni (co-PI, UCSD), Shachar Lovett (co-PI, UCSD), Chris Rosin
+    (co-PI, UCSD), Matthew Clegg (co-PI, UCSD), Prithviraj Ammanabrolu
+    (co-PI, UCSD), Leon Bergen (co-PI, UCSD), Rammmohan Paturi (PI, UCSD). 
+  \item 
+      Funding Program:  DARPA BAA HR001125S0010 (expMath).  
+  \end{itemize}
+
+\end{enumerate}
+
+\heading{F. Advising}
+
+\vspace{1em}
+\noindent Current PhD Dissertation Advisees 
+\begin{enumerate}
+  \item Nicholas Lewchenko, Fall 2021--present, Thesis Proposal done. Likely graduating in Spring 2026.
+  \item Kirby Linvill, Fall 2021--present, Thesis Proposal scheduled in
+  Fall 2025. Likely graduating in Spring 2027. 
+  \item Christian Fontenot (co-advised with Evan Chang), Fall 2022–present,
+  first paper done, Prelim done. 
+  \item Dakota Bryan (co-advised with Evan Chang), Fall 2024–present,
+  Working on their first paper.
+  \item Sai Lalith Kumar Aka, Fall 2025--present, Just joined. 
+\end{enumerate}
+
+\noindent Graduated BS/MS Thesis Advisees
+\begin{enumerate}
+\item Pranav Subramanian, Fall 2022--Spring 2023,
+Computer Science, CU Boulder,\\
+{\bf Thesis Title.} {\em Secko: A Distributed
+Content-Addressable Data Store}. \\{\bf First Employment.} {\it Sofware Engineer},
+NASA Goddard Space Flight Center. 
+\end{enumerate}
+
+
+\noindent MS/BS Research Advisees (Computer Science, CU Boulder)
+\begin{enumerate}
+  \item Mayank Joshi (MS), Fall 2020--Spring 2021.
+  \item Saksham Srivastava (MS), co-advised with Ashutosh Trivedi, Fall
+  2022--Spring 2023,  
+  \item Hemanth Nagendra (MS), Fall 2022 --Spring 2023 
+  \item Bhoomika Singla (MS), Spring 2023 --Spring 2024 
+  \item Richard Roberson (BS), Summer 2023-- Fall 2023, Started as CU SPUR summer intern
+  \item Noah Schwartz (BS), Summer 2024 -- Spring 2025, , Started as CU SPUR summer intern
+  \item Warren Fu (BS), Summer 2024 -- Spring 2025, Started as CU SPUR summer intern
+  \item Oscar Bender-Stone (BS), Fall 2024 -- present, Started as CU DLA apprentice
+\end{enumerate}
+
+\noindent CU SPUR Summer Interns (non-CU)
+\begin{enumerate}
+  \item AJ Lorenzo Carson, Cybersecurity, Arapahoe Community College.
+  \item Brian Meza, Computer Science, Community College of Aurora.
+\end{enumerate}
+
+\heading{G. Publications}
+
+\vspace{1em}
+In many areas of Computer Science, the first and primary publications are
+full-length peer-reviewed papers in the proceedings of selective
+conferences. Many conferences have extensive two-phase review processes
+with author responses. These include the four flagship conferences of ACM's
+Special Interest Group on Programming Languages (SIGPLAN), namely POPL,
+PLDI, OOPSLA, and ICFP. The proceedings of POPL, OOPSLA, and ICFP are also
+published in a journal named the Proceedings of ACM in Programming
+Languages (PACMPL). The DBLP service (http://dblp.uni-trier.de/db/)
+maintains an up-to-date index of Computer Science literature. In the
+following, the names of the students whom I formally advise are underlined
+(besides my name). The students whom I unofficially advise are indicated
+with $\dag$. Author ordering signifies the volume of contributions unless
+otherwise specified. 
+
+
+\newcommand{\ugkaki}{\underline{Gowtham Kaki}}
+\newcommand{\bec}{Bor-Yuh Evan Chang}
+\newcommand{\sj}{Suresh Jagannathan}
+
+\vspace{1em}
+\begin{region} {Journal Pre-prints}{{J}1}{9}
+
+\begin{publication}{}
+		{Dissprove: Goal-Directed Verification of Parametrized Affine Actor Systems}
+    {Jan 2026}{\underline{Christian Fontenot}, \ugkaki, and \bec}
+    {Under submission to Proceedings of the ACM on Programming Languages
+    (PACMPL), issue POPL 2026}{}
+\end{publication}
+
+\begin{publication}{}
+		{Effectively-Propositional Higher-Order Functional Programming}
+    {Apr 2026}{\underline{Nicholas Lewchenko}, \ugkaki, and \bec}
+		{Conditionally accepted with major revision at Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2026}{}
+\end{publication}
+
+\end{region}
+
+
+\begin{region} {Journal Publications}{{J}1}{7}
+
+\begin{publication}{https://dl.acm.org/doi/10.1145/3720502}
+		{Bolt-On Strong Consistency: Specification, Implementation, and Verification}
+    {Oct 2025}{\underline{Nicholas Lewchenko}, \ugkaki, and \bec}
+    {Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA1
+    2025}
+    {Acceptance rate: 32\%}
+\end{publication}
+
+\begin{publication}{https://gowthamk.github.io/docs/oopsla23a.pdf}
+		{Verifying Indistinguishability of Privacy-Preserving Protocols }
+    {Oct 2023}{\underline{Kirby Linvill}, \ugkaki, and Eric Wustrow}
+    {Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA2
+    2023}
+    {Acceptance rate: 38\%}
+\end{publication}
+
+\begin{publication}{https://gowthamk.github.io/docs/oopsla23b.pdf}
+		{Historia: Refuting Callback Reachability with Message-History Logics}
+    {Oct 2023}{Shawn Meier$^\dag$, Sergio Mover, \ugkaki, and Bor-Yuh Evan Chang}
+    {Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA2
+    2023}
+    {Acceptance rate: 38\%}
+\end{publication}
+
+\begin{publication}{https://gowthamk.github.io/docs/mrdt.pdf}
+		{Mergeable Replicated Data Types}
+    {Oct 2019}{\ugkaki, Swarn Priya, KC Sivaramakrishnan, Suresh Jagannathan}
+    {Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA
+    2019}
+    {Acceptance rate: 36\%}
+  \end{publication}
+
+	\begin{publication}{https://gowthamk.github.io/docs/q9.pdf}
+		{Safe Replication through Bounded Concurrency Verification}
+    {Nov 2018}{\ugkaki, Kapil Earanky, KC Sivaramakrishnan, Suresh Jagannathan}
+    {Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA
+    2018}
+    {Acceptance rate: 28\%}
+  \end{publication}
+
+  \begin{publication}{https://gowthamk.github.io/docs/popl18.pdf}
+    {Alone Together: Compositional Reasoning and Inference for Weak Isolation}
+    {Jan 2018}
+    {\ugkaki, Kartik Nagar, Mahsa Najafzadeh, Suresh Jagannathan}
+    {Proceedings of the ACM on Programming Languages (PACMPL), issue POPL
+    2018}
+    {Acceptance rate: 24\%}
+  \end{publication}
+
+  \begin{publication}{https://gowthamk.github.io/docs/quelea_ieee16.pdf}
+    {Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores}
+    {Mar 2016}{KC Sivaramakrishnan, \ugkaki, Suresh Jagannathan}
+    {IEEE Data Engineering Bulletin, 39(1): 52 -- 64}
+    {Invited article}
+  \end{publication}
+
+\end{region}
+
+\begin{region} {Peer-Reviewed Conference Publications}{{C}1}{7}
+
+  \begin{publication} {https://www.usenix.org/conference/usenixsecurity25/presentation/dai}
+		{Lancet: A Formalization Framework for Crash and Exploit Pathology}
+		{August 2025} {Qinrun Dai, \underline{Kirby Linvill}, Yueqi Chen, \ugkaki}
+		{34$^{th}$ USENIX Security Symposium (Security 2025)}
+    {Accceptance rate: 17\%}
+  \end{publication}
+
+	\begin{publication} {https://gowthamk.github.io/docs/pldi22.pdf}
+		{RunTime-Assisted Convergence in Replicated Data Types}
+		{June 2022} {\ugkaki, Prasanth Prahladan$^\dag$, \underline{Nicholas Lewchenko}}
+		{43$^{rd}$ ACM SIGPLAN Programming Language Design and
+    Implementation (PLDI 2022)}
+    {Accceptance rate: 20\%}
+  \end{publication}
+
+	\begin{publication} {https://gowthamk.github.io/docs/snapl19.pdf}
+		{Version Control Is For Your Data Too}
+		{May 2019} {\ugkaki, KC Sivaramakrishnan, Suresh Jagannathan}
+		{3$^{rd}$ Summit on Advances in Programming Languages (SNAPL 2019)}
+    {Accceptance rate: 57\%}
+  \end{publication}
+
+	\begin{publication} {https://gowthamk.github.io/docs/ecoop2018.pdf}
+		{Safe Transferable Regions}
+		{Jul 2018} {\ugkaki, G Ramalingam}
+		{32$^{nd}$ European Conference on Object-Oriented Programming (ECOOP 2018)}
+    {Accceptance rate: 39\%}
+  \end{publication}
+
+  \begin{publication} {https://gowthamk.github.io/docs/quelea.pdf}
+    {Declarative Programming over Eventually Consistent Data Stores}
+    {Jun 2015} {KC Sivaramakrishnan, \ugkaki, Suresh Jagannathan}
+    {37$^{th}$ ACM SIGPLAN Programming Language Design and
+    Implementation (PLDI 2015)}
+    {Accceptance rate: 19\%}
+  \end{publication}
+
+  \begin{publication}{https://gowthamk.github.io/docs/icfp2014.pdf}
+    {A Relational Framework for Higher-Order Shape Analysis}
+    {Sep 2014}{\ugkaki, Suresh Jagannathan}
+    {19$^{th}$ ACM SIGPLAN  International Conference on Functional Programming (ICFP 2014)}
+    {Accceptance rate: 29\%}
+  \end{publication}
+
+  \begin{publication}{https://www.researchgate.net/publication/224127688_Novel_adaptive_scheduling_algorithm_for_computational_grid}
+    {Novel adaptive scheduling algorithm for computational grid}
+    {Jan 2010}{Sunita Bansal, \ugkaki, Chittaranjan Hota}
+    {IEEE Internet Multimedia Services Architecture and Applications (IMSAA
+    2009)}
+    {Acceptance rate unknown}
+  \end{publication}
+
+\end{region}
+
+\begin{region} {Peer-Reviewed Workshop Publications}{{W}1}{5}
+  \begin{publication} {https://gowthamk.github.io/docs/papoc23.pdf}
+		{Distributed Consensus Algorithms as Replicated State Applications }
+		{April 2023} {\underline{Nicholas Lewchenko} and \ugkaki}
+		{ACM SIGOPS Principles and Practice of Consistency for Distributed Data
+    (PaPoC 2023)}
+    {Acceptance rate: 70\%}
+  \end{publication}
+
+  \begin{publication} {https://gowthamk.github.io/docs/papoc23.pdf}
+		{Bolt-On Convergence in Mergeable Replicated Data Types}
+		{April 2022} {\ugkaki, Prasanth Prahladan$^\dag$, \underline{Nicholas Lewchenko}}
+		{ACM SIGOPS Principles and Practice of Consistency for Distributed Data
+    (PaPoC 2022)}
+    {Acceptance rate: 73\%}
+  \end{publication}
+
+	\begin{publication}{https://gowthamk.github.io/docs/papoc18.pdf}
+		{Fine-grained distributed consistency guarantees with effect orchestration}
+		{Apr 2018}{Kia Rahmani, \ugkaki, Suresh Jagannathan}
+		{ACM SIGOPS Principles and Practice of Consistency for Distributed Data (PaPoC
+		2018)}
+    {Acceptance rate: 72\%}
+  \end{publication}
+
+  \begin{publication}{http://kcsrk.info/papers/mergeable_types_ml17.pdf}
+    {Mergeable Types}
+    {Sep 2017}{\ugkaki, KC Sivaramakrishnan, Samodya Abeysiriwardane, Suresh Jagannathan}
+    {ML Workshop (ML 2017)}
+    {Acceptance rate unknown}
+  \end{publication}
+
+	\begin{publication} {http://kcsrk.info/papers/dali_snapl17.pdf}
+    {DaLi : Database as a Library}
+    {May 2017} {\ugkaki, KC Sivaramakrishnan, Thomas Gazagnaire, Anil
+    Madhavapeddy, &\\ Suresh Jagannathan}
+    {Summit on Advances in Programming Languages (SNAPL 2017)}
+    {Oral Presentation. Acceptance rate unknown.}
+  \end{publication}
+
+\end{region}
+
+%\vspace{1em}
+\begin{region} {Technical Reports}{{T}1}{2}
+ 
+   \begin{publication} {https://arxiv.org/abs/2401.12379}
+    {Analyzing the Effectiveness of Large Language Models on
+    Text-to-SQL Synthesis}
+    {Dec 2023} {\underline{Richard Roberson}, \ugkaki, and Ashutosh Trivedi}
+    {arXiv:2401.12379} {}
+  \end{publication}
+
+  \begin{publication}{https://www.microsoft.com/en-us/research/publication/safe-memory-regions-big-data-processing}
+    {Safe Memory Regions for Big Data Processing}
+    {Jan 2016}{\ugkaki, G Ramalingam, Kapil Vaswani, Dimitrios
+    Vytiniotis} {Microsoft Tech Report} {}
+  \end{publication}
+\end{region}
+
+
+\heading{H. Invited Talks}
+
+\begin{nonumregion}{}
+
+\item \begin{tabular*}{6.8in}{l@{\extracolsep{\fill}}r}
+      \textbf{Convergence is Half Way to Consensus}\\
+      \hspace{1ex} Verification of Distributed Systems (VDS) Workshop,
+      Rabat, Morocco. &
+      \textit{May 2025} \\
+      \hspace{1ex} State of Scale, ETH Denver. &
+      \textit{Feb 2025} \\
+      \end{tabular*}
+
+\begin{talk} 
+  {Consensus via Convergence and Monotonicity} 
+  {Sep 2024} 
+  {ACM DARE Summer School, TU Darmstadt.} {}
+\end{talk}
+
+\item \begin{tabular*}{6.8in}{l@{\extracolsep{\fill}}r}
+      \textbf{Verifying Indistinguishability of Privacy-Preserving
+      Protocols}\\
+      \hspace{1ex} Dagstuhl Seminar on Formal Methods in Distributed
+      Systems&
+      \textit{Mar 2023} \\
+      \end{tabular*}
+
+\begin{talk} {MRDTs: Data Structures for Truly Decentralized
+  Internet} {Nov 2022} {IIT Madras, India} {}
+\end{talk}
+        
+\item \begin{tabular*}{6.8in}{l@{\extracolsep{\fill}}r}
+      \textbf{Mergeable Replicated Data Types} \\
+      \hspace{1ex} University of Minnesota, Twin Cities & \textit{Nov 2020}\\
+%      \hspace{1ex} OOPSLA 2019, Athens & \textit{Oct 2019} \\
+      \hspace{1ex}  Shonan Seminar on Programming Language Support for
+        Data-Intensive Applications, Japan & \textit{Jul 2019}\\
+      \end{tabular*}
+
+\begin{talk} 
+  {Catalyst: A Relational Framework for Higher-Order Shape Analysis} 
+  {Mar 2016} {Dagstuhl Seminar on Language-based approaches for Functiona
+  Program Verification}{}
+\end{talk}
+
+\end{nonumregion}
+
+\newpage
+\heading{I. Teaching Experience}
+
+\vspace{1em}
+\noindent \underline{{\em University of Colorado Boulder:}}
+%\vspace{-1em}
+\begin{center}
+  \begin{tabular}{ p{16.5cm}}
+{\bf CSCI 3155 Principles of Programming Languages} \hfill
+Spring 2021, Spring 2022, Fall 2023, Spring 2025 \\[3pt]
+{\bf CSCI 5535 \& ECEN 5533 Fundamentals of Programming Languages}\hfill Fall 2021, Fall 2024 \\[3pt]
+\hspace{2em}  Core undergraduate and graduate-level course on the
+fundamental ideas behind programming languages and formal verification. I
+re-designed the graduate curriculum to center around proof assistants.\\ [7pt]
+%
+{\bf CSCI 7000 Distributed Systems Verification} \hfill Spring 2021, Spring
+2024 \\[3pt]
+\hspace{2em} (New) Graduate seminar on the formal verification problem for
+distributed systems. New course. The course curriculum was later
+adopted by NUS Singapore.\\ [7pt] 
+%
+{\bf CSCI 7000 Advanced Functional Programming} \hfill Spring 2023\\[3pt]
+\hspace{2em} (New) Graduate course teaching advanced concepts in functional
+programming, such as Applicatives, Monads, and Dependent Types. \\ [7pt] 
+\end{tabular}
+\end{center}
+\vspace{0.3em}
+\noindent \underline{\em Purdue University:}
+%\vspace{-1em}
+\begin{center}
+  \begin{tabular}{ p{16.5cm}}
+{\bf CS 307 Software Engineering} \hfill Fall 2019 \\[3pt]
+\hspace{2em}  Core undergraduate-level course teaching methodical
+approaches to large-scale software engineering.  \\ [6pt]
+  \end{tabular}
+\end{center}
+
+
+\heading{J. Professional Activities}
+%\lline
+\begin{itemize}
+\item NSF Panelist: 2021, 2023, 2024.
+\item NSF External Reviewer: 2025.
+\item Computer Security Search Committee Member, 2021-2022
+\item Trustworthy and Scalable AI Systems Search Committee Chair, 2024-2025
+\item CS Department Graduate Committee Member, 2020-2022, 2024-present.
+\item Program Committee Chair, 12$^{th}$ ACM SIGOPS Workshop on Principles
+and Practice of Consistency for Distributed Data, 2025. Co-located with
+EuroSys.
+\item Program Committee Member: PaPoC 2022, OOPSLA 2022, PLDI 2023, OOPSLA
+2023, PaPoC 2023, OOPSLA 2024, ATVA 2024, POPL 2025.
+\item External Reviewer: TOPLAS 2023, TOPLAS 2024, POPL 2026.
+\item Organizing Committee Member: OOPSLA 2023, OOPSLA 2024.
+\end{itemize}
+
+\vspace{1em}
+\heading{K. Citizenship Status}
+
+Citizenship: India.
+
+
+US permanent residency petition (I-140) approved. 
+\end{document}
