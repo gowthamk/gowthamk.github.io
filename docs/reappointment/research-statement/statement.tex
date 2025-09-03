@@ -28,12 +28,13 @@
 \usepackage[most]{tcolorbox}
 \usepackage{newpxtext}
 \usepackage[T1]{fontenc}
+\usepackage{datetime}
 %\renewcommand{\familydefault}{\sfdefault}
 
 
 
 % My settings
-% -------------
+% --------------
 \newcommand{\mypara}[1]{\noindent\fcolorbox{white}{black!5}{\bf #1}}
 
 % For block quote
@@ -51,7 +52,7 @@
   fontupper=\itshape, 
   width=\dimexpr\linewidth-2pt\relax,
 }
-
+ 
 
 \sectionfont{\color{teal}}
 \newcommand{\C}[1]{{\tt #1}}
@@ -72,7 +73,9 @@
 % `pagestyle{fancy}` must come after package loads but before \begin{document}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\Large Gowtham Kaki {\color{Gray} {$\vert$} Research Statement} }
+\fancyhead[L]{\Large Gowtham Kaki {\color{Gray} {$\vert$} Research
+Statement} }
+\fancyfoot[R]{\today\ \currenttime}
 \renewcommand{\headrulewidth}{0pt}
 
 % === FIX FOR THE TITLE PAGE ===
@@ -80,7 +83,9 @@
 % We redefine what 'plain' looks like to match our fancy header.
 \fancypagestyle{plain}{
   \fancyhf{} % clear all header and footer fields
-  \fancyhead[L]{\Large Gowtham Kaki {\color{Gray} {$\vert$} Research Statement} }
+  \fancyhead[L]{\Large Gowtham Kaki {\color{Gray} {$\vert$} Research
+  Statement} }
+  \fancyfoot[R]{\today\ \currenttime}
   \renewcommand{\headrulewidth}{0pt}
 }
 % ==============================

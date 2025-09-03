@@ -11,6 +11,8 @@
 \usepackage{mdwlist}
 \usepackage[left=.5cm,top=2cm,right=.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{datetime}
 
 \definecolor{darkgrey}{HTML}{333333}
 \definecolor{grey}{HTML}{4D4D4D}
@@ -44,6 +46,13 @@
     OOPSLA, SPLASH, ECOOP, weak consistency, paxos, raft, protocols,
      mysql, postgres, cassandra, NoSQL
 }}
+
+\fancypagestyle{plain}{
+  %\fancyhf{} % clear all header and footer fields
+  %\fancyhead[L]{\Large Gowtham Kaki {\color{Gray} {$\vert$} Service Statement} }
+  \fancyfoot[R]{\today\ \currenttime}
+  %\renewcommand{\headrulewidth}{0pt}
+}
 
 % http://tex.stackexchange.com/questions/110236/is-there-a-way-to-get-reverse-numbering-on-the-enumerate-environment
 \newenvironment{benumerate}[2]{

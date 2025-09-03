@@ -30,6 +30,7 @@
 %\usepackage[sc]{mathpazo}
 \usepackage{newpxtext}
 \usepackage[T1]{fontenc}
+\usepackage{datetime}
 
 
 % My settings
@@ -67,12 +68,13 @@
 \newcommand{\eventual}{\blacklozenge}
 \newcommand{\strong}{\blacksquare}
 
-
+ 
 % Header setup
 % `pagestyle{fancy}` must come after package loads but before \begin{document}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\Large Gowtham Kaki {\color{Gray} {$\vert$} Service Statement} }
+\fancyfoot[R]{\today\ \currenttime}
 \renewcommand{\headrulewidth}{0pt}
 
 % === FIX FOR THE TITLE PAGE ===
@@ -81,9 +83,10 @@
 \fancypagestyle{plain}{
   \fancyhf{} % clear all header and footer fields
   \fancyhead[L]{\Large Gowtham Kaki {\color{Gray} {$\vert$} Service Statement} }
+  \fancyfoot[R]{\today\ \currenttime}
   \renewcommand{\headrulewidth}{0pt}
 }
-% ==============================
+% ===============================
 
 \setlength{\droptitle}{-0.6in} 
 \title{\color{teal} Service Statement}

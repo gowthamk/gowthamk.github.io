@@ -1,58 +1,65 @@
-The evolution of computational systems has always trended in the direction
-of increasing complexity. While early machines were designed for simple
-sequential computations, modern computational systems routinely operate
-concurrently in distributed environments connected by adversarial and
-unreliable networks. Ensuring safety and security of distributed
-computational systems requires novel programming abstractions and formal
-(reasoning) methods that enable programmers overcome the overwhelming
-complexity inherent to the design of these systems. 
+Popular web services, such as Amazon, Google, and Facebook, are supported
+by large numbers of \emph{distributed} computing systems that involve the
+coordination across thousands of machines to serve millions of requests
+every second. Increasingly, these systems are responsible for powering
+hospitals, air traffic control systems and traffic signals. Ensuring
+fail-safe operation and resilience against adversarial attacks require new
+ideas on how to program these massive systems and how to aid programmers in
+reasoning about their behaviors. The field of programming languages (PL)
+and formal methods (FM) in computer science investigates techniques founded
+in symbolic logic and automated reasoning to solve some of these pressing
+issues. Formal methods are witnessing increasing adoption at ``high-tech''
+organizations to secure mission-critical systems, such as unmanned aerial
+vehicles at DARPA and US Air Force~\cite{darpa-hacms,darpa-airforce},
+rovers and orbiters at NASA~\cite{nasa-fm}, cryptographic communication
+systems at Microsoft~\cite{project-everest}, and planet-scale web services
+at Amazon~\cite{aws-formal}. However, widespread adoption of formal methods
+remains a challenge due to their steep learning curve, the complexity of
+their integration into software development lifecycle, and the
+computational hardness of scaling them to real-world systems.
 \begin{mdquote}
 My research attempts to make foundational advances in programming languages
 and formal methods with aim of making provably-safe distributed systems
 development accessible to mainstream software developers.
 \end{mdquote}
-\noindent Formal methods have seen increasing adoption in mission-critical
-systems in the recent years. DARPA's HACMS program, for example,
-demonstrated the effectiveness of formal verification in securing unmanned
-aerial vehicles~\cite{darpa-hacms}. However, their widespread adoption
-remains a challenge due to the steep learning curve, integration
-complexity, and scalability concerns associated with formal methods.
-Bridging the gap between theoretical advances and practical deployment in
-industry requires research into more accessible tools, automated reasoning
-techniques, and programming abstractions that can seamlessly integrate with
-existing development workflows. My work is motivated by these challenges
-and aims to make formal methods more practical and impactful for real-world
-software systems. My research program involves three major thrusts,
-numbered $R_{1-3}$, to address scalability, generality, and usability
-challenges associated with formal methods. I will next summarize each
-research thrust, highlight significant contributions, and present their
-broader impacts and applications. 
+\noindent Bridging the gap between theoretical advances and practical
+deployment in industry requires research into more accessible tools,
+automated reasoning techniques, and programming abstractions that can
+seamlessly integrate with existing development workflows. My work is
+motivated by these challenges and aims to make formal methods more
+practical and impactful for real-world software systems. My research
+program focuses on ($R_1$) the development of formal verification
+techniques that can scale to industrial-scale distributed systems; ($R_2$)
+the application of ideas from $R_1$ to study problems of adversarial
+attacks on distributed blockchains; and ($R_3$) the application of
+verification approaches to probabilistic models of physical systems. I will
+next summarize each research thrust, highlight significant contributions,
+and present their broader impacts and applications. 
 
 \section*{$R_1$ Scaling Formal Verification to Real Systems}
 
-Programming safe and reliable distributed systems is extremely
-hard~\cite{aws-formal,samc,Yu2018}. The complexity stems from having to
-simultaneously reason about several failure modes, such as reordered and
-dropped messages, network partitions, and node crashes. Complex
-combinatorial reasoning involving low-level events and high-level
-application logic is hard for humans and machines alike, making it
-challenging to apply formal methods at scale. Consequently, formal
-certification of safety and reliability guarantees of distributed systems
-remains out of reach for most application developers. Any formal
-verification that is currently done in the industry is carried out at the
-level of distributed protocol specifications, e.g., using TLA+~\cite{tla}
-or P~\cite{p-lang}, with no way to translate the guarantees to
-implementations.
-
-Several decades of research into programming languages has shown that
-modularity and abstraction is often the key to overcoming programming
-complexity. The abstractions typically used to program distributed systems
-today expose asynchronous communication primitives and require the explicit
-reasoning about the dynamics of the network state in relation to faults. To
-scale formal verification to real-world systems implementations, we need
-novel programming abstractions that decompose the complexity of fault
-tolerance and protocol logic into loosely-coupled \emph{modules} and
-\emph{services} amenable to independent specification and verification.
+I believe that the key to making formal verification scale to real
+distributed systems lies in adopting a programming methodology that is
+designed from first principles to be amenable to machine-assisted
+reasoning. Just as human languages influence the human thought process,
+programming languages influence the design of the computing systems by
+prioritizing certain concerns, e.g., efficiency, over others, e.g.,
+understandability. Several decades of research into programming languages
+has shown that \emph{modularity} and \emph{abstraction} are often the key
+to overcoming programming complexity. Intuitively, the programmer should be
+able to express the high level modular structure of their software system
+while abstracting away the implementation minutia behind well-defined
+interfaces. \textbf{The abstractions that lower the cognitive overhead of
+comprehension for humans also lower the computational overhead of reasoning
+for machines}, leading to scalable formal verification. Unfortunately, the
+abstractions typically used to program distributed systems expose low-level
+communication primitives and require the explicit reasoning about the
+dynamics of the network state in relation to \emph{faults}, such as node
+crashes and network partitions. To scale formal verification to real-world
+systems implementations, we need novel programming abstractions that
+decompose the complexity of fault tolerance and application logic into
+loosely-coupled \emph{modules} and \emph{services} amenable to independent
+specification and verification.
 
 \begin{mdquote}
 Thrust 1 focuses on developing novel programming abstractions that enable
@@ -60,74 +67,67 @@ modular specification, verification, and implementation of distributed systems.
 \end{mdquote}
 
 The primary motivation for modular decomposition in our case is automated
-verification as opposed to efficient implementation. To be amenable to
-SMT-aided automated reasoning, verification conditions should be encodable
-in a a decidable logic, which requires deliberate design of modules and
-interfaces. As a part of ongoing work in Thrust 1, we are developing
-language-embedded specification and reasoning frameworks that reduce the
-manual effort and creative inputs involved in this process. The broadest
-impact will be on mainstream application programmers, who may not have the
-expertise to build mission-critical distributed systems. Our research will
-help programmers overcome the complexity of this task by making formal
-verification and machine-assisted reasoning readily accessible. 
+verification as opposed to efficient implementation. A class of tools,
+called Satisfiability-Modulo-Theory (SMT) solvers~\cite{smt-primer}, are
+the workhorses of machine-assisted formal verification in practice. To be
+amenable to SMT-aided automated reasoning, verification conditions should
+be encodable in a a decidable logic, which requires deliberate design of
+modules and interfaces. As a part of ongoing work in Thrust 1, we are
+developing language-embedded specification and reasoning frameworks that
+reduce the manual effort and creative inputs involved in this process. The
+broadest impact will be on mainstream application programmers, who may not
+have the expertise to build mission-critical distributed systems. Our
+research will help programmers overcome the complexity of this task by
+making formal verification and machine-assisted reasoning readily
+accessible. 
 
-\mypara{Significant Contributions} Our early work in Thrust
-1~\cite{mrdt, snapl19, quark} focused on development of \emph{Mergeable
-Replicated Data Types} (MRDTs) -- a high-level distributed programming
-abstraction that guarantees fault tolerance by design. We built a
-distributed runtime for MRDTs, called \quark~\cite{quark}, that
-orchestrates distributed computation in a way that is guaranteed to
-converge. This is in contrast to the state-of-the-art RDT abstractions,
-which require the programmer to prove the convergence of a computation
-explicitly~\cite{crdt}. \quark has allowed us to uncover novel performance
-tradeoffs in distributed applications and collect strong experimental
-evidence demonstrating the viability of high-level programming abstractions
-for \emph{coordination-free} distributed computations. Theoretically, RDTs
-are a high-level abstraction of a weakly-consistent replicated state
-machine (RSM), denoted $\eventual$ RSM. While $\eventual$ RSMs are often
-useful, safety-critical distributed systems need strongly-consistent
-($\strong$) RSMs, whose implementations are known to be notoriously
-complex. In our recent work~\cite{lewchenko-oopsla25}, we have shown that
-$\eventual$ RSMs can be extended with modules of inter-replica coordination
-to obtain $\strong$ RSMs, resulting in a modular approach that drastically
-reduced the overhead of safety verification. We implemented this technique
-in a verification framework called \superv and used it to automatically
-verify an industry-strength implementation of Raft log replication
+\mypara{Significant Contributions} Our early work in Thrust 1~\cite{mrdt,
+snapl19, quark} focused on development of \emph{Mergeable Replicated Data
+Types} (MRDTs) -- a high-level distributed programming abstraction that
+guarantees fault tolerance by design. We built a distributed runtime for
+MRDTs, called \quark~\cite{quark}, that orchestrates distributed
+computation in a way that is guaranteed to converge. This is in contrast to
+the state-of-the-art RDT abstractions, which require the programmer to
+prove the convergence of a computation explicitly~\cite{crdt}. \quark has
+allowed us to uncover novel performance tradeoffs in distributed
+applications and collect strong experimental evidence demonstrating the
+viability of high-level programming abstractions for
+\emph{coordination-free} distributed computations. Theoretically, RDTs are
+a high-level abstraction of a weakly-consistent replicated state machine
+(RSM), denoted $\eventual$ RSM. While $\eventual$ RSMs are often useful,
+safety-critical distributed systems need strongly-consistent ($\strong$)
+RSMs, whose implementations are known to be notoriously complex. In our
+recent work~\cite{lewchenko-oopsla25}, we have shown that $\eventual$ RSMs
+can be extended with modules of inter-replica coordination to obtain
+$\strong$ RSMs, resulting in a modular approach that drastically reduced
+the overhead of safety verification. We implemented this technique in a
+verification framework called \superv and used it to automatically verify
+an industry-strength implementation of Raft log replication
 protocol~\cite{raft}. We believe this is a notable achievement considering
 that verification efforts of similar nature required 2-3 orders of
 magnitude more manual annotations~\cite{VerdiRaft}. Our results will soon
-be presented at SIGPLAN OOPSLA 2025 conference. 
+be presented at SIGPLAN OOPSLA 2025 conference. This line of work was
+recognized by Amazon through a research award.
 
 \mypara{Funding and Project Management} The primary source of funding has
-thus far been my startup grant. An Amazon Research Award providing \$50,000
-to this work had to be declined on insistence of CU's office of contracts
-and grants (OCG). An NSF Small proposal titled \emph{A  Modular Approach to
-Practical Distributed Systems Veriﬁcation} is currently pending review. The
-proposed budget is \$480,110 to be spent over three years. The project team
-includes Mr. Nicholas Lewchenko, a PhD student advised by me. Mr. Lewchenko
-will graduate in Spring 2026 and will be replaced by a new graduate student
-yet to be admitted. 
+thus far been my startup grant. An NSF Small proposal titled \emph{A
+Modular Approach to Practical Distributed Systems Veriﬁcation} is currently
+pending review. The proposed budget is \$480,110 to be spent over three
+years. The project team includes Mr. Nicholas Lewchenko, a PhD student
+advised by me. Mr. Lewchenko will graduate in Spring 2026 and will be
+succeeded by a new graduate student yet to be admitted. 
 
 \section*{$R_2$ Generalizing Formal Verification to Adversarial Networks}
 
-Like the prior work on distributed systems verification~\cite{verdi,
-VerdiRaft, disel-popl18}, Thrust 1 focuses on \emph{crash faults} such as
-node crashes and network partitions. In conventional data center-based
-deployments, exceptional behavior is almost exclusively due to crash
-faults. However, distributed systems now increasingly operate the public
-internet, where they are used to implement novel decentralized
-applications, such as blockchain
-cryptocurrencies~\cite{nakamoto-bitcoin08,buterin-eth14} and federated
-social networks~\cite{mastodon,bluesky}. A decentralized application is
-effectively a distributed protocol designed to operate on a public network.
-The early successes of decentralized applications and the push towards
-local-first software~\cite{local-first} are expected to accelerate the
-development of a novel class of distributed protocols designed to execute
-on internet-native distributed systems. While network partitions remain a
-major concern on public networks,  more serious concern is the presence of
-adversaries who can actively subvert protocol executions towards unsafe or
-unproductive states \emph{even} when all the protocol participants are
-honest (i.e., non-byzantine). Ensuring the safety of distributed systems
+Distributed systems now increasingly operate the public internet, where
+they are used to implement novel decentralized applications, such as
+blockchain cryptocurrencies~\cite{nakamoto-bitcoin08,buterin-eth14} and
+federated social networks~\cite{mastodon,bluesky}. A decentralized
+application is effectively a \emph{internet-native} distributed system.
+unlike conventional distributed systems, which operate inside secure data
+centers and private networks, internet-native systems are exposed to
+anonymous adversaries who can actively subvert system executions towards
+unsafe or unproductive states. Ensuring the safety of distributed systems
 and the privacy of their users on adversarial networks requires
 synthesizing reasoning and verification techniques from Cryptography and
 Distributed Systems.
@@ -191,12 +191,14 @@ accessible and routine part of the software development lifecycle, there is
 a need for novel techniques and tools that flatten the learning curve and
 lower the barrier to entry. The recent progress in Large Language Models
 (LLMs) provides an exciting opportunity to (a). leverage natural languages
-as interfaces to formal verification tools, and (b). use generative AI to
-guide the proof search process. There are also notable new inventions in
-programming language techniques, such as the Incorrectness Logic and
-Goal-directed abstract abstract interpretation, which require minimal user
-inputs to drive formal verification. In Thrust 3, our goal is to leverage
-these developments to drastically improve the usability of formal methods,
+as interfaces to formal verification tools, and (b). use Generative AI to
+guide the computationally intensive proof search process performed by every
+formal verification tool. There are also notable new inventions in
+programming language techniques, such as the Incorrectness
+Logic~\cite{ohearn-popl19} and Goal-directed abstract
+interpretation~\cite{historia-oopsla23}, which require minimal user inputs
+to drive formal verification. In Thrust 3, our goal is to leverage these
+developments to drastically improve the usability of formal methods,
 particularly in the context of distributed systems. 
 \begin{mdquote}
 Thrust 3 focuses on developing symbolic and neuro-symbolic reasoning

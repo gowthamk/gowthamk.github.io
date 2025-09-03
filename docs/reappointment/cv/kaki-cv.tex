@@ -10,6 +10,9 @@
 \usepackage{tikz}
 \usepackage{mdwlist}
 \usepackage{ifthen}
+\usepackage{fancyhdr}
+\usepackage{datetime}
+
 
 \definecolor{darkgrey}{HTML}{333333}
 \definecolor{grey}{HTML}{4D4D4D}
@@ -43,6 +46,17 @@
      mysql, postgres, cassandra, NoSQL
 }}
 \usepackage[letterpaper, top=1in, left=0.65in, right=0.65in, bottom=1in]{geometry} 
+
+\pagestyle{fancy}
+\fancyfoot[R]{\today\ \currenttime}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{
+  %\fancyhf{} % clear all header and footer fields
+  %\fancyhead[L]{\Large Gowtham Kaki {\color{Gray} {$\vert$} Service Statement} }
+  \fancyfoot[R]{\today\ \currenttime}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
 
 %%%%%%%%%%%%% MyDefs %%%%%%%%%%%%%
 \newcommand{\mypara}[1]{\noindent\colorbox{white}{black!5}{#1}}
@@ -189,16 +203,23 @@ Cryptography, Databases, Functional Programming, Automated Reasoning, Program An
 \heading{D. Awards/Honors}
 
 \vspace{1em}
-
+ 
 \noindent {\em Professional}
-\vspace{-0.8em}
+%\vspace*{-1em}
 \begin{center}
   \begin{tabular}{ p{15cm}  r }
+{\bf Provost's Award} for outstanding service and highly-valued accomplishments& 2025 \\ [3pt]
+\hspace{2em} University of Colorado Boulder, USA. &
+\\[6pt]
+%
 {\bf Amazon Research Award} & 2023 \\ [3pt]
 \hspace{2em} Amazon Inc., USA. &
 \\[6pt]
 %
-{\bf Maurice H. Halstead Memorial Award}, for Software
+  \end{tabular}
+
+  \begin{tabular}{ p{15cm}  r }
+{\bf Maurice H. Halstead Memorial Award} for Software
 Engineering research & 2019 \\ [3pt]
 \hspace{2em} Purdue University, USA. &
 \\[6pt]
@@ -511,13 +532,14 @@ otherwise specified.
 		{Dissprove: Goal-Directed Verification of Parametrized Affine Actor Systems}
     {Jan 2026}{\underline{Christian Fontenot}, \ugkaki, and \bec}
     {Under submission to Proceedings of the ACM on Programming Languages
-    (PACMPL), issue POPL 2026}{}
+    (PACMPL), issue POPL 2026}{Full paper (25 pages)}
 \end{publication}
 
 \begin{publication}{}
 		{Effectively-Propositional Higher-Order Functional Programming}
     {Apr 2026}{\underline{Nicholas Lewchenko}, \ugkaki, and \bec}
-		{Conditionally accepted with major revision at Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2026}{}
+    {Conditionally accepted with major revision at Proceedings of the ACM
+    on Programming Languages (PACMPL), issue OOPSLA 2026}{Full paper (25 pages)}
 \end{publication}
 
 \end{region}
@@ -530,15 +552,15 @@ otherwise specified.
     {Oct 2025}{\underline{Nicholas Lewchenko}, \ugkaki, and \bec}
     {Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA1
     2025}
-    {Acceptance rate: 32\%}
+    {Article No.: 137; Pages: 1604 - 1631; Acceptance rate: 32\%}
 \end{publication}
 
 \begin{publication}{https://gowthamk.github.io/docs/oopsla23a.pdf}
-		{Verifying Indistinguishability of Privacy-Preserving Protocols }
-    {Oct 2023}{\underline{Kirby Linvill}, \ugkaki, and Eric Wustrow}
-    {Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA2
-    2023}
-    {Acceptance rate: 38\%}
+		{Verifying Indistinguishability of Privacy-Preserving Protocols } {Oct
+    2023}{\underline{Kirby Linvill}, \ugkaki, and Eric Wustrow}
+    {Proceedings of the ACM on Programming Languages (PACMPL), issue
+    OOPSLA2 2023} 
+    {Article No.: 273; Pages 1442 - 1469; Acceptance rate: 38\%}
 \end{publication}
 
 \begin{publication}{https://gowthamk.github.io/docs/oopsla23b.pdf}
@@ -546,7 +568,7 @@ otherwise specified.
     {Oct 2023}{Shawn Meier$^\dag$, Sergio Mover, \ugkaki, and Bor-Yuh Evan Chang}
     {Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA2
     2023}
-    {Acceptance rate: 38\%}
+    {Article No.: 289; Pages 1905 - 1934; Acceptance rate: 38\%}
 \end{publication}
 
 \begin{publication}{https://gowthamk.github.io/docs/mrdt.pdf}
@@ -554,7 +576,7 @@ otherwise specified.
     {Oct 2019}{\ugkaki, Swarn Priya, KC Sivaramakrishnan, Suresh Jagannathan}
     {Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA
     2019}
-    {Acceptance rate: 36\%}
+    {Article No.: 154; Pages 1 - 29; Acceptance rate: 36\%}
   \end{publication}
 
 	\begin{publication}{https://gowthamk.github.io/docs/q9.pdf}
@@ -562,7 +584,7 @@ otherwise specified.
     {Nov 2018}{\ugkaki, Kapil Earanky, KC Sivaramakrishnan, Suresh Jagannathan}
     {Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA
     2018}
-    {Acceptance rate: 28\%}
+    {Article No.: 164; Pages 1 - 27; Acceptance rate: 28\%}
   \end{publication}
 
   \begin{publication}{https://gowthamk.github.io/docs/popl18.pdf}
@@ -571,14 +593,14 @@ otherwise specified.
     {\ugkaki, Kartik Nagar, Mahsa Najafzadeh, Suresh Jagannathan}
     {Proceedings of the ACM on Programming Languages (PACMPL), issue POPL
     2018}
-    {Acceptance rate: 24\%}
+    {Article No.: 27; Pages 1 - 34; Acceptance rate: 24\%}
   \end{publication}
 
   \begin{publication}{https://gowthamk.github.io/docs/quelea_ieee16.pdf}
     {Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores}
     {Mar 2016}{KC Sivaramakrishnan, \ugkaki, Suresh Jagannathan}
     {IEEE Data Engineering Bulletin, 39(1): 52 -- 64}
-    {Invited article}
+    {Invited article; Pages 52 - 64.}
   \end{publication}
 
 \end{region}
@@ -589,7 +611,7 @@ otherwise specified.
 		{Lancet: A Formalization Framework for Crash and Exploit Pathology}
 		{August 2025} {Qinrun Dai, \underline{Kirby Linvill}, Yueqi Chen, \ugkaki}
 		{34$^{th}$ USENIX Security Symposium (Security 2025)}
-    {Accceptance rate: 17\%}
+    {Pages 375 - 394 (double column); Accceptance rate: 17\%}
   \end{publication}
 
 	\begin{publication} {https://gowthamk.github.io/docs/pldi22.pdf}
@@ -597,21 +619,21 @@ otherwise specified.
 		{June 2022} {\ugkaki, Prasanth Prahladan$^\dag$, \underline{Nicholas Lewchenko}}
 		{43$^{rd}$ ACM SIGPLAN Programming Language Design and
     Implementation (PLDI 2022)}
-    {Accceptance rate: 20\%}
+    {Pages 364 - 378 (double column); Accceptance rate: 20\%}
   \end{publication}
 
 	\begin{publication} {https://gowthamk.github.io/docs/snapl19.pdf}
 		{Version Control Is For Your Data Too}
 		{May 2019} {\ugkaki, KC Sivaramakrishnan, Suresh Jagannathan}
 		{3$^{rd}$ Summit on Advances in Programming Languages (SNAPL 2019)}
-    {Accceptance rate: 57\%}
+    {Pages 8:1 - 8:18; Accceptance rate: 57\%}
   \end{publication}
 
 	\begin{publication} {https://gowthamk.github.io/docs/ecoop2018.pdf}
 		{Safe Transferable Regions}
 		{Jul 2018} {\ugkaki, G Ramalingam}
 		{32$^{nd}$ European Conference on Object-Oriented Programming (ECOOP 2018)}
-    {Accceptance rate: 39\%}
+    {Pages 11:1-11:31; Accceptance rate: 39\%}
   \end{publication}
 
   \begin{publication} {https://gowthamk.github.io/docs/quelea.pdf}
@@ -626,7 +648,7 @@ otherwise specified.
     {A Relational Framework for Higher-Order Shape Analysis}
     {Sep 2014}{\ugkaki, Suresh Jagannathan}
     {19$^{th}$ ACM SIGPLAN  International Conference on Functional Programming (ICFP 2014)}
-    {Accceptance rate: 29\%}
+    {Pages 413 - 424 (double column); Accceptance rate: 29\%}
   \end{publication}
 
   \begin{publication}{https://www.researchgate.net/publication/224127688_Novel_adaptive_scheduling_algorithm_for_computational_grid}
@@ -634,7 +656,7 @@ otherwise specified.
     {Jan 2010}{Sunita Bansal, \ugkaki, Chittaranjan Hota}
     {IEEE Internet Multimedia Services Architecture and Applications (IMSAA
     2009)}
-    {Acceptance rate unknown}
+    {Pages: 11:1 - 11:5; Acceptance rate unknown}
   \end{publication}
 
 \end{region}
@@ -645,7 +667,7 @@ otherwise specified.
 		{April 2023} {\underline{Nicholas Lewchenko} and \ugkaki}
 		{ACM SIGOPS Principles and Practice of Consistency for Distributed Data
     (PaPoC 2023)}
-    {Acceptance rate: 70\%}
+    {Short paper (6 pages); Acceptance rate: 70\%}
   \end{publication}
 
   \begin{publication} {https://gowthamk.github.io/docs/papoc23.pdf}
@@ -653,7 +675,7 @@ otherwise specified.
 		{April 2022} {\ugkaki, Prasanth Prahladan$^\dag$, \underline{Nicholas Lewchenko}}
 		{ACM SIGOPS Principles and Practice of Consistency for Distributed Data
     (PaPoC 2022)}
-    {Acceptance rate: 73\%}
+    {Short paper (6 pages); Acceptance rate: 73\%}
   \end{publication}
 
 	\begin{publication}{https://gowthamk.github.io/docs/papoc18.pdf}
@@ -661,14 +683,14 @@ otherwise specified.
 		{Apr 2018}{Kia Rahmani, \ugkaki, Suresh Jagannathan}
 		{ACM SIGOPS Principles and Practice of Consistency for Distributed Data (PaPoC
 		2018)}
-    {Acceptance rate: 72\%}
+    {Short paper (6 pages); Acceptance rate: 72\%}
   \end{publication}
 
   \begin{publication}{http://kcsrk.info/papers/mergeable_types_ml17.pdf}
     {Mergeable Types}
     {Sep 2017}{\ugkaki, KC Sivaramakrishnan, Samodya Abeysiriwardane, Suresh Jagannathan}
     {ML Workshop (ML 2017)}
-    {Acceptance rate unknown}
+    {Short paper (2 pages; double column); Acceptance rate unknown}
   \end{publication}
 
 	\begin{publication} {http://kcsrk.info/papers/dali_snapl17.pdf}
@@ -676,7 +698,7 @@ otherwise specified.
     {May 2017} {\ugkaki, KC Sivaramakrishnan, Thomas Gazagnaire, Anil
     Madhavapeddy, &\\ Suresh Jagannathan}
     {Summit on Advances in Programming Languages (SNAPL 2017)}
-    {Oral Presentation. Acceptance rate unknown.}
+    {Oral Presentation; Acceptance rate unknown.}
   \end{publication}
 
 \end{region}
@@ -801,6 +823,10 @@ EuroSys.
 \item Organizing Committee Member: OOPSLA 2023, OOPSLA 2024.
 \end{itemize}
 
+
+%%%%%%%
+%% TODO: add research products.
+%%%
 
 \heading{K. Citizenship Status}
 \vspace{1em}
