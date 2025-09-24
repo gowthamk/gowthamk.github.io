@@ -38,10 +38,11 @@ I am part of the <a href="https://plv.colorado.edu">CUPLV</a> research group and
 
 <h2>Students</h2>
 * <a href="https://www.octalsrc.org/research">Nicholas Lewchenko</a> (Ph.D)
-* <a
-  href="https://scholar.google.com/citations?user=zodGXUUAAAAJ&hl=en">Kirby Linvill</a> (Ph.D)
+* <a href="https://scholar.google.com/citations?user=zodGXUUAAAAJ&hl=en">Kirby Linvill</a> (Ph.D)
 * <a href="https://chfont.github.io/">Christian Fontenot</a> (Ph.D;
   co-advised with Bor-Yuh Evan Chang)
+* <a href="https://www.dakota.quest/">Dakota Bryan</a> (PhD; co-advised with Bor-Yuh Evan Chang)
+* Sai Lalith Kumar Aka (PhD)
 * Pranav Subramanian (UG Senior Thesis Spring 2023, Currently at NASA
   JPL)
 
@@ -75,10 +76,10 @@ to live in the US! -->
   <div class="alignleft" >
   <h2>Teaching</h2>
   <ul>
-	<li>Spring'21,'22, Fall'23:<a href="https://github.com/sriram0339/csci3155_notebooks"> CSCI 3155 Principles of Programming Languages </a></li>
+	<li>Spring'21,'22,'25, Fall'23:<a href="https://github.com/sriram0339/csci3155_notebooks"> CSCI 3155 Principles of Programming Languages </a></li>
 	<li>Spring'23: <a href="https://gowthamk.github.io/csci7000_pfp_s23/">CSCI 7000-11 Principles of Functional
   Programming</a></li>
-    <li>Fall'21: <a href="https://csci5535.github.io/">CSCI 5535: Foundations of Programming Languages</a></li>
+    <li>Fall'21, '24: <a href="https://csci5535.github.io/">CSCI 5535: Foundations of Programming Languages</a></li>
     <li>Spring'21: <a href="https://gowthamk.github.io/csci7000_s21/">CSCI 7000 Distributed Systems Verification</a></li>
   </ul>
   </div>
