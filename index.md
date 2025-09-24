@@ -100,6 +100,8 @@ to live in the US! -->
                   <a href="https://papoc-workshop.github.io/2023/committees.html">2023</a>, 
 				  <a href="https://papoc-workshop.github.io/2022/committees.html">2022</a>
 	</li>
+    <li>ATVA PC: <a href="https://atva-conference.org/2024/organization/">2024</a>
+    </li>
   </ul>
   </div>
 </div>
