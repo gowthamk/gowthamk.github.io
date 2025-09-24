@@ -85,12 +85,18 @@ to live in the US! -->
   <div>
   <h2> Service</h2>
   <ul>
-    <li>OOPSLA PC: <a href="https://2022.splashcon.org/committee/splash-2022-psla-review-committee">2023</a>, 
-				   <a href="https://2023.splashcon.org/committee/splash-2023-oopsla-review-committee">2023</a>
+    <li>POPL PC: <a href="https://popl25.sigplan.org/committee/POPL-2025-popl-research-papers-program-committee">2025</a>
+    </li>
+    <li>OOPSLA PC: <a href="https://2023.splashcon.org/committee/splash-2023-oopsla-review-committee">2023</a>,
+                   <a href="https://2022.splashcon.org/committee/splash-2022-psla-review-committee">2022</a>
+				   
 	</li>
-    <li>PLDI PC: <a href="https://pldi23.sigplan.org/committee/pldi-2023-pldi-review-committee">2023</a>
+    <li>PLDI PC: <a href="https://pldi26.sigplan.org/committee/pldi-2026-papers-pldi-review-committee">2026</a>,
+                 <a href="https://pldi23.sigplan.org/committee/pldi-2023-pldi-review-committee">2023</a>
+                
 	</li>
-    <li>PaPoC PC: <a href="https://papoc-workshop.github.io/2023/committees.html">2023</a>, 
+    <li>PaPoC PC: <a href="https://papoc-workshop.github.io/2025/committees.html">2025</a>,
+                  <a href="https://papoc-workshop.github.io/2023/committees.html">2023</a>, 
 				  <a href="https://papoc-workshop.github.io/2022/committees.html">2022</a>
 	</li>
   </ul>
