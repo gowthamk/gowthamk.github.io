@@ -106,6 +106,6 @@ to live in the US! -->
   </div>
 </div>
 
-<div style="clear:left;">
+<!--div style="clear:left;">
 {% include news.html %}
-</div>
+</div-->
