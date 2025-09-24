@@ -1,47 +1,101 @@
-\begin{mdquote}
-``Tell me and I forget, teach me and I may remember, involve me and I learn.'' --- Benjamin Franklin
-\end{mdquote}
+%\begin{mdquote}
+%``Tell me and I forget, teach me and I may remember, involve me and I learn.'' --- Benjamin Franklin
+%\end{mdquote}
 
-My teaching philosophy is grounded in one core principle: students truly learn only when they can see a skill’s practical value in their own lives and future work. When learners recognize how a concept connects to problems they care about, the motivation to engage deeply follows naturally. Conversely, if the relevance is unclear, even the most elegant exposition may fall flat. This belief shapes every aspect of my course design, delivery, and mentorship.
+Programming language is the primary medium of
+communication between humans and machines. A well-designed programming
+language must serve as a natural medium of expressing human ideas about
+computation and should be able translate those ideas to efficient
+machine-executable code while preserving the \emph{semantics}. To be
+considered competent programmers and computer scientists, especially in the
+age of Large Language Models (LLMs), students should have the skill to
+quickly pick up new programming languages along with the ability to build
+new languages if needed. This is only possible if the students understand
+the scientific principles underpinning programming languages rather than
+merely knowing how to use an array of programming languages. I see this
+analogous to studying linguistics versus merely learning a new language on
+DuoLingo: the former requires a scientific approach whereas the latter can
+be done recreationally. My approach to teaching programming languages (PL)
+courses is informed by this observation. 
+\begin{mdquote} 
+My teaching mission is to make rigorous programming languages education
+widely accessible. 
+\end{mdquote}
+\noindent For the PL courses I teach, I designed the curriculum (sometimes
+from the ground-up) and tailored my instruction to familiarize the
+scientific method to students inasmuch as it becomes their second nature.
+Considering that PL courses of this nature are only taught at top-tier
+research universities, I publish my course materials online -- on dedicated
+course-specific websites -- to make them widely available to anyone who is
+willing to learn.
 
 \section*{Educational Contributions}
+
 Since joining CU Boulder, I have participated in the educational mission of both the Programming Languages and Verification (PLV) and the Systems groups. I have taught graduate courses such as:
 \begin{itemize}
     \item \textbf{Fundamentals of Programming Languages} (CSCI 5535/ECEN 5533; Fall 2021, Fall 2024)
     \item \textbf{Advanced Functional Programming} (CSCI 7000; Spring 2023)
     \item \textbf{Distributed Systems Verification} (CSCI 7000; Spring 2021, Spring 2024)
 \end{itemize}
-At the undergraduate level, I have taught \textbf{Programming Languages} (CSCI 3155) to hundreds of students across multiple semesters (Spring 2021, Spring 2022, Fall 2023, Spring 2025). 
-
-In CSCI 3155, students explore topics such as functional programming, operational semantics, interpreters, type systems, continuations, object-oriented programming, and garbage collection. In my graduate courses, topics range from formal semantics, type theory, and program verification to advanced functional programming paradigms, distributed algorithms, and verification techniques. Detailed schedules and materials for all my courses are publicly available:
+At the undergraduate level, I have taught \textbf{Programming Languages}
+(CSCI 3155) to hundreds of students across multiple semesters (Spring 2021,
+Spring 2022, Fall 2023, Spring 2025). In CSCI 3155, students explore topics
+such as functional programming, operational semantics, interpreters, type
+systems, continuations, object-oriented programming, and garbage
+collection. In my graduate courses, topics range from formal semantics,
+type theory, and program verification to advanced functional programming
+paradigms, distributed algorithms, and verification techniques. I
+re-designed the course curriculum of CSCI 5535 to make extensive use of
+mechanical proof assistants, such as Coq and Lean, which have now become
+popular in the mathematics research community owing to their rigor.
+Detailed schedules and materials for all my courses are publicly available:
 \begin{itemize}
     \item CSCI 5535: \url{https://csci5535.cs.colorado.edu/f24/}
     \item CSCI 7000 Advanced Functional Programming: \url{https://gowthamk.github.io/csci7000_pfp_s23/}
     \item CSCI 7000 Distributed Systems Verification: \url{https://gowthamk.github.io/csci7000_s21/}
 \end{itemize}
 
-For each of these graduate-level courses, I designed the curriculum and developed all instructional materials myself. These websites not only provide students with lecture notes, assignments, and code but also serve as open resources for the broader academic community.
+The instructional materials listed on the course websites were largely
+developed by myself (others' contributions have been duly credited). These
+websites not only provide students with lecture notes, assignments, and
+code but also serve as open resources for the broader academic community.
+
+\section*{Course Design and Delivery}
+
+My classes are highly interactive: I use literate programming-style Jupyter
+notebooks to seamlessly switch between prose and programming. When I teach
+programming, I make it a point to live-code the examples in class while
+inviting inputs from students. This method of collaborative problem solving
+inculcates a sense of community among students and lowers the barrier to
+class participation. I also make heavy use of iPad in the class in lieu of
+whiteboard to help students watching classrooom capture videos follow along
+easily. In addition, I integrate project-based learning wherever
+possible—asking students to build interpreters, experiment with language
+features, or verify non-trivial protocols. These projects give students the
+dual satisfaction of mastering theory while producing something functional
+and relevant. As described earlier, I maintain public course websites for
+my graduate-level courses, which play a crucial role in my teaching. Beyond
+providing transparency and accessibility, they allow students to revisit
+materials at their own pace and serve as a portfolio of my evolving
+pedagogical approach.
 
 \section*{Making Utility Visible}
-In my classrooms, I strive to bridge theory with lived application. When introducing an abstract concept—be it continuations in functional programming or model checking in distributed systems—I begin by situating the idea in a context the students can relate to. This could mean:
+
+My teaching philosophy is grounded in the principle of demonstrating
+utility: students truly learn only when they can see a skill's practical
+value in their own lives and future work. When learners recognize how a
+concept connects to problems they care about, the motivation to engage
+deeply follows naturally. In my classrooms, I strive to bridge theory with
+live application. When introducing an abstract concept—be it continuations
+in functional programming or model checking in distributed systems—I begin
+by situating the idea in a context the students can relate to. This could
+mean:
 \begin{itemize}
     \item Demonstrating how type systems prevent security vulnerabilities in real-world software.
     \item Connecting garbage collection algorithms to memory management issues in industry-scale systems.
     \item Linking verification techniques to the reliability demands of distributed systems like blockchain or NASA flight software.
 \end{itemize}
 By framing concepts in terms of tangible utility, students not only engage but also begin to transfer their learning to new, unfamiliar domains.
-
-\section*{Course Design and Delivery}
-My classes are highly interactive and often make use of live coding,
-collaborative problem-solving, and real-time polling tools to check
-understanding and adjust pacing. I integrate project-based learning
-wherever possible—asking students to build interpreters, experiment with
-language features, or verify non-trivial protocols. These projects give
-students the dual satisfaction of mastering theory while producing
-something functional and relevant. I also maintain public websites, which
-play a crucial role in my teaching. Beyond providing transparency and
-accessibility, they allow students to revisit materials at their own pace
-and serve as a portfolio of my evolving pedagogical approach.
 
 \section*{Mentorship}
 Mentoring is where my teaching philosophy extends most naturally into research. Since joining CU, I have advised 4 Ph.D. students, 3 M.S. students, and 7 undergraduates. All 7 of my major publications at CU have been co-authored with CU students. 
@@ -59,4 +113,8 @@ As part of the CUPLV group, my students benefit from a vibrant research communit
 Mentoring, to me, is a reciprocal process: my students bring fresh perspectives that challenge me to re-examine familiar problems, while I provide the guidance, focus, and encouragement needed to turn promising ideas into polished contributions.
 
 \section*{Closing Thoughts}
-Whether in the classroom or the research lab, my aim is to spark curiosity by showing students the practical power of the concepts they are learning. When they can see how an idea might shape their own future projects or careers, the drive to master it comes naturally—and that, in my view, is when real learning happens.
+Whether in the classroom or the research lab, my aim is to spark curiosity
+by showing students the scientific concepts underlying the computational
+phenomena. When they can see how an idea might shape their own future
+projects or careers, the drive to master it comes naturally—and that, in my
+view, is when real learning happens.

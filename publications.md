@@ -6,6 +6,30 @@ permalink: /publications/
 
 
 <div class="publications">
+<h2>2025</h2>
+<p class="pub-item">
+  <div class="pub-title">
+   Bolt-On Strong Consistency: Specification, Implementation, and
+   Verification
+  </div>
+  (Nicholas Lewchenko, Gowtham Kaki, and Bor-Yuh Evan Chang)
+  <ul>
+    <li>
+       ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages, 
+       and Applications (OOPSLA'25) [<a href="{% link docs/oopsla25.pdf %}">Paper</a>]
+    </li>
+  </ul>
+</p>
+<p class="pub-item">
+  <div class="pub-title">
+   Lancet: A Formalization Framework for Crash and Exploit Pathology
+  </div>
+  (Qinrun Dai, Kirby Linvill, Yueqi Chen, and Gowtham Kaki)
+  <ul>
+    <li>
+       Usenix Security Symposium (Usenix Sec'25) [<a href="{% link docs/usenixsecurity25.pdf %}">Paper</a>]
+    </li>
+  </ul>
 
 <h2>2023</h2>
 <p class="pub-item">
