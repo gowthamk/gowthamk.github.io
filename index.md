@@ -4,7 +4,7 @@ layout: default
 
 
 <div id="profile-pic" class="alignleft" style="max-width: 250px;
-margin-right: 30px; margin-bottom:60px">
+margin-right: 30px; margin-bottom:110px">
 
 <div><img class="" src="/images/profile-image-2.jpg" alt="gowtham kaki" style="max-width: 225px"/></div>
 <br/>
