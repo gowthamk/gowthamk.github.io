@@ -27,7 +27,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.x' # Use a recent Ruby version compatible with your Gemfile
+          ruby-version: '3.1.2' # Use a recent Ruby version compatible with your Gemfile
           bundler-cache: true # Caches installed gems for faster builds
 
       # This step builds the Jekyll site using the command you run locally
