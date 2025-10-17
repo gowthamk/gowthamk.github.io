@@ -32,7 +32,12 @@ excerpt_separator: "<!--more-->"
 plugins_dir:
   - jekyll-sitemap
 
-exclude: ['*.Rmd']
+# Ensure these files and folders are ignored during the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .idea/
 
 # -----------------------------------------------------------------------------
 # Collections
