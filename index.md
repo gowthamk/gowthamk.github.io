@@ -22,7 +22,7 @@ I am an Assistant Professor of Computer Science at the University of
 Colorado (CU), Boulder. My background is in Programming Languages and
 Formal Methods. My research is driven by the curiousity to apply
 language design techniques and formal methods to solve hard problems
-in computer science. I frequently work at intersection of PL and
+in computer science. I work at intersection of PL and
 Distributed Systems, Databases, Security, and Artificial Intelligence.
 I am an alumnus of Purdue University, West Lafayette, and BITS Pilani, India.
 
