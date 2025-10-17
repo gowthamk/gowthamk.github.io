@@ -1,0 +1,63 @@
+name: Build and Deploy Jekyll Site
+
+# Controls when the workflow runs
+on:
+  push:
+    branches: ["main", "master"] # Adjust this to your source branch name
+
+# Sets permissions to allow the GITHUB_TOKEN to deploy to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  # This job builds the site
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.x' # Use a recent Ruby version compatible with your Gemfile
+          bundler-cache: true # Caches installed gems for faster builds
+
+      # This step builds the Jekyll site using the command you run locally
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --future
+        env:
+          JEKYLL_ENV: production
+          
+      # This step prepares the deployment by uploading the output directory
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # This is the directory Jekyll's build command creates
+          path: './_site'
+
+    # This is necessary to pass the artifact to the deploy job
+    outputs:
+      page_url: ${{ steps.pages.outputs.page_url }}
+
+  # This job deploys the artifact to GitHub Pages
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ needs.build.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
