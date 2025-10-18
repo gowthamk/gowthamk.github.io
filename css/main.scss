@@ -59,3 +59,20 @@ $on-laptop:        950px;
 	"fancy-image",
 	"table"
 ;
+
+
+.pagination {
+    display: flex;             /* 1. Enable flex layout for the container */
+    justify-content: center;   /* 2. Center the children horizontally */
+    gap: 20px;                 /* Adds space between the Previous/Next buttons */
+    padding: 20px 0;           /* Adds vertical space */
+}
+
+/* Optional: You may want to style the buttons themselves */
+.pagination .btn {
+    /* Example styles to make them look nice */
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

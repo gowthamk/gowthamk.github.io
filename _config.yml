@@ -82,4 +82,8 @@ scholar:
 
   query: "@*"
 
-
+# --------------------------------------
+# Disqus Comments
+# --------------------------------------
+disqus_shortname: 'tycon'
+comments: true
