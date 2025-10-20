@@ -12,6 +12,7 @@ margin-right: 30px; margin-bottom:110px">
 <li><a href="https://www.colorado.edu/cs/gowtham-kaki">gowtham.kaki@colorado.edu</a></li>
 <li><a href="https://twitter.com/GowthamK">twitter.com/gowthamk</a></li>
 <li><a href="https://github.com/gowthamk/">github.com/gowthamk</a></li>
+<li><a href="https://bsky.app/profile/gowthamkaki.bsky.social">gowthamkaki.bsky.social</a></li>
 </ul>
 <div style="text-align:center"><a href="https://plv.colorado.edu/"><img class="" src="/images/cuplv-logo.png" alt="CUPLV" style="max-width: 100px"/></a></div>
 
