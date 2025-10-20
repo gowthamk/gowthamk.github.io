@@ -85,5 +85,5 @@ scholar:
 # --------------------------------------
 # Disqus Comments
 # --------------------------------------
-disqus_shortname: 'tycon'
+disqus: 'tycon'
 comments: true
