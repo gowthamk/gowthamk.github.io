@@ -6,7 +6,7 @@ layout: default
 <div id="profile-pic" class="alignleft" style="max-width: 250px;
 margin-right: 30px; margin-bottom:110px">
 
-<div><img class="" src="/images/profile-image-2.jpg" alt="gowtham kaki" style="max-width: 225px"/></div>
+<div><img class="" src="/assets/profile-pic-whiteboard.png" alt="gowtham kaki" style="max-width: 225px"/></div>
 <br/>
 <ul>
 <li><a href="https://www.colorado.edu/cs/gowtham-kaki">gowtham.kaki@colorado.edu</a></li>
