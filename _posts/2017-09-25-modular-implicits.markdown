@@ -2,6 +2,7 @@
 layout: post
 title:  "First-Class Modules and Modular Implicits in OCaml"
 permalink: modular-implicits.html
+categories: functional-programming ocaml
 ---
 
 I was pleasantly surprised to discover that OCaml has been supporting

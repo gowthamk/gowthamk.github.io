@@ -2,6 +2,7 @@
 layout: post
 title:  "Atomicity vs Isolation"
 permalink: ACID.html
+categories: databases, transactions
 ---
 
 From the perspective of a transaction,

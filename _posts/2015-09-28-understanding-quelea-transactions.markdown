@@ -2,6 +2,7 @@
 layout: post
 title:  "Understanding Transactions in Quelea"
 permalink: understanding-quelea-transactions.html
+categories: transactions
 ---
 
 [Quelea][quelea] is our eventually consistent data store with an

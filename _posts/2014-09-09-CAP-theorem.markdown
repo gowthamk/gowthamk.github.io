@@ -3,6 +3,7 @@ layout: post
 title:  "CAP Theorem and Related"
 date:   2014-09-09 11:23:41
 permalink: cap-theorem-notes.html
+categories: distributed-systems
 ---
 
 My intention in writing this note is to understand the relation

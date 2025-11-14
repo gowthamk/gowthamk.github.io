@@ -9,8 +9,9 @@ layout: default
       {% if page.author %} by {{ page.author }}{% endif %}  
       {% if page.categories %}
         in
-        {% for cat in page.categories %}
-        <a href="/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
+        {% for category in page.categories %}
+          {% assign category_slug = category | slugify %}
+          <a href="{{ '/category/' | append: category_slug | append: '/' | relative_url }}" title="{{ category }}">{{ category }}</a>&nbsp;
         {% endfor %}
       {% endif %}
     </p>

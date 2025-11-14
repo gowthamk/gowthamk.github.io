@@ -2,6 +2,7 @@
 layout: post
 title:  "Coq Basics"
 permalink: coq-basics-1.html
+categories: formal-verification coq
 ---
 
 GADTs vs Inductive Datatypes

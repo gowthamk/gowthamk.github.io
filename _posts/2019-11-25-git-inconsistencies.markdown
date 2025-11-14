@@ -2,6 +2,7 @@
 layout: post
 title:  "Vagaries of Git Merge"
 permalink: git-inconsistencies.html
+categories: git
 ---
 
 Git's merge algorithm seems to have inexplicable semantics leading to

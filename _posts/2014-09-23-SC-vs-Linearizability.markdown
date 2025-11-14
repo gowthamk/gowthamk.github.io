@@ -2,6 +2,7 @@
 layout: post
 title:  "SC vs Linearizability"
 permalink: sc-vs-linearizability.html
+categories: databases, transactions
 ---
 
 Sequential consistency requires that all data operations appear to

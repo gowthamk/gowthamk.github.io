@@ -2,6 +2,7 @@
 layout: post
 title:  "ML Type Inference"
 permalink: ML-type-inference.html
+categories: functional-programming type-systems
 ---
 
 One of the most useful features of ML-family languages (OCaml,

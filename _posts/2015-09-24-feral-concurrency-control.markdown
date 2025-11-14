@@ -3,6 +3,7 @@ layout: post
 comments: true
 title:  "Notes - Feral Concurrency Control"
 permalink: feral-concurrency-control.html
+category: transactions
 ---
 
 This post is a compilation of my notes on Peter Bailis et al's

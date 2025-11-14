@@ -2,6 +2,7 @@
 layout: post
 title:  "SAT solving puzzles"
 permalink: cheryl-birthday.html
+categories: smt
 ---
 
 Few months ago, [Cheryl birthday puzzle](http://goo.gl/siAHSi) has has

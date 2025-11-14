@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<header>
+  <h1>Category: {{ page.title }}</h1>
+  </header>
+
+<hr>
+
+{% if page.posts.size > 0 %}
+  <h2>Posts in this Category ({{ page.posts.size }})</h2>
+  
+  {% for post in page.posts %}
+    <article>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>Published on: {{ post.date | date: "%B %d, %Y" }}</p>
+      
+      {{ post.content | strip_html | truncatewords: 50 }}
+      <p>
+        <a href="{{ post.url | relative_url }}">Read more &rarr;</a>
+      </p>
+    </article>
+    <hr>
+  {% endfor %}
+
+{% else %}
+  <p>There are no posts assigned to this category yet.</p>
+{% endif %}

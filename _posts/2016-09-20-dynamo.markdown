@@ -2,6 +2,7 @@
 layout: post
 title:  "Dynamo and DynamoDB"
 permalink: dynamo.html
+categories: distributed-systems
 ---
 
 In this post, I discuss DeCandia et al's Dynamo [paper][dynamo], and

@@ -2,6 +2,7 @@
 layout: post
 title:  "Extraction in Coq"
 permalink: coq-extraction.html
+categories: formal-verification coq
 ---
 
 ### Extraction erases Props ###

@@ -2,6 +2,7 @@
 layout: post
 title:  "Understanding Transactions in Rails"
 permalink: understanding-rails-transactions.html
+categories: transactions
 ---
 
 In my [previous post][fcpost] I have noted that Rails encourages

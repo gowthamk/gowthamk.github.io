@@ -3,6 +3,7 @@ layout: post
 title:  "Notes - Terry's Session Guarantees"
 comments: true
 permalink: terry-session-guarantees.html
+categories: distributed-systems
 ---
 
 This post is the compilaton of my notes on Terry et al's PDIS'94
