@@ -81,17 +81,17 @@ they transiently disagree. All seems well.
 But not quite: when `W(150)` was originally marked `Committed` on $$R_3$$,
 the funds could have been transferred out the banking system, which now
 need to be recovered through some extraneous process, perhaps by mailing
-the user and requesting them to return the funds **\footnote{xxx}**. Thus,
-even if the replicas eventually reach an agreement, it is possible that
-they make incorrect decisions during the transient disagreement phase that
-may not be reversible. Avoiding such situations requires us to go beyond
-eventual agreement and guarantee there is never a disagreement in the first
-place. In the current example, this means that replicas should never
-disagree on the status of the `W(150)` transaction, i.e., the prefix of the
-execution to the left of the dotted line shown above should be impossible.
-Enforcing this requires a coordination protocol to orchestrate consensus
-across replicas, which is what protocols such as Two-Phase Commit, Paxos,
-and Raft do. 
+the user and requesting them to return the funds. Thus, even if the
+replicas eventually reach an agreement, it is possible that they make
+incorrect decisions during the transient disagreement phase that may not be
+reversible. Avoiding such situations requires us to go beyond eventual
+agreement and guarantee there is never a disagreement in the first place.
+In the current example, this means that replicas should never disagree on
+the status of the `W(150)` transaction, i.e., the prefix of the execution
+to the left of the dotted line shown above should be impossible. Enforcing
+this requires a coordination protocol to orchestrate consensus across
+replicas, which is what protocols such as Two-Phase Commit, Paxos, and Raft
+do. 
 
 
 ## What exactly is lack of disagreement?
