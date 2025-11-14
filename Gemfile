@@ -9,6 +9,7 @@ gem 'jekyll-paginate-v2'
 gem 'jekyll-scholar', '~> 7.2'
 gem 'jemoji'
 gem 'jekyll-archives'
+gem "jekyll-sass-converter", "~> 2.1"
 # The below gem is often a dependency of jekyll-scholar, good to keep it explicit
 gem 'unicode_utils'
 
