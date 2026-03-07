@@ -6,13 +6,29 @@ permalink: /publications/
 
 
 <div class="publications">
+<h2>2026</h2>
+<p class="pub-item">
+  <div class="pub-title">
+  Effectively Propositional Higher-Order Functional Programming 
+  </div>
+  (Nicholas Lewchenko, Kunha Kim, Bor-Yuh Evan Chang, and Gowtham Kaki)
+  <ul>
+    <li>
+       ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages, 
+       and Applications (OOPSLA'26) [<a href="{% link docs/oopsla26.pdf %}">Pre-print</a>]
+    </li>
+    <li>
+      Software: <a href="https://crates.io/crates/ravencheck">Ravencheck</a>: Decidable SMT-aided Verification for Rust.
+    </li>
+  </ul>
+</p>
 <h2>2025</h2>
 <p class="pub-item">
   <div class="pub-title">
    Bolt-On Strong Consistency: Specification, Implementation, and
    Verification
   </div>
-  (Nicholas Lewchenko, Gowtham Kaki, and Bor-Yuh Evan Chang)
+  (Nicholas Lewchenko, Bor-Yuh Evan Chang, and Gowtham Kaki)
   <ul>
     <li>
        ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages, 
