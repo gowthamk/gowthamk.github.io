@@ -17,6 +17,18 @@ permalink: /publications/
        ACM SIGPLAN Conference on Object-Oriented Programming Systems, Languages, 
        and Applications (OOPSLA'26) [<a href="{% link docs/oopsla26.pdf %}">Pre-print</a>]
     </li>
+  </ul>
+</p>
+<p class="pub-item">
+  <div class="pub-title">
+  Ravencheck: Effectively-Propositional Reasoning for Rust
+  </div>
+  (Kunha Kim, Nicholas Lewchenko, Bor-Yuh Evan Chang, and Gowtham Kaki)
+  <ul>
+    <li>
+       ACM SIGPLAN International Workshop on the State Of the Art in
+       Program Analysis (SOAP 2026) [<a href="{% link docs/soap26.pdf %}">Paper</a>]
+    </li>
     <li>
       Software: <a href="https://crates.io/crates/ravencheck">Ravencheck</a>: Decidable SMT-aided Verification for Rust.
     </li>
