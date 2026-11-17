@@ -19,7 +19,7 @@ markdown: kramdown
 permalink: blog/:year/:month/:title/
 jobtitle: "Assistant Professor"
 address: |
-    Department of Computer Science,
+    ECCS 121A, Department of Computer Science,
     University of Colorado,
     Boulder, CO 80309
 excerpt_separator: "<!--more-->"
